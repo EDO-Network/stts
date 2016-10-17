@@ -1,0 +1,17 @@
+.top-wrap{
+    margin: 0 auto;
+    height: 35px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #eee;
+}
+
+.top-right-menu{
+    height: 35px;
+    line-height: 35px;
+    float: right;
+}
+
+.top-right-menu li{
+    float: left;
+    margin-left: 10px;
+}

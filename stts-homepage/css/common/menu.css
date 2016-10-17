@@ -1,0 +1,15 @@
+.category-menu{
+    width: 210px;
+    z-index: 10;
+}
+
+.category-menu-title a{
+    font-size:15px;
+    font-weight: 400;
+    color: #FFFFFF;
+    background-color: #000000;
+    display: block;
+    opacity: 0.6;
+    height: 44px;
+    padding: 10px;
+}

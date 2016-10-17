@@ -1,0 +1,859 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head> 
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /> 
+        <title>jQuery仿京东首页左侧菜单导航</title> 
+        <link href="images/favicon.ico" rel="shortcut icon" /> 
+        <meta content="jquery导航菜单,京东导航" name="keywords" /> 
+        <meta content="本文分享下京东首页左侧二级导航菜单效果，代码很简洁。" name="description" /> 
+        <link rel="stylesheet" type="text/css" href="css/style.css" /> 
+    </head> 
+    <body> 
+
+        <div id="nav-2014">
+            <div class="w">
+                <div class="w-spacer"></div>
+                <div class="dorpdown" id="categorys-2014">
+                    <div class="dt">
+                        <a href="http://www.jd.com/allSort.aspx" target="_blank">全部商品分类</a>
+                    </div>
+                    <div class="dd">
+                        <div class="dd-inner">
+                            <div  class="item fore1">
+                                <h3><a href="http://channel.jd.com/electronic.html" target="_blank">家用电器</a></h3>
+                                <i>&gt;</i> 
+                            </div>
+                            <div class="item fore2">
+                                <h3><a href="http://shouji.jd.com/" target="_blank">手机</a>、<a href="http://shuma.jd.com/" target="_blank">数码</a>、<a href="http://mobile.jd.com/" target="_blank">京东通信</a></h3>
+                                <i>&gt;</i> 
+                            </div>
+                        </div>
+                        <div style="display: none;" class="dorpdown-layer" id="index_menus_sub">
+                            <div class="item-sub">
+                                <div class="item-brands">
+                                    <div class="brands-inner">
+                                        <a target="_blank" class="img-link" href="http://jmall.jd.com/shop/midea/index.html?erpad_source=erpad">
+                                            <img width="83" height="35" src="http://img10.360buyimg.com/vclist/jfs/t832/286/5445725/2411/8aae93c1/54d9eeeeN993b74f4.jpg">
+                                        </a>
+                                        <a target="_blank" class="img-link" href="http://haier.jd.com/">
+                                            <img width="83" height="35" src="http://img11.360buyimg.com/vclist/jfs/t745/301/749830018/3039/9c96d09e/54d9eef9N5bb8d27f.jpg">
+                                        </a>
+                                        <a target="_blank" class="img-link" href="http://jmall.jd.com/shop/tcl/index.html?erpad_source=erpad">
+                                            <img width="83" height="35" src="http://img12.360buyimg.com/vclist/jfs/t742/296/752313526/2128/67ff82d9/54d9ef02N99d26435.jpg">
+                                        </a>
+                                        <a target="_blank" class="img-link" href="http://mall.jd.com/index-1000000940.html?cpdad=1DLSUE">
+                                            <img width="83" height="35" src="http://img13.360buyimg.com/vclist/jfs/t643/241/1441917153/1991/b7f68956/54d9ef10Nd206a236.jpg">
+                                        </a>
+                                        <a target="_blank" class="img-link" href="http://mall.jd.com/index-1000001134.html">
+                                            <img width="83" height="35" src="http://img14.360buyimg.com/vclist/jfs/t703/273/787686128/2436/5299f29d/54d9ef28N00328d44.jpg">
+                                        </a>
+                                        <a target="_blank" class="img-link" href="http://jmall.jd.com/shop/philipschina/index.html?cpdad=1DLSUE">
+                                            <img width="83" height="35" src="http://img10.360buyimg.com/vclist/jfs/t820/181/3448454/2372/cbfc2389/54d9ef34N7cc61f4c.jpg">
+                                        </a>
+                                        <a target="_blank" class="img-link" href="http://mall.jd.com/index-1000001402.html">
+                                            <img width="83" height="35" src="http://img11.360buyimg.com/vclist/jfs/t475/29/1411508579/2230/64183923/54d9ef3eN99aef1f0.jpg">
+                                        </a>
+                                        <a target="_blank" class="img-link" href="http://mall.jd.com/index-1000002484.html">
+                                            <img width="83" height="35" src="http://img12.360buyimg.com/vclist/jfs/t700/76/767891003/1472/c20aa630/54d9ef4cN4fe57f9b.jpg">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item-channels">
+                                    <div class="channels">
+                                        <a target="_blank" href="http://sale.jd.com/act/QGKqdHvopWietx.html">
+                                            品牌日
+                                            <i>
+                                                &gt;
+                                            </i>
+                                        </a>
+                                        <a target="_blank" href="http://channel.jd.com/electronic.html">
+                                            家电城
+                                            <i>
+                                                &gt;
+                                            </i>
+                                        </a>
+                                        <a target="_blank" href="http://smarthome.jd.com/">
+                                            智能生活馆
+                                            <i>
+                                                &gt;
+                                            </i>
+                                        </a>
+                                        <a target="_blank" href="http://sale.jd.com/act/rSRFscLklGhxXW2H.html">
+                                            京东净化馆
+                                            <i>
+                                                &gt;
+                                            </i>
+                                        </a>
+                                        <a target="_blank" href="http://sale.jd.com/act/eRszkp8fyiS3Yt.html">
+                                            京东帮服务店
+                                            <i>
+                                                &gt;
+                                            </i>
+                                        </a>
+                                        <a target="_blank" href="http://sale.jd.com/act/WPzKnobpCLO1N.html">
+                                            值得买精选
+                                            <i>
+                                                &gt;
+                                            </i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div clstag="h|keycount|2015|0501c" class="subitems">
+                                    <dl class="fore1">
+                                        <dt>
+                                            <a target="_blank" href="http://channel.jd.com/737-794.html">
+                                                大家电
+                                                <i>
+                                                    &gt;
+                                                </i>
+                                            </a>
+                                        </dt>
+                                        <dd>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,794,798">
+                                                平板电视
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,794,870">
+                                                空调
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,794,878">
+                                                冰箱
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,794,880">
+                                                洗衣机
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,794,823">
+                                                家庭影院
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,794,965">
+                                                DVD
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,794,1199">
+                                                迷你音响
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,794,1300">
+                                                烟机/灶具
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,794,1706">
+                                                热水器
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,794,1301">
+                                                消毒柜/洗碗机
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,794,12392">
+                                                冷柜/冰吧
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,794,12401">
+                                                酒柜
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,794,877">
+                                                家电配件
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore2">
+                                        <dt>
+                                            <a target="_blank" href="http://channel.jd.com/737-738.html">
+                                                生活电器
+                                                <i>
+                                                    &gt;
+                                                </i>
+                                            </a>
+                                        </dt>
+                                        <dd>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,738,751">
+                                                电风扇
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,738,1278">
+                                                冷风扇
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,738,749">
+                                                净化器
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,738,748">
+                                                加湿器
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,738,12394">
+                                                扫地机器人
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,738,745">
+                                                吸尘器
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,738,1279">
+                                                挂烫机/熨斗
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,738,1052">
+                                                插座
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,738,806">
+                                                电话机
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,738,897">
+                                                清洁机
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,738,1283">
+                                                除湿机
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,738,12395">
+                                                干衣机
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,738,801">
+                                                收录/音机
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,738,747">
+                                                取暖电器
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,738,825">
+                                                其它生活电器
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,738,12396">
+                                                生活电器配件
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,738,898">
+                                                净水设备
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,738,750">
+                                                饮水机
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore3">
+                                        <dt>
+                                            <a target="_blank" href="http://channel.jd.com/737-752.html">
+                                                厨房电器
+                                                <i>
+                                                    &gt;
+                                                </i>
+                                            </a>
+                                        </dt>
+                                        <dd>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,752,881">
+                                                电压力锅
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,752,753">
+                                                电饭煲
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,752,756">
+                                                豆浆机
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,752,899">
+                                                面包机
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,752,761">
+                                                咖啡机
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,752,758">
+                                                微波炉
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,752,755">
+                                                料理/榨汁机
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,752,759">
+                                                电烤箱
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,752,757">
+                                                电磁炉
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,752,882">
+                                                电饼铛/烧烤盘
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,752,902">
+                                                煮蛋器
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,752,762">
+                                                酸奶机
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,752,760">
+                                                电水壶/热水瓶
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,752,9249">
+                                                电炖锅
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,752,754">
+                                                多用途锅
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,752,901">
+                                                果蔬解毒机
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,752,12397">
+                                                养生壶/煎药壶
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,752,12398">
+                                                电热饭盒
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,752,803">
+                                                其它厨房电器
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore4">
+                                        <dt>
+                                            <a target="_blank" href="http://channel.jd.com/737-1276.html">
+                                                个护健康
+                                                <i>
+                                                    &gt;
+                                                </i>
+                                            </a>
+                                        </dt>
+                                        <dd>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1276,739">
+                                                剃须刀
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1276,742">
+                                                剃/脱毛器
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1276,741">
+                                                口腔护理
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1276,740">
+                                                电吹风
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1276,795">
+                                                美容器
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1276,1287">
+                                                理发器
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1276,12400">
+                                                卷/直发器
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1276,1291">
+                                                按摩椅
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1276,967">
+                                                按摩器
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1276,963">
+                                                足浴盆
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1276,966">
+                                                血压计
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1276,1289">
+                                                健康秤/厨房秤
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1276,1225">
+                                                血糖仪
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1276,1292">
+                                                体温计
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1276,968">
+                                                计步器/脂肪检测仪
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1276,1290">
+                                                其它健康电器
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore5">
+                                        <dt>
+                                            <a target="_blank" href="http://channel.jd.com/737-1277.html">
+                                                五金家装
+                                                <i>
+                                                    &gt;
+                                                </i>
+                                            </a>
+                                        </dt>
+                                        <dd>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1277,934">
+                                                电动工具
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1277,3979">
+                                                手动工具
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1277,6974">
+                                                仪器仪表
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1277,900">
+                                                浴霸/排气扇
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1277,1295">
+                                                灯具
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1277,6975">
+                                                LED灯
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1277,4934">
+                                                洁身器
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1277,5004">
+                                                水槽
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1277,5005">
+                                                龙头
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1277,5006">
+                                                淋浴花洒
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1277,1293">
+                                                厨卫五金
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1277,4834">
+                                                家具五金
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1277,1294">
+                                                门铃
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1277,6976">
+                                                电气开关
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1277,6977">
+                                                插座
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1277,6978">
+                                                电工电料
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1277,6979">
+                                                监控安防
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=737,1277,1299">
+                                                电线/线缆
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div clstag="h|keycount|2015|0501e" class="item-promotions">
+                                    <a target="_blank" class="img-link" href="http://sale.jd.com/act/aFjqpzHBdKkR0UWs.html">
+                                        <img width="168" height="134" src="http://img13.360buyimg.com/vclist/jfs/t1567/86/522742109/3011/83797413/5590aa6cN54d6a0da.jpg">
+                                    </a>
+                                    <a target="_blank" class="img-link" href="http://sale.jd.com/act/w8diTSEs3RcrxqW.html">
+                                        <img width="168" height="134" src="http://img14.360buyimg.com/vclist/jfs/t1438/70/499206764/4803/3ccabfa9/558cae41N3ce42344.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-id="b" id="category-item-2" class="item-sub">
+                                <div clstag="h|keycount|2015|0502d" class="item-brands">
+                                    <div class="brands-inner">
+                                        <a target="_blank" class="img-link" href="http://dashen.jd.com/">
+                                            <img width="83" height="35" src="http://img10.360buyimg.com/vclist/jfs/t577/59/1141877583/2123/21f323ae/54dac925N430994cf.jpg">
+                                        </a>
+                                        <a target="_blank" class="img-link" href="http://mall.jd.com/index-1000001961.html">
+                                            <img width="83" height="35" src="http://img11.360buyimg.com/vclist/jfs/t730/67/744582853/2078/7f4a20d7/54dac932Nb84e058e.jpg">
+                                        </a>
+                                        <a target="_blank" class="img-link" href="http://jmall.jd.com/shop/lgmobile/index.html">
+                                            <img width="83" height="35" src="http://img12.360buyimg.com/vclist/jfs/t1219/310/6758473/2511/ff30bb9e/54dac93fNa5657af2.jpg">
+                                        </a>
+                                        <a target="_blank" class="img-link" href="http://sale.jd.com/act/UaSsnjAKQNeyiY.html">
+                                            <img width="83" height="35" src="http://img13.360buyimg.com/vclist/jfs/t913/134/5602064/3019/2404feb5/54dac94aN05486981.jpg">
+                                        </a>
+                                        <a target="_blank" class="img-link" href="http://search.jd.com/Search?keyword=%E5%AF%8C%E5%A3%AB&amp;enc=utf-8">
+                                            <img width="83" height="35" src="http://img14.360buyimg.com/vclist/jfs/t1162/39/5496350/2504/75a25de4/54d9d1e9Nfb4684e5.jpg">
+                                        </a>
+                                        <a target="_blank" class="img-link" href="http://list.jd.com/list.html?cat=652%2C654%2C832&amp;ev=exbrand_%E5%B0%BC%E5%BA%B7%EF%BC%88Nikon%EF%BC%89%40&amp;page=1&amp;JL=3_&amp;cpdad=1DLSUE">
+                                            <img width="83" height="35" src="http://img10.360buyimg.com/vclist/jfs/t1168/263/575530441/2865/2cbf335/552faae9N37cbee1c.jpg">
+                                        </a>
+                                        <a target="_blank" class="img-link" href="http://doss.jd.com/">
+                                            <img width="83" height="35" src="http://img11.360buyimg.com/vclist/jfs/t928/37/544453640/4324/75cd1847/552fa8faN8e19c6fb.jpg">
+                                        </a>
+                                        <a target="_blank" class="img-link" href="http://noahedu.jd.com">
+                                            <img width="83" height="35" src="http://img12.360buyimg.com/vclist/jfs/t1297/151/82592145/3260/180f95b7/554a11bbN7bb7f655.jpg">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div clstag="h|keycount|2015|0502b" class="item-channels">
+                                    <div class="channels">
+                                        <a target="_blank" href="http://shouji.jd.com/">
+                                            手机频道
+                                            <i>
+                                                &gt;
+                                            </i>
+                                        </a>
+                                        <a target="_blank" href="http://channel.jd.com/yunyingshang.html">
+                                            网上营业厅
+                                            <i>
+                                                &gt;
+                                            </i>
+                                        </a>
+                                        <a target="_blank" href="http://channel.jd.com/peijiancheng.html">
+                                            配件城
+                                            <i>
+                                                &gt;
+                                            </i>
+                                        </a>
+                                        <a target="_blank" href="http://yingxiang.jd.com">
+                                            影像Club
+                                            <i>
+                                                &gt;
+                                            </i>
+                                        </a>
+                                        <a target="_blank" href="http://group.jd.com/site/20000151/20000091.htm">
+                                            手机社区
+                                            <i>
+                                                &gt;
+                                            </i>
+                                        </a>
+                                        <a target="_blank" href="http://sale.jd.com/act/02ZCO1Nqk7eALJw.html">
+                                            以旧换新
+                                            <i>
+                                                &gt;
+                                            </i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div clstag="h|keycount|2015|0502c" class="subitems">
+                                    <dl class="fore1">
+                                        <dt>
+                                            <a target="_blank" href="http://shouji.jd.com">
+                                                手机通讯
+                                                <i>
+                                                    &gt;
+                                                </i>
+                                            </a>
+                                        </dt>
+                                        <dd>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=9987,653,655">
+                                                手机
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=9987,653,659">
+                                                对讲机
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore2">
+                                        <dt>
+                                            <a target="_blank" href="http://mobile.jd.com">
+                                                京东通信
+                                                <i>
+                                                    &gt;
+                                                </i>
+                                            </a>
+                                        </dt>
+                                        <dd>
+                                            <a target="_blank" href="http://xuanhao.jd.com">
+                                                选号中心
+                                            </a>
+                                            <a target="_blank" href="http://mobile.jd.com/personal/personal.do">
+                                                自助服务
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore3">
+                                        <dt>
+                                            <a target="_blank" href="http://channel.jd.com/yunyingshang.html">
+                                                运营商
+                                                <i>
+                                                    &gt;
+                                                </i>
+                                            </a>
+                                        </dt>
+                                        <dd>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=9987,6880,6881">
+                                                合约机
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=9987,6880,1195">
+                                                办套餐
+                                            </a>
+                                            <a target="_blank" href="http://number.eve.jd.com/npc/initPage">
+                                                选号码
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=9987%2C6880%2C12428&amp;stock=0&amp;page=1&amp;JL=4_7_0&amp;area=1,72,2799">
+                                                装宽带
+                                            </a>
+                                            <a target="_blank" href="http://channel.jd.com/mobile.html">
+                                                中国移动
+                                            </a>
+                                            <a target="_blank" href="http://channel.jd.com/unicom.html">
+                                                中国联通
+                                            </a>
+                                            <a target="_blank" href="http://channel.jd.com/telecom.html">
+                                                中国电信
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore4">
+                                        <dt>
+                                            <a target="_blank" href="http://channel.jd.com/peijian.html">
+                                                手机配件
+                                                <i>
+                                                    &gt;
+                                                </i>
+                                            </a>
+                                        </dt>
+                                        <dd>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=9987,830,860">
+                                                电池/移动电源
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=9987,830,863">
+                                                蓝牙耳机
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=9987,830,861">
+                                                充电器/数据线
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=9987,830,862">
+                                                手机耳机
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=9987,830,867">
+                                                贴膜
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=9987,830,1099">
+                                                存储卡
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=9987,830,866">
+                                                保护套
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=9987,830,864">
+                                                车载
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=9987,830,5003">
+                                                iPhone配件
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=9987,830,868">
+                                                创意配件
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/9987-830-11301-0-0-0-0-0-0-0-1-1-1-1-1-72-4137-0.html">
+                                                便携/无线音箱
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/9987-830-11302-0-0-0-0-0-0-0-1-1-1-1-1-72-4137-0.html">
+                                                手机饰品
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore5">
+                                        <dt>
+                                            <a target="_blank" href="http://channel.jd.com/652-654.html">
+                                                摄影摄像
+                                                <i>
+                                                    &gt;
+                                                </i>
+                                            </a>
+                                        </dt>
+                                        <dd>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,654,831">
+                                                数码相机
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,654,5012">
+                                                单电/微单相机
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore6">
+                                        <dt>
+                                            <a target="_blank" href="http://channel.jd.com/652-829.html">
+                                                数码配件
+                                                <i>
+                                                    &gt;
+                                                </i>
+                                            </a>
+                                        </dt>
+                                        <dd>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,829,845">
+                                                存储卡
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,829,846">
+                                                读卡器
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,829,835">
+                                                滤镜
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,829,836">
+                                                闪光灯/手柄
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore7">
+                                        <dt>
+                                            <a target="_blank" href="http://channel.jd.com/652-828.html">
+                                                影音娱乐
+                                                <i>
+                                                    &gt;
+                                                </i>
+                                            </a>
+                                        </dt>
+                                        <dd>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,828,842">
+                                                耳机/耳麦
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,828,841">
+                                                音箱/音响
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,828,869">
+                                                麦克风
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,828,837">
+                                                MP3/MP4
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,828,962">
+                                                专业音频
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,828,5270">
+                                                苹果周边
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore8">
+                                        <dt>
+                                            <a target="_blank" href="http://channel.jd.com/652-12345.html">
+                                                智能设备
+                                                <i>
+                                                    &gt;
+                                                </i>
+                                            </a>
+                                        </dt>
+                                        <dd>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,12345,12347">
+                                                智能手环
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,12345,12348">
+                                                智能手表
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,12345,12349">
+                                                智能眼镜
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,12345,12350">
+                                                运动跟踪器
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,12345,12351">
+                                                健康监测
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,12345,12352">
+                                                智能配饰
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,12345,12353">
+                                                智能家居
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,12345,12354">
+                                                体感车
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,12345,12355">
+                                                其他配件
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fore9">
+                                        <dt>
+                                            <a target="_blank" href="http://channel.jd.com/652-12346.html">
+                                                电子教育
+                                                <i>
+                                                    &gt;
+                                                </i>
+                                            </a>
+                                        </dt>
+                                        <dd>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,12346,12358">
+                                                学生平板
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,12346,12357">
+                                                点读机/笔
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,12346,12359">
+                                                早教益智
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,12346,840">
+                                                录音笔
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,12346,1203">
+                                                电纸书
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,12346,838">
+                                                电子词典
+                                            </a>
+                                            <a target="_blank" href="http://list.jd.com/list.html?cat=652,12346,12356">
+                                                复读机
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div  class="item-promotions">
+                                    <a target="_blank" class="img-link" href="http://sale.jd.com/act/0EVDvstf6Mw.html">
+                                        <img width="168" height="134" src="http://img13.360buyimg.com/vclist/jfs/t1093/4/1328251865/5227/b695bc8f/558ece77N338e5b20.jpg"/>
+                                    </a>
+                                    <a target="_blank" class="img-link" href="http://sale.jd.com/act/hrfdcs4xOlTtD.html">
+                                        <img width="168" height="134" src="http://img14.360buyimg.com/vclist/jfs/t1153/137/1296696041/9302/3d68f929/5591f4cfN5f954f59.jpg"/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!--index_ok-->
+                <div id="navitems-2014">
+
+                    <ul id="navitems-group1">
+                        <li class="fore1" id="nav-fashion" clstag="h|keycount|2015|06a">
+                            <a href="http://channel.jd.com/fashion.html" target="_blank">服装城</a>
+                        </li>
+                        <li class="fore2" id="nav-beauty" clstag="h|keycount|2015|06b">
+                            <a href="http://channel.jd.com/beautysale.html" target="_blank">美妆馆</a>
+                        </li>
+                        <li class="fore3" id="nav-chaoshi" clstag="h|keycount|2015|06c">
+                            <a href="http://channel.jd.com/chaoshi.html" target="_blank">美食</a>
+                        </li>
+                        <li class="fore4" id="nav-jdww" clstag="h|keycount|2015|06d">
+                            <a href="http://www.jd.hk/" target="_blank">全球购</a>
+                        </li>
+                    </ul>
+                    <div class="spacer"></div>
+                    <ul id="navitems-group2">
+                        <li class="fore1" id="nav-red" clstag="h|keycount|2015|06e">
+                            <a href="http://red.jd.com/" target="_blank">闪购</a>
+                        </li>
+                        <li class="fore2" id="nav-tuan" clstag="h|keycount|2015|06f">
+                            <a href="http://tuan.jd.com/" target="_blank">团购</a>
+                        </li>
+                        <li class="fore3" id="nav-auction" clstag="h|keycount|2015|06g">
+                            <a href="http://auction.jd.com/" target="_blank">夺宝岛</a>
+                        </li>
+                        <li class="fore4" id="nav-jr" clstag="h|keycount|2015|06h">
+                            <a href="http://jr.jd.com/" target="_blank">金融</a>
+                        </li>
+                        <li class="fore1" id="nav-auction" clstag="h|keycount|2015|06i">
+                            <a href="http://smart.jd.com/" target="_blank">智能</a>
+                        </li>
+                    </ul>
+                </div><!--index_ok-->
+                <span class="clr"></span>
+            </div>
+        </div>
+        <!---------左侧导航菜单结束------------->
+
+        <script src="js/jquery.js" type="text/javascript"></script> 
+        <script  type="text/javascript">
+            $(function() {
+                $(".dd-inner").children(".item").hover(function() { //一级导航悬浮
+                    $(this).addClass("hover").siblings(".item").removeClass("hover");
+                    var index = $(this).index();
+                    $(".dorpdown-layer").children(".item-sub").hide();
+                    $(".dorpdown-layer").children(".item-sub").eq(index).show();
+
+                })
+                $(".dd-inner").hover(function() { //整个导航菜单悬浮，是否显示二级导航到出厂
+                    $("#index_menus_sub").show();
+                }, function() {
+                    $("#index_menus_sub").hide();
+                    $('.item').removeClass("hover");
+                })
+                $("#index_menus_sub").children(".item-sub").hover(function() { //二级导航悬浮
+                    var index = $(this).index();
+                    $(".dd-inner").children(".item").eq(index).addClass("hover");
+                    $("#index_menus_sub").show();
+                }, function() {
+                    $("#index_menus_sub").hide();
+                    $(".dd-inner").children(".item").removeClass("hover");
+                })
+            })
+        </script>  
+    </body>
+</html>
+
+<!-- 以下是统计及其他信息，与演示无关，不必理会 -->
+
+<p class="vad">
+    <a href="http://www.sucaihuo.com/" target="_blank">sucaihuo.com</a>
+    <a href="http://www.sucaihuo.com/js/301.html" target="_blank">说 明</a>
+    <a href="http://www.sucaihuo.com/js/301.html" target="_blank">下 载</a>
+</p>
+<style type="text/css">
+    .vad { margin: 250px 0 5px; font-family: Consolas,arial,宋体,sans-serif; text-align:center;}
+    .vad a { display: inline-block; height: 36px; line-height: 36px; margin: 0 5px; padding: 0 50px; font-size: 14px; text-align:center; color:#eee; text-decoration: none; background-color: #222;}
+    .vad a:hover { color: #fff; background-color: #000;}
+    .thead { width: 728px; height: 90px; margin: 0 auto; border-bottom: 40px solid #fff;}
+</style>
+<div style="width:728px;margin:0 auto">
+    <script type="text/javascript">
+        /*700*90 创建于 2015-06-27*/
+        var cpro_id = "u2176575";
+    </script>
+    <script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+
