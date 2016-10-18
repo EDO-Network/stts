@@ -1,0 +1,24 @@
+.nav-category .panel-body {
+    padding: 0px;
+}
+
+.nav-category ul {
+    margin: 0 10px 30px 10px;
+    padding: 0;
+}
+
+.nav-category li{
+    margin-left: 0;
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px dashed #e1e1e1;
+    padding-left: 3px;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nav-category li i{
+    color: #8c8c8c;
+}

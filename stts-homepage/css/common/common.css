@@ -31,6 +31,18 @@ img {
     border-radius: 0px;
 }
 
+.panel-heading {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.panel-primary>.panel-heading {
+    color: #fff;
+    background-color: #0c63a9;
+    border-color: #0c63a9;
+}
+
+
 .table{
     margin-bottom: 0px;
 }

@@ -1,6 +1,3 @@
-/**
- * 服务机构后台管理首页
- */
 var Index = React.createClass({
     render: function () {
         return (

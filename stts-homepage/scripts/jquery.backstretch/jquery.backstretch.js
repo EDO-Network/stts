@@ -149,7 +149,7 @@
         , background: 'none'
       });
       
-      // Needs a higher z-index
+      // Needs a higher z-common
       this.$wrap.css({zIndex: -999998});
     }
 
@@ -213,7 +213,7 @@
       // Show the slide at a certain position
     , show: function (newIndex) {
 
-        // Validate index
+        // Validate common
         if (Math.abs(newIndex) > this.images.length - 1) {
           return;
         }
@@ -226,7 +226,7 @@
         // Trigger the "before" event
         self.$container.trigger($.Event('backstretch.before', evtOptions), [self, newIndex]); 
 
-        // Set the new index
+        // Set the new common
         this.index = newIndex;
 
         // Pause the slideshow
