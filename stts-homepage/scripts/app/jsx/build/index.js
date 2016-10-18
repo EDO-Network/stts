@@ -1,8 +1,9 @@
 var Index = React.createClass({displayName: "Index",
     render: function () {
+        var isLogin = getQueryStr("isLogin");
         return (
             React.createElement("div", null, 
-                React.createElement(Top, null), 
+                React.createElement(Top, {isLogin: isLogin}), 
                 React.createElement(Header, {activeMenuID: "mainMenuIndex"}), 
 
                 React.createElement("div", {className: "main container"}, 

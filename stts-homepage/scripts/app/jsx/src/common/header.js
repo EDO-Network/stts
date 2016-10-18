@@ -2,10 +2,7 @@ var Header = React.createClass({
     componentDidMount: function () {
         var activeMenuID = this.props.activeMenuID;
 
-        if(activeMenuID == "mainMenuLogin"){
-            $("#" + activeMenuID).show();
-        }
-
+        $("#" + activeMenuID).show();
         $("#" + activeMenuID).addClass("active");
     },
 
@@ -21,6 +18,8 @@ var Header = React.createClass({
                                 <span className="service-icon">SERVICE</span>
                             </li>
                             <li id="mainMenuLogin" style={{display:"none"}}><a href="javascript:void(0)">用户登录</a></li>
+                            <li id="mainMenuSelectCompany" style={{display:"none"}}><a href="javascript:void(0)">选择企业</a></li>
+                            <li id="mainMenuRegisterUser" style={{display:"none"}}><a href="javascript:void(0)">注册用户</a></li>
                             <li id="mainMenuIndex"><a href="javascript:void(0)">首页</a></li>
                             <li id="mainMenuService"><a href="javascript:void(0)">服务产品</a></li>
                             <li id="mainMenuOrg"><a href="javascript:void(0)">服务机构</a></li>

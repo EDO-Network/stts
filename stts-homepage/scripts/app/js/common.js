@@ -176,28 +176,6 @@ role = {
     readonly: "readonly"
 };
 
-Page = {
-    login: "/page/login.html",
-    serviceDetail: "/page/service_detail.html",
-
-
-    bigdOrderList: "/page/bigd-order-list.html",
-    bigdOrderDetail: "/page/bigd-order-detail.html",
-    bigdNewOrder: "/page/bigd-new-order.html",
-    systemManage: "/page/system-manage.html",
-    creditSearch: "/page/credit-search.html",
-    creditSearchHistory: "/page/credit_search_history.html",
-    creditSearchLog: "/page/credit_search_log.html",
-    creditBasicReport: "/page/credit_basic_report.html",
-    profile: "/page/profile.html",
-    password: "/page/password.html",
-
-    users: "/pages/users.html",
-    user: "/pages/user.html",
-    admin: "/pages/admin.html",
-    access: "/pages/access.html",
-};
-
 var CmsPicture = {
     contentID: 0,
     createTime: 0,

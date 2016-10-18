@@ -12,6 +12,9 @@ var Login = React.createClass({
 
 
 var LoginForm = React.createClass({
+    handleLogin:function(){
+        location.href = "select_company.html";
+    },
     render: function () {
         return (
             <div className="login-form hot-tab-wrap mt-20">
