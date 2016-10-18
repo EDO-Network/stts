@@ -1,8 +1,9 @@
 var Index = React.createClass({displayName: "Index",
     render: function () {
+        var isLogin = getQueryStr("isLogin");
         return (
             React.createElement("div", null, 
-                React.createElement(Top, null), 
+                React.createElement(Top, {isLogin: isLogin}), 
                 React.createElement(Header, {activeMenuID: "mainMenuIndex"}), 
 
                 React.createElement("div", {className: "main container"}, 
@@ -16,7 +17,8 @@ var Index = React.createClass({displayName: "Index",
                     ), 
                     React.createElement("div", {className: "clearfix"}), 
                     React.createElement(Statistics, null), 
-                    React.createElement(Choice, null)
+                    React.createElement(Choice, null), 
+                    React.createElement(Hot, null)
                 )
             )
         );
@@ -148,21 +150,131 @@ var Choice = React.createClass({displayName: "Choice",
     render: function () {
         return (
             React.createElement("div", {className: "choice-wrap"}, 
-                React.createElement("h2", null, "精选服务"), 
-                React.createElement("div", null, 
-                    React.createElement("div", {className: "left-wrap"}, 
-                        React.createElement("div", {className: "panel panel-default"}, 
-                            React.createElement("div", {className: "panel-heading"}, 
-                                React.createElement("i", {className: "fa fa-search", "aria-hidden": "true"}), 
-                                React.createElement("span", null, " 您要寻找什么服务？")
-                            ), 
-                            React.createElement("div", {className: "panel-body"}
-
-                            )
-                        )
+                React.createElement("div", {className: "clearfix"}, 
+                    React.createElement("div", {className: "pull-left"}, 
+                        React.createElement("h2", null, "精选服务")
                     ), 
-                    React.createElement("div", {className: "right-wrap"}
+                    React.createElement("div", {className: "pull-right lh-66"}, 
+                        React.createElement("a", {href: "javascript:void(0)"}, 
+                            React.createElement("span", null, "换一批"), " ", React.createElement("i", {className: "fa fa-refresh", "aria-hidden": "true"})
+                        )
                     )
+                ), 
+                React.createElement("div", {className: "row"}, 
+                    React.createElement("div", {className: "col-sm-3"}, React.createElement(ServicePreview, null)), 
+                    React.createElement("div", {className: "col-sm-3"}, React.createElement(ServicePreview, null)), 
+                    React.createElement("div", {className: "col-sm-3"}, React.createElement(ServicePreview, null)), 
+                    React.createElement("div", {className: "col-sm-3"}, React.createElement(ServicePreview, null))
+                )
+                
+                    //<div>
+                    //    <div className="left-wrap">
+                    //        <div className="panel panel-default">
+                    //            <div className="panel-heading">
+                    //                <i className="fa fa-search" aria-hidden="true"></i>
+                    //                <span>&nbsp;您要寻找什么服务？</span>
+                    //            </div>
+                    //            <div className="panel-body">
+                    //                <div>
+                    //                    <div className="pull-left w-90">分类</div>
+                    //                    <div>
+                    //                        <select className="form-control input-sm">
+                    //                            <option>全部</option>
+                    //                            <option>人才引培</option>
+                    //                            <option>技术创新</option>
+                    //                            <option>财务指导</option>
+                    //                            <option>......</option>
+                    //                        </select>
+                    //                    </div>
+                    //                </div>
+                    //                <div className="mt-10">
+                    //                    <div className="pull-left w-90">子分类</div>
+                    //                    <div>
+                    //                        <select className="form-control input-sm">
+                    //                            <option>全部</option>
+                    //                            <option>高管培训</option>
+                    //                            <option>人才引进</option>
+                    //                            <option>财务指导</option>
+                    //                            <option>......</option>
+                    //                        </select>
+                    //                    </div>
+                    //                </div>
+                    //            </div>
+                    //        </div>
+                    //    </div>
+                    //    <div className="right-wrap container-fluid">
+                    //
+                    //    </div>
+                    //</div>
+                
+            )
+        );
+    }
+});
+
+var Hot = React.createClass({displayName: "Hot",
+    render: function () {
+        return (
+            React.createElement("div", {className: "hot-tab-wrap mt-20"}, 
+                React.createElement("ul", {className: "nav nav-tabs", role: "tablist"}, 
+                    React.createElement("li", {role: "presentation", className: "active"}, React.createElement("a", {href: "#service", role: "tab", "data-toggle": "tab"}, "热门服务")
+                    ), 
+                    React.createElement("li", {role: "presentation"}, React.createElement("a", {href: "#org", role: "tab", "data-toggle": "tab"}, "加盟机构"))
+                ), 
+
+                React.createElement("a", {className: "more", href: "javascript:void(0)"}, 
+                    React.createElement("span", null, "更多"), " ", React.createElement("i", {className: "fa fa-ellipsis-h", "aria-hidden": "true"})
+                ), 
+
+                React.createElement("div", {className: "tab-content"}, 
+                    React.createElement("div", {role: "tabpanel", className: "tab-pane active", id: "service"}, 
+                        React.createElement(Service, null)
+                    ), 
+                    React.createElement("div", {role: "tabpanel", className: "tab-pane", id: "org"}, 
+                        React.createElement(Org, null)
+                    )
+                )
+            )
+        );
+    }
+});
+
+var Service = React.createClass({displayName: "Service",
+    render: function () {
+        return (
+            React.createElement("div", {className: "service-wrap"}, 
+                React.createElement("div", {className: "row"}, 
+                    React.createElement("div", {className: "col-sm-3"}, React.createElement(ServicePreview, null)), 
+                    React.createElement("div", {className: "col-sm-3"}, React.createElement(ServicePreview, null)), 
+                    React.createElement("div", {className: "col-sm-3"}, React.createElement(ServicePreview, null)), 
+                    React.createElement("div", {className: "col-sm-3"}, React.createElement(ServicePreview, null))
+                ), 
+                React.createElement("div", {className: "row mt-10"}, 
+                    React.createElement("div", {className: "col-sm-3"}, React.createElement(ServicePreview, null)), 
+                    React.createElement("div", {className: "col-sm-3"}, React.createElement(ServicePreview, null)), 
+                    React.createElement("div", {className: "col-sm-3"}, React.createElement(ServicePreview, null)), 
+                    React.createElement("div", {className: "col-sm-3"}, React.createElement(ServicePreview, null))
+                )
+            )
+        );
+    }
+});
+
+var Org = React.createClass({displayName: "Org",
+    render: function () {
+        return (
+            React.createElement("div", {className: "org-wrap"}, 
+                React.createElement("div", {className: "row"}, 
+                    React.createElement("div", {className: "col-sm-3"}, React.createElement(OrgPreview, null)), 
+                    React.createElement("div", {className: "col-sm-3"}, React.createElement(OrgPreview, null)), 
+                    React.createElement("div", {className: "col-sm-3"}, React.createElement(OrgPreview, null)), 
+                    React.createElement("div", {className: "col-sm-3"}, React.createElement(OrgPreview, null))
+                ), 
+                React.createElement("div", {className: "row mt-10"}, 
+                    React.createElement("div", {className: "col-sm-3"}, React.createElement(OrgPreview, null)), 
+                    React.createElement("div", {className: "col-sm-3"}, React.createElement(OrgPreview, null)), 
+                    React.createElement("div", {className: "col-sm-3"}, React.createElement(OrgPreview, null)), 
+                    React.createElement("div", {className: "col-sm-3"}, React.createElement(OrgPreview, null))
                 )
             )
         );

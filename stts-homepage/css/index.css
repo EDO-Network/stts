@@ -78,8 +78,18 @@
     font-weight: 600;
 }
 
-.main .choice-wrap h2{
+.main h2{
     color: #333;
     font-size: 20px;
     line-height: 36px;
+}
+
+.main .hot-tab-wrap {
+    position: relative;
+}
+
+.main .hot-tab-wrap .more{
+    position: absolute;
+    right: 10px;
+    top: 10px;
 }
