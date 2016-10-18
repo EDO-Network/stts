@@ -1,6 +1,11 @@
 var Header = React.createClass({displayName: "Header",
     componentDidMount: function () {
         var activeMenuID = this.props.activeMenuID;
+
+        if(activeMenuID == "mainMenuLogin"){
+            $("#" + activeMenuID).show();
+        }
+
         $("#" + activeMenuID).addClass("active");
     },
 
@@ -15,9 +20,10 @@ var Header = React.createClass({displayName: "Header",
                                 " 企服超市 ", 
                                 React.createElement("span", {className: "service-icon"}, "SERVICE")
                             ), 
-                            React.createElement("li", {id: "mainMenuIndex"}, React.createElement("a", {href: "#"}, "首页")), 
-                            React.createElement("li", {id: "mainMenuService"}, React.createElement("a", {href: "#"}, "服务产品")), 
-                            React.createElement("li", {id: "mainMenuOrg"}, React.createElement("a", {href: "#"}, "服务机构"))
+                            React.createElement("li", {id: "mainMenuLogin", style: {display:"none"}}, React.createElement("a", {href: "javascript:void(0)"}, "用户登录")), 
+                            React.createElement("li", {id: "mainMenuIndex"}, React.createElement("a", {href: "javascript:void(0)"}, "首页")), 
+                            React.createElement("li", {id: "mainMenuService"}, React.createElement("a", {href: "javascript:void(0)"}, "服务产品")), 
+                            React.createElement("li", {id: "mainMenuOrg"}, React.createElement("a", {href: "javascript:void(0)"}, "服务机构"))
                         )
                     )
                     

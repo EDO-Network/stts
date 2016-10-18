@@ -17,6 +17,7 @@ var Index = React.createClass({
                     <div className="clearfix"></div>
                     <Statistics/>
                     <Choice/>
+                    <Hot/>
                 </div>
             </div>
         );
@@ -148,21 +149,131 @@ var Choice = React.createClass({
     render: function () {
         return (
             <div className="choice-wrap">
-                <h2>精选服务</h2>
-                <div>
-                    <div className="left-wrap">
-                        <div className="panel panel-default">
-                            <div className="panel-heading">
-                                <i className="fa fa-search" aria-hidden="true"></i>
-                                <span>&nbsp;您要寻找什么服务？</span>
-                            </div>
-                            <div className="panel-body">
+                <div className="clearfix">
+                    <div className="pull-left">
+                        <h2>精选服务</h2>
+                    </div>
+                    <div className="pull-right lh-66">
+                        <a href="javascript:void(0)">
+                            <span>换一批</span>&nbsp;<i className="fa fa-refresh" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-sm-3"><ServicePreview/></div>
+                    <div className="col-sm-3"><ServicePreview/></div>
+                    <div className="col-sm-3"><ServicePreview/></div>
+                    <div className="col-sm-3"><ServicePreview/></div>
+                </div>
+                {
+                    //<div>
+                    //    <div className="left-wrap">
+                    //        <div className="panel panel-default">
+                    //            <div className="panel-heading">
+                    //                <i className="fa fa-search" aria-hidden="true"></i>
+                    //                <span>&nbsp;您要寻找什么服务？</span>
+                    //            </div>
+                    //            <div className="panel-body">
+                    //                <div>
+                    //                    <div className="pull-left w-90">分类</div>
+                    //                    <div>
+                    //                        <select className="form-control input-sm">
+                    //                            <option>全部</option>
+                    //                            <option>人才引培</option>
+                    //                            <option>技术创新</option>
+                    //                            <option>财务指导</option>
+                    //                            <option>......</option>
+                    //                        </select>
+                    //                    </div>
+                    //                </div>
+                    //                <div className="mt-10">
+                    //                    <div className="pull-left w-90">子分类</div>
+                    //                    <div>
+                    //                        <select className="form-control input-sm">
+                    //                            <option>全部</option>
+                    //                            <option>高管培训</option>
+                    //                            <option>人才引进</option>
+                    //                            <option>财务指导</option>
+                    //                            <option>......</option>
+                    //                        </select>
+                    //                    </div>
+                    //                </div>
+                    //            </div>
+                    //        </div>
+                    //    </div>
+                    //    <div className="right-wrap container-fluid">
+                    //
+                    //    </div>
+                    //</div>
+                }
+            </div>
+        );
+    }
+});
 
-                            </div>
-                        </div>
+var Hot = React.createClass({
+    render: function () {
+        return (
+            <div className="hot-tab-wrap mt-20">
+                <ul className="nav nav-tabs" role="tablist">
+                    <li role="presentation" className="active"><a href="#service" role="tab" data-toggle="tab">热门服务</a>
+                    </li>
+                    <li role="presentation"><a href="#org" role="tab" data-toggle="tab">加盟机构</a></li>
+                </ul>
+
+                <a className="more" href="javascript:void(0)">
+                    <span>更多</span>&nbsp;<i className="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </a>
+
+                <div className="tab-content">
+                    <div role="tabpanel" className="tab-pane active" id="service">
+                        <Service/>
                     </div>
-                    <div className="right-wrap">
+                    <div role="tabpanel" className="tab-pane" id="org">
+                        <Org/>
                     </div>
+                </div>
+            </div>
+        );
+    }
+});
+
+var Service = React.createClass({
+    render: function () {
+        return (
+            <div className="service-wrap">
+                <div className="row">
+                    <div className="col-sm-3"><ServicePreview/></div>
+                    <div className="col-sm-3"><ServicePreview/></div>
+                    <div className="col-sm-3"><ServicePreview/></div>
+                    <div className="col-sm-3"><ServicePreview/></div>
+                </div>
+                <div className="row mt-10">
+                    <div className="col-sm-3"><ServicePreview/></div>
+                    <div className="col-sm-3"><ServicePreview/></div>
+                    <div className="col-sm-3"><ServicePreview/></div>
+                    <div className="col-sm-3"><ServicePreview/></div>
+                </div>
+            </div>
+        );
+    }
+});
+
+var Org = React.createClass({
+    render: function () {
+        return (
+            <div className="org-wrap">
+                <div className="row">
+                    <div className="col-sm-3"><OrgPreview/></div>
+                    <div className="col-sm-3"><OrgPreview/></div>
+                    <div className="col-sm-3"><OrgPreview/></div>
+                    <div className="col-sm-3"><OrgPreview/></div>
+                </div>
+                <div className="row mt-10">
+                    <div className="col-sm-3"><OrgPreview/></div>
+                    <div className="col-sm-3"><OrgPreview/></div>
+                    <div className="col-sm-3"><OrgPreview/></div>
+                    <div className="col-sm-3"><OrgPreview/></div>
                 </div>
             </div>
         );

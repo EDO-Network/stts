@@ -1,42 +1,9 @@
-var LoginActions = Reflux.createActions(['login']);
-
-var LoginStore = Reflux.createStore({
-
-    listenables: [LoginActions],
-
-    onLogin: function (data) {
-        var url = SiteProperties.serverURL + CommonAPI.login;
-
-        var callback = function (result) {
-            if (result.status == 200) {
-                sessionStorage.setItem(SessionKey.accessToken, result.data.token);
-                sessionStorage.setItem(SessionKey.operatorID, result.data.userID);
-                // 用户信息用的地方比较多，以json格式存储进sessionStorage
-                sessionStorage.setItem(SessionKey.user, JSON.stringify(result.data.user));
-                location.href = SiteProperties.webURL + Page.systemManage;
-            } else {
-                var message = Message.LOGIN_FAILED;
-                $("#messageBox").show().text(message);
-            }
-        };
-
-        ajaxPost(url, data, callback);
-    }
-});
-
 var Login = React.createClass({
-    componentDidMount(){
-        $.backstretch("../img/bg/loginBg.jpg");
-    },
     render: function () {
         return (
-            <div className="container">
-                <h1 id="logoWrap" className="text-center">
-                    {
-                        //<img src="../img/zslogoB.png"></img>
-                    }
-                </h1>
-                <h2 id="loginTitle" className="text-center">个人审贷资信验证平台</h2>
+            <div>
+                <Top/>
+                <Header activeMenuID="mainMenuLogin"/>
                 <LoginForm/>
             </div>
         );
@@ -45,46 +12,61 @@ var Login = React.createClass({
 
 
 var LoginForm = React.createClass({
-    getInitialState: function () {
-        return {
-            loginID: "",
-            password: ""
-        }
-    },
-    handleLogin: function () {
-        this.state.loginID = this.refs.inputLoginID.value;
-        this.state.password = this.refs.inputPassword.value;
-        if(this.state.loginID == "" || this.state.password == ""){
-            alert(Message.LOGIN_INFO_REQUIRED);
-            return;
-        }
-        LoginActions.login(this.state);
-    },
     render: function () {
         return (
-            <div id="loginForm">
-                <MessageBox/>
-                <div className="loginFrame">
-                    <div className="form-group">
-                        <label>用户名</label>
-                        <input ref="inputLoginID" type="text" placeholder="请输入用户名" className="form-control input-lg"/>
-                    </div>
-                    <div className="form-group">
-                        <label>密码</label>
+            <div className="login-form hot-tab-wrap mt-20">
+                <ul className="nav nav-tabs login-tabs" role="tablist">
+                    <li role="presentation" className="active"><a href="#verify" role="tab" data-toggle="tab">验证码登录</a>
+                    </li>
+                    <li role="presentation"><a href="#password" role="tab" data-toggle="tab">密码登录</a></li>
+                </ul>
 
-                        <div className="pull-right">
-                            <a href="#">忘记密码？</a>
+                <div className="tab-content login-frame">
+                    <div role="tabpanel" className="tab-pane active" id="verify">
+                        <div className="form-group">
+                            <label>手机号</label>
+                            <input type="text" placeholder="请输入手机号" className="form-control"/>
                         </div>
-                        <input ref="inputPassword" type="password" placeholder="请输入密码"
-                               className="form-control input-lg"/>
+                        <div className="form-group">
+                            <label>验证码</label>
+
+                            <div className="input-group">
+                                <input type="text" placeholder="请输入验证码"
+                                       className="form-control"/>
+                                  <span className="input-group-btn">
+                                    <button className="btn btn-default" type="button">获取验证码</button>
+                                  </span>
+                            </div>
+                        </div>
+                        <div className="form-group">
+                            <button type="button" className="btn btn-primary btn-block"
+                                    onClick={this.handleLogin}>
+                                登录
+                            </button>
+                        </div>
                     </div>
-                    <div className="form-group">
-                        <button type="button" className="btn btn-primary btn-lg btn-block" onClick={this.handleLogin}>
-                            登录
-                        </button>
+                    <div role="tabpanel" className="tab-pane" id="password">
+                        <div className="form-group">
+                            <label>手机号</label>
+                            <input type="text" placeholder="请输入手机号" className="form-control"/>
+                        </div>
+                        <div className="form-group">
+                            <label>密码</label>
+
+                            <div className="pull-right">
+                                <a href="#">忘记密码？</a>
+                            </div>
+                            <input ref="inputPassword" type="password" placeholder="请输入密码"
+                                   className="form-control"/>
+                        </div>
+                        <div className="form-group">
+                            <button type="button" className="btn btn-primary btn-block"
+                                    onClick={this.handleLogin}>
+                                登录
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <Footer/>
             </div>
         );
     }
