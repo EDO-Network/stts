@@ -149,7 +149,7 @@
         , background: 'none'
       });
       
-      // Needs a higher z-common
+      // Needs a higher z-widgets
       this.$wrap.css({zIndex: -999998});
     }
 
@@ -213,7 +213,7 @@
       // Show the slide at a certain position
     , show: function (newIndex) {
 
-        // Validate common
+        // Validate widgets
         if (Math.abs(newIndex) > this.images.length - 1) {
           return;
         }
@@ -226,7 +226,7 @@
         // Trigger the "before" event
         self.$container.trigger($.Event('backstretch.before', evtOptions), [self, newIndex]); 
 
-        // Set the new common
+        // Set the new widgets
         this.index = newIndex;
 
         // Pause the slideshow

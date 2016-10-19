@@ -3,7 +3,7 @@ var OrgPreview = React.createClass({displayName: "OrgPreview",
         return (
             React.createElement("div", {className: "org-preview-wrap text-center clearfix"}, 
                 React.createElement("div", null, 
-                    React.createElement("div", null, React.createElement("img", {className: "w-per-100", src: "../img/widgets/org-preview.png"})),
+                    React.createElement("div", null, React.createElement("img", {className: "w-per-100", src: "../img/common/org-preview.png"})), 
                     React.createElement("div", {className: "mt-5 mb-5"}, "中国信保")
                 ), 
                 React.createElement("div", null, 

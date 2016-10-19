@@ -76,9 +76,9 @@ var SideBar = React.createClass({
     componentDidUpdate: function () {
         //var $contentChannelTree = $("#contentChannelTree");
         //$contentChannelTree.children().remove();
-        //$.each(this.state.channelList, function (common, item) {
-        //    var common = 0;
-        //    createChannelTree($contentChannelTree, item, common);
+        //$.each(this.state.channelList, function (widgets, item) {
+        //    var widgets = 0;
+        //    createChannelTree($contentChannelTree, item, widgets);
         //});
     },
     handleToggleSub: function (event) {

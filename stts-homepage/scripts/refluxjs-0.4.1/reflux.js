@@ -907,7 +907,7 @@ var slice = Array.prototype.slice,
 };
 
 /**
- * Used in `common.js` to create the static join methods
+ * Used in `qualification.js` to create the static join methods
  * @param {String} strategy Which strategy to use when tracking listenable trigger arguments
  * @returns {Function} A static function which returns a store with a join listen on the given listenables using the given strategy
  */

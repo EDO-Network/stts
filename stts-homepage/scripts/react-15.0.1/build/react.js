@@ -1235,11 +1235,11 @@ function getNodeAfter(parentNode, node) {
 }
 
 /**
- * Inserts `childNode` as a child of `parentNode` at the `common`.
+ * Inserts `childNode` as a child of `parentNode` at the `widgets`.
  *
  * @param {DOMElement} parentNode Parent node in which to insert.
  * @param {DOMElement} childNode Child node to insert.
- * @param {number} common Index at which to insert the child.
+ * @param {number} widgets Index at which to insert the child.
  * @internal
  */
 var insertChildAt = createMicrosoftUnsafeLocalFunction(function (parentNode, childNode, referenceNode) {
@@ -1940,7 +1940,7 @@ var getMarkupWrap = _dereq_(152);
 var invariant = _dereq_(156);
 
 var OPEN_TAG_NAME_EXP = /^(<[^ \/>]+)/;
-var RESULT_INDEX_ATTR = 'data-danger-common';
+var RESULT_INDEX_ATTR = 'data-danger-widgets';
 
 /**
  * Extracts the `nodeName` from a string of markup.
@@ -1990,7 +1990,7 @@ var Danger = {
 
       // This for-in loop skips the holes of the sparse array. The order of
       // iteration should follow the order of assignment, which happens to match
-      // numerical common order, but we don't rely on that.
+      // numerical widgets order, but we don't rely on that.
       var resultIndex;
       for (resultIndex in markupListByNodeName) {
         if (markupListByNodeName.hasOwnProperty(resultIndex)) {
@@ -2000,7 +2000,7 @@ var Danger = {
           // attribute.  If the markup does not start with a < character, it
           // will be discarded below (with an appropriate console.error).
           markupListByNodeName[resultIndex] = markup.replace(OPEN_TAG_NAME_EXP,
-          // This common will be parsed back out below.
+          // This widgets will be parsed back out below.
           '$1 ' + RESULT_INDEX_ATTR + '="' + resultIndex + '" ');
         }
       }
@@ -2016,7 +2016,7 @@ var Danger = {
           resultIndex = +renderNode.getAttribute(RESULT_INDEX_ATTR);
           renderNode.removeAttribute(RESULT_INDEX_ATTR);
 
-          !!resultList.hasOwnProperty(resultIndex) ? "development" !== 'production' ? invariant(false, 'Danger: Assigning to an already-occupied result common.') : invariant(false) : void 0;
+          !!resultList.hasOwnProperty(resultIndex) ? "development" !== 'production' ? invariant(false, 'Danger: Assigning to an already-occupied result widgets.') : invariant(false) : void 0;
 
           resultList[resultIndex] = renderNode;
 
@@ -2031,7 +2031,7 @@ var Danger = {
 
     // Although resultList was populated out of order, it should now be a dense
     // array.
-    !(resultListAssignmentCount === resultList.length) ? "development" !== 'production' ? invariant(false, 'Danger: Did not assign to every common of resultList.') : invariant(false) : void 0;
+    !(resultListAssignmentCount === resultList.length) ? "development" !== 'production' ? invariant(false, 'Danger: Did not assign to every widgets of resultList.') : invariant(false) : void 0;
 
     !(resultList.length === markupList.length) ? "development" !== 'production' ? invariant(false, 'Danger: Expected markup to render %s nodes, but rendered %s.', markupList.length, resultList.length) : invariant(false) : void 0;
 
@@ -4287,7 +4287,7 @@ function forEachSingleChild(bookKeeping, child, name) {
 /**
  * Iterates through children that are typically specified as `props.children`.
  *
- * The provided forEachFunc(child, common) will be called for each
+ * The provided forEachFunc(child, widgets) will be called for each
  * leaf child.
  *
  * @param {?*} children Children tree container.
@@ -4362,7 +4362,7 @@ function mapIntoWithKeyPrefixInternal(children, array, prefix, func, context) {
 /**
  * Maps children that are typically specified as `props.children`.
  *
- * The provided mapFunction(child, key, common) will be called for each
+ * The provided mapFunction(child, key, widgets) will be called for each
  * leaf child.
  *
  * @param {?*} children Children tree container.
@@ -5568,7 +5568,7 @@ var ReactCompositeComponentMixin = {
 
     if ("development" !== 'production') {
       // Since plain JS classes are defined without any special initialization
-      // logic, we can not catch common errors early. Therefore, we have to
+      // logic, we can not catch widgets errors early. Therefore, we have to
       // catch them here, at initialization time, instead.
       "development" !== 'production' ? warning(!inst.getInitialState || inst.getInitialState.isReactClassApproved, 'getInitialState was defined on %s, a plain JavaScript class. ' + 'This is only supported for classes created using React.createClass. ' + 'Did you mean to define a state property instead?', this.getName() || 'a component') : void 0;
       "development" !== 'production' ? warning(!inst.getDefaultProps || inst.getDefaultProps.isReactClassApproved, 'getDefaultProps was defined on %s, a plain JavaScript class. ' + 'This is only supported for classes created using React.createClass. ' + 'Use a static property to define defaultProps instead.', this.getName() || 'a component') : void 0;
@@ -8940,7 +8940,7 @@ module.exports = ReactDOMTextarea;
 var invariant = _dereq_(156);
 
 /**
- * Return the lowest common ancestor of A and B, or null if they are in
+ * Return the lowest widgets ancestor of A and B, or null if they are in
  * different trees.
  */
 function getLowestCommonAncestor(instA, instB) {
@@ -9027,7 +9027,7 @@ function traverseTwoPhase(inst, fn, arg) {
  * Traverses the ID hierarchy and invokes the supplied `cb` on any IDs that
  * should would receive a `mouseEnter` or `mouseLeave` event.
  *
- * Does not invoke the callback on the nearest common ancestor because nothing
+ * Does not invoke the callback on the nearest widgets ancestor because nothing
  * "entered" or "left" that element.
  */
 function traverseEnterLeave(from, to, fn, argFrom, argTo) {
@@ -11143,10 +11143,10 @@ var DOCUMENT_FRAGMENT_NODE_TYPE = 11;
 var instancesByReactRootID = {};
 
 /**
- * Finds the common of the first character
- * that's not common between the two given strings.
+ * Finds the widgets of the first character
+ * that's not widgets between the two given strings.
  *
- * @return {number} the common of the character where the strings diverge
+ * @return {number} the widgets of the character where the strings diverge
  */
 function firstDifferenceIndex(string1, string2) {
   var minLen = Math.min(string1.length, string2.length);
@@ -11600,10 +11600,10 @@ var flattenChildren = _dereq_(119);
 var invariant = _dereq_(156);
 
 /**
- * Make an update for markup to be rendered and inserted at a supplied common.
+ * Make an update for markup to be rendered and inserted at a supplied widgets.
  *
  * @param {string} markup Markup that renders into an element.
- * @param {number} toIndex Destination common.
+ * @param {number} toIndex Destination widgets.
  * @private
  */
 function makeInsertMarkup(markup, afterNode, toIndex) {
@@ -11619,10 +11619,10 @@ function makeInsertMarkup(markup, afterNode, toIndex) {
 }
 
 /**
- * Make an update for moving an existing element to another common.
+ * Make an update for moving an existing element to another widgets.
  *
- * @param {number} fromIndex Source common of the existing element.
- * @param {number} toIndex Destination common of the element.
+ * @param {number} fromIndex Source widgets of the existing element.
+ * @param {number} toIndex Destination widgets of the element.
  * @private
  */
 function makeMove(child, afterNode, toIndex) {
@@ -11638,7 +11638,7 @@ function makeMove(child, afterNode, toIndex) {
 }
 
 /**
- * Make an update for removing an element at an common.
+ * Make an update for removing an element at an widgets.
  *
  * @param {number} fromIndex Index of the element to remove.
  * @private
@@ -11721,7 +11721,7 @@ function processQueue(inst, updateQueue) {
 var ReactMultiChild = {
 
   /**
-   * Provides common functionality for components that must reconcile multiple
+   * Provides widgets functionality for components that must reconcile multiple
    * children. This is used by `ReactDOMComponent` to mount, update, and
    * unmount child components.
    *
@@ -11853,7 +11853,7 @@ var ReactMultiChild = {
       var updates = null;
       var name;
       // `nextIndex` will increment for each child in `nextChildren`, but
-      // `lastIndex` will be the last common visited in `prevChildren`.
+      // `lastIndex` will be the last widgets visited in `prevChildren`.
       var lastIndex = 0;
       var nextIndex = 0;
       var lastPlacedNode = null;
@@ -11905,15 +11905,15 @@ var ReactMultiChild = {
     },
 
     /**
-     * Moves a child component to the supplied common.
+     * Moves a child component to the supplied widgets.
      *
      * @param {ReactComponent} child Component to move.
-     * @param {number} toIndex Destination common of the element.
-     * @param {number} lastIndex Last common visited of the siblings of `child`.
+     * @param {number} toIndex Destination widgets of the element.
+     * @param {number} lastIndex Last widgets visited of the siblings of `child`.
      * @protected
      */
     moveChild: function (child, afterNode, toIndex, lastIndex) {
-      // If the common of `child` is less than `lastIndex`, then it needs to
+      // If the widgets of `child` is less than `lastIndex`, then it needs to
       // be moved. Otherwise, we do not need to move it because a child will be
       // inserted or moved before `child`.
       if (child._mountIndex < lastIndex) {
@@ -14916,7 +14916,7 @@ var SimpleEventPlugin = {
       case topLevelTypes.topVolumeChange:
       case topLevelTypes.topWaiting:
         // HTML Events
-        // @see http://www.w3.org/TR/html5/common.html#events-0
+        // @see http://www.w3.org/TR/html5/widgets.html#events-0
         EventConstructor = SyntheticEvent;
         break;
       case topLevelTypes.topKeyPress:
@@ -16324,7 +16324,7 @@ function dangerousStyleValue(name, value, component) {
   // whole string will be escaped when the attribute is injected into
   // the markup. If you provide unsafe user data here they can inject
   // arbitrary CSS which may be problematic (I couldn't repro this):
-  // https://www.owasp.org/common.php/XSS_Filter_Evasion_Cheat_Sheet
+  // https://www.owasp.org/widgets.php/XSS_Filter_Evasion_Cheat_Sheet
   // http://www.thespanner.co.uk/2007/11/26/ultimate-xss-css-injection/
   // This is not an XSS hole but instead a potential CSS injection issue
   // which has lead to a greater discussion about how we're going to
@@ -17419,7 +17419,7 @@ if (ExecutionEnvironment.canUseDOM) {
         // https://github.com/mishoo/UglifyJS2/blob/v2.4.20/lib/parse.js#L216
         node.innerHTML = String.fromCharCode(0xFEFF) + html;
 
-        // deleteData leaves an empty `TextNode` which offsets the common of all
+        // deleteData leaves an empty `TextNode` which offsets the widgets of all
         // children. Definitely want to avoid this.
         var textNode = node.firstChild;
         if (textNode.data.length === 1) {
@@ -17576,7 +17576,7 @@ function getComponentKey(component, index) {
     // Explicit key
     return wrapUserProvidedKey(component.key);
   }
-  // Implicit key determined by the common in the set
+  // Implicit key determined by the widgets in the set
   return index.toString(36);
 }
 
@@ -17592,7 +17592,7 @@ function escapeUserProvidedKey(text) {
 
 /**
  * Wrap a `key` value explicitly provided by the user to distinguish it from
- * implicitly-generated keys generated by a component's common in its parent.
+ * implicitly-generated keys generated by a component's widgets in its parent.
  *
  * @param {string} key Value of a user-provided `key` attribute
  * @return {string}
@@ -18038,7 +18038,7 @@ if ("development" !== 'production') {
         return inst.getName() || UNKNOWN;
       });
       var ownerInfo = [].concat(
-      // If the parent and child instances have a common owner ancestor, start
+      // If the parent and child instances have a widgets owner ancestor, start
       // with that -- otherwise we just start with the parent's owners.
       deepestCommon !== -1 ? childOwners[deepestCommon].getName() || UNKNOWN : [], ancestorOwnerNames, ancestorTag,
       // If we're warning about an invalid (non-parent) ancestry, add '...'

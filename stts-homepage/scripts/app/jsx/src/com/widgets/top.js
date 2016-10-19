@@ -2,6 +2,7 @@ var Top = React.createClass({
     getInitialState: function () {
         return {
             user: {
+                company: "中国海峡人才市场宁波分部",
                 userName: "jack",
             }
         };
@@ -10,9 +11,13 @@ var Top = React.createClass({
         return (
             <div className="top-wrap">
                 <div className="container">
+                    <ul className="top-left-menu">
+                        <li>{this.state.user.company}</li>
+                    </ul>
                     <ul className="top-right-menu">
-                        <li>您好：<a href="#">{this.state.user.userName}</a></li>
-                        <li><a href="#">企服超市</a></li>
+                        <li>您好：{this.state.user.userName}</li>
+                        <li><a href="../account_profile.html">账户设置</a></li>
+                        <li><a href="../index.html">企服超市</a></li>
                         <li><a href="#">我是服务机构</a></li>
                         <li><a href="#">帮助中心</a></li>
                         <li><a href="#">退出</a></li>

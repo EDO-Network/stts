@@ -51,7 +51,7 @@ var AccessStore = Reflux.createStore({
     },
 });
 
-var Access = React.createClass({
+var Access = React.createClass({displayName: "Access",
     mixins: [Reflux.connect(AccessStore, 'securityClient')],
     getInitialState: function () {
         return {
@@ -68,44 +68,44 @@ var Access = React.createClass({
     },
     render: function () {
         return (
-            <div>
-                <Header/>
+            React.createElement("div", null, 
+                React.createElement(Header, null), 
 
-                <div id="main" className="container-fluid margin-top-60">
-                    <SideBar activeMenuID="menuAccessManage"/>
+                React.createElement("div", {id: "main", className: "container-fluid margin-top-60"}, 
+                    React.createElement(SideBar, {activeMenuID: "menuAccessManage"}), 
 
-                    <div className="content-page">
-                        <Breadcrumb page={Page.access}/>
+                    React.createElement("div", {className: "content-page"}, 
+                        React.createElement(Breadcrumb, {page: Page.access}), 
 
-                        <div className="panel panel-default">
-                            <div className="panel-heading">API Access Key 维护</div>
-                            <div className="panel-body">
-                                <div className="form-group">
-                                    <div className="control-label">
-                                        <label>accessKey</label>
-                                    </div>
-                                    <input id="inputaccessKey" ref="inputaccessKey" type="text" className="form-control" disabled="disabled"/>
-                                </div>
-                                <div className="form-group">
-                                    <div className="control-label">
-                                        <label>accessSecret</label>
-                                    </div>
-                                    <input id="inputaccessSecret" ref="inputaccessSecret" type="text" className="form-control" disabled="disabled"/>
-                                </div>
-                            </div>
-                        </div>
+                        React.createElement("div", {className: "panel panel-default"}, 
+                            React.createElement("div", {className: "panel-heading"}, "API Access Key 维护"), 
+                            React.createElement("div", {className: "panel-body"}, 
+                                React.createElement("div", {className: "form-group"}, 
+                                    React.createElement("div", {className: "control-label"}, 
+                                        React.createElement("label", null, "accessKey")
+                                    ), 
+                                    React.createElement("input", {id: "inputaccessKey", ref: "inputaccessKey", type: "text", className: "form-control", disabled: "disabled"})
+                                ), 
+                                React.createElement("div", {className: "form-group"}, 
+                                    React.createElement("div", {className: "control-label"}, 
+                                        React.createElement("label", null, "accessSecret")
+                                    ), 
+                                    React.createElement("input", {id: "inputaccessSecret", ref: "inputaccessSecret", type: "text", className: "form-control", disabled: "disabled"})
+                                )
+                            )
+                        ), 
 
-                        <Footer/>
+                        React.createElement(Footer, null)
 
-                    </div>
-                </div>
+                    )
+                )
 
-            </div>
+            )
         );
     }
 });
 
 ReactDOM.render(
-    <Access />,
+    React.createElement(Access, null),
     document.getElementById('page')
 );

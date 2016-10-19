@@ -1,85 +1,47 @@
 var Header = React.createClass({displayName: "Header",
-    getInitialState: function () {
-        return {
-            user: {}
-        };
-    },
-    componentWillMount: function () {
-        this.state.user = JSON.parse(sessionStorage.getItem(SessionKey.user));
-        if(this.state.user == null){
-            location.href = SiteProperties.webURL + Page.login;
-        }
-    },
-    render: function () {
-        return (
-            React.createElement("nav", {className: "navbar navbar-fixed-top", role: "navigation"}, 
-                React.createElement("div", {className: "navbar-inner"}, 
-                    React.createElement("div", {className: "navbar-header width-240"}, 
-                        React.createElement("div", {className: "navbar-brand"}
-                            
-                                //<img src="../img/zslogo.png" style={{height:"38px",marginTop:"-8px"}}></img>
-                            
-                        )
-                    ), 
-                    React.createElement("div", {id: "navbar", className: "navbar-collapse collapse"}, 
-                        React.createElement(MainMenu, {activeMenuID: this.props.activeMenuID}), 
-                        React.createElement(LoginInfo, {userName: this.state.user.userName})
-                    )
-                )
-            )
-        );
-    }
-});
-
-
-var MainMenu = React.createClass({displayName: "MainMenu",
     componentDidMount: function () {
         var activeMenuID = this.props.activeMenuID;
+
+        $("#" + activeMenuID).show();
         $("#" + activeMenuID).addClass("active");
     },
-    render: function () {
-        return (
-            React.createElement("ul", {className: "nav navbar-nav"}, 
-                React.createElement("li", {id: "mainMenuSysManage"}, 
-                    React.createElement("a", {href: SiteProperties.webURL + Page.systemManage}, "系统管理")
-                ), 
-                React.createElement("li", {id: "mainMenuBussinessManage"}, 
-                    React.createElement("a", {href: SiteProperties.webURL + Page.creditSearch}, "征信业务")
-                )
-            )
-        );
-    }
-});
-
-var LoginInfo = React.createClass({displayName: "LoginInfo",
-    handleLogout: function () {
-        sessionStorage.removeItem(SessionKey.accessToken);
-        sessionStorage.removeItem(SessionKey.operatorID);
-        location.href = SiteProperties.webURL + Page.login;
-    },
 
     render: function () {
         return (
-            React.createElement("ul", {className: "nav navbar-nav navbar-right"}, 
-                React.createElement("li", {className: "dropdown"}, 
-                    React.createElement("a", {href: "javascript:void(0)", className: "dropdown-toggle", "data-toggle": "dropdown"}, 
-                        React.createElement("span", null, "您好，", this.props.userName, "   "), 
-                        React.createElement("i", {className: "fa fa-cog"})
-                    ), 
-                    React.createElement("ul", {className: "dropdown-menu"}, 
-                        React.createElement("li", null, 
-                            React.createElement("a", {href: SiteProperties.webURL + Page.profile}, React.createElement("i", {className: "fa fa-user"}), "  个人信息")
-                        ), 
-                        React.createElement("li", null, 
-                            React.createElement("a", {href: SiteProperties.webURL + Page.password}, React.createElement("i", {className: "fa fa-pencil"}), "  密码修改")
-                        ), 
-                        
-                            //<li><a href="/pricing"><i className="fa fa-clipboard"></i>&nbsp;&nbsp;Plans</a></li>
-                            //<li><a href="/docs"><i className="fa fa-files-o"></i>&nbsp;&nbsp;Documentation</a></li>
-                        
-                        React.createElement("li", null, React.createElement("a", {href: "javascript:void(0)", onClick: this.handleLogout}, React.createElement("i", {
-                            className: "fa fa-power-off"}), "  注销"))
+            React.createElement("div", {className: "header-wrap"}, 
+                React.createElement("div", {className: "container"}, 
+                    React.createElement("div", {className: "menu-main"}, 
+                        React.createElement("ul", {className: "clearfix"}, 
+                            React.createElement("li", {className: "title"}, 
+                                React.createElement("i", {className: "fa fa-shopping-cart", "aria-hidden": "true"}), 
+                                " 企服超市 ", 
+                                React.createElement("span", {className: "service-icon"}, "SERVICE")
+                            ), 
+                            React.createElement("li", {id: "mainMenuLogin", style: {display:"none"}}, React.createElement("a", {href: "login.html"}, "用户登录")), 
+                            React.createElement("li", {id: "mainMenuSelectCompany", style: {display:"none"}}, React.createElement("a", {href: "select_company.html"}, "选择企业")), 
+                            React.createElement("li", {id: "mainMenuRegisterUser", style: {display:"none"}}, React.createElement("a", {href: "register_user.html"}, "注册用户")), 
+                            React.createElement("li", {id: "mainMenuAccountProfile", style: {display:"none"}}, React.createElement("a", {href: "account_profile.html"}, "账户设置")), 
+                            React.createElement("li", {id: "mainMenuIndex"}, React.createElement("a", {href: "index.html"}, "首页")), 
+                            React.createElement("li", {id: "mainMenuService"}, React.createElement("a", {href: "javascript:void(0)"}, "服务产品")), 
+                            React.createElement("li", {id: "mainMenuOrg"}, React.createElement("a", {href: "javascript:void(0)"}, "服务机构"))
+                        )
                     )
+                    
+                        //<div className="search-wrap nav nav-tabs pull-left">
+                        //    <ul className="search-classify nav nav-tabs" role="tablist">
+                        //        <li className="active"><a href="#service" role="tab" data-toggle="tab">服务</a></li>
+                        //        <li><a href="#org" role="tab" data-toggle="tab">机构</a></li>
+                        //    </ul>
+                        //    <div className="input-group">
+                        //        <input type="text" className="search-content form-control"/>
+                        //        <span className="input-group-btn">
+                        //            <button className="btn btn-default" type="button">
+                        //                <i className="fa fa-search" aria-hidden="true"></i>
+                        //            </button>
+                        //        </span>
+                        //    </div>
+                        //</div>
+                    
                 )
             )
         );

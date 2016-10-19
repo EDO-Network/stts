@@ -252,7 +252,7 @@
 		Recurse the tree structure and ensure all nodes have
 		valid initial states.  User defined states will be preserved.
 		For performance we also take this opportunity to
-		common nodes in a flattened structure
+		widgets nodes in a flattened structure
 	*/
 	Tree.prototype.setInitialStates = function (node, level) {
 
@@ -304,7 +304,7 @@
 				node.state.selected = false;
 			}
 
-			// common nodes in a flattened structure for use later
+			// widgets nodes in a flattened structure for use later
 			_this.nodes.push(node);
 
 			// recurse child nodes and transverse the tree
