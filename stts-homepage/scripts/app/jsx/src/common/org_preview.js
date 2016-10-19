@@ -3,7 +3,7 @@ var OrgPreview = React.createClass({
         return (
             <div className="org-preview-wrap text-center clearfix">
                 <div>
-                    <div><img className="w-per-100" src="img/common/org-preview.png"/></div>
+                    <div><img className="w-per-100" src="../img/common/org-preview.png"/></div>
                     <div className="mt-5 mb-5">中国信保</div>
                 </div>
                 <div>

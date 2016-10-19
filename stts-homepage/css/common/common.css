@@ -74,8 +74,6 @@ img {
 
 .breadcrumb {
     border-radius: 0px;
-    background-color: transparent;
-    margin-bottom: 0px;
 }
 
 .bg-info {
@@ -129,26 +127,6 @@ img {
     color: red;
 }
 
-.img-square-48 {
-    width: 48px;
-    height: 48px;
-}
-
-.img-square-50 {
-    width: 50px;
-    height: 50px;
-}
-
-.img-square-100 {
-    width: 100px;
-    height: 100px;
-}
-
-.img-square-200 {
-    width: 200px;
-    height: 200px;
-}
-
 .img-rect-200x100 {
     width: 200px;
     height: 100px;
@@ -180,6 +158,18 @@ img {
 
 .w-90{
     width: 90px;
+}
+
+.w-100{
+    width: 100px;
+}
+
+.w-200{
+    width: 200px;
+}
+
+.w-222{
+    width: 222px;
 }
 
 .w-400 {
@@ -235,6 +225,10 @@ img {
     margin-top: 20px;
 }
 
+.mt-50 {
+    margin-top: 50px;
+}
+
 .mt-100 {
     margin-top: 100px;
 }
@@ -245,6 +239,14 @@ img {
 
 .ml-80 {
     margin-left: 80px;
+}
+
+.ml-210{
+    margin-left: 210px;
+}
+
+.ml-240{
+    margin-left: 240px;
 }
 
 .margin-top-60 {
@@ -277,6 +279,10 @@ img {
 
 .margin-right-10 {
     margin-right: 10px;
+}
+
+.pt-7{
+    padding-top: 7px;
 }
 
 .padding-5 {
@@ -330,11 +336,6 @@ img {
 /*将对象呈递为内联对象，但是对象的内容作为块对象呈递。旁边的内联对象会被呈递在同一行内*/
 .inline-block {
     display: inline-block;
-}
-
-.content-page {
-    margin-left: 240px;
-    overflow: hidden;
 }
 
 .title h4 {

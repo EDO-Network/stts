@@ -17,10 +17,11 @@ var Header = React.createClass({displayName: "Header",
                                 " 企服超市 ", 
                                 React.createElement("span", {className: "service-icon"}, "SERVICE")
                             ), 
-                            React.createElement("li", {id: "mainMenuLogin", style: {display:"none"}}, React.createElement("a", {href: "javascript:void(0)"}, "用户登录")), 
-                            React.createElement("li", {id: "mainMenuSelectCompany", style: {display:"none"}}, React.createElement("a", {href: "javascript:void(0)"}, "选择企业")), 
-                            React.createElement("li", {id: "mainMenuRegisterUser", style: {display:"none"}}, React.createElement("a", {href: "javascript:void(0)"}, "注册用户")), 
-                            React.createElement("li", {id: "mainMenuIndex"}, React.createElement("a", {href: "javascript:void(0)"}, "首页")), 
+                            React.createElement("li", {id: "mainMenuLogin", style: {display:"none"}}, React.createElement("a", {href: "login.html"}, "用户登录")), 
+                            React.createElement("li", {id: "mainMenuSelectCompany", style: {display:"none"}}, React.createElement("a", {href: "select_company.html"}, "选择企业")), 
+                            React.createElement("li", {id: "mainMenuRegisterUser", style: {display:"none"}}, React.createElement("a", {href: "register_user.html"}, "注册用户")), 
+                            React.createElement("li", {id: "mainMenuAccountProfile", style: {display:"none"}}, React.createElement("a", {href: "account_profile.html"}, "账户设置")), 
+                            React.createElement("li", {id: "mainMenuIndex"}, React.createElement("a", {href: "index.html"}, "首页")), 
                             React.createElement("li", {id: "mainMenuService"}, React.createElement("a", {href: "javascript:void(0)"}, "服务产品")), 
                             React.createElement("li", {id: "mainMenuOrg"}, React.createElement("a", {href: "javascript:void(0)"}, "服务机构"))
                         )

@@ -18,9 +18,9 @@ var TopLogout = React.createClass({
             <div className="top-wrap">
                 <div className="container">
                     <ul className="top-right-menu">
-                        <li><a href="#">欢迎您</a></li>
-                        <li><a href="page/login.html">请登录</a></li>
-                        <li><a href="page/register_user.html">免费注册</a></li>
+                        <li>欢迎您</li>
+                        <li><a href="login.html">请登录</a></li>
+                        <li><a href="register_user.html">免费注册</a></li>
                         <li><a href="#">忘记密码</a></li>
                     </ul>
                 </div>
@@ -33,6 +33,7 @@ var TopLogin = React.createClass({
     getInitialState: function () {
         return {
             user: {
+                company: "中国海峡人才市场宁波分部",
                 userName: "jack",
             }
         };
@@ -41,8 +42,12 @@ var TopLogin = React.createClass({
         return (
             <div className="top-wrap">
                 <div className="container">
+                    <ul className="top-left-menu">
+                        <li>{this.state.user.company}</li>
+                    </ul>
                     <ul className="top-right-menu">
                         <li>您好：{this.state.user.userName}</li>
+                        <li><a href="account_profile.html">账户设置</a></li>
                         <li><a href="#">我的平台</a></li>
                         <li><a href="#">我是服务机构</a></li>
                         <li><a href="#">帮助中心</a></li>

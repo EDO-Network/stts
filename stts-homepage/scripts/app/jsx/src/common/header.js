@@ -17,10 +17,11 @@ var Header = React.createClass({
                                 &nbsp;企服超市&nbsp;
                                 <span className="service-icon">SERVICE</span>
                             </li>
-                            <li id="mainMenuLogin" style={{display:"none"}}><a href="javascript:void(0)">用户登录</a></li>
-                            <li id="mainMenuSelectCompany" style={{display:"none"}}><a href="javascript:void(0)">选择企业</a></li>
-                            <li id="mainMenuRegisterUser" style={{display:"none"}}><a href="javascript:void(0)">注册用户</a></li>
-                            <li id="mainMenuIndex"><a href="javascript:void(0)">首页</a></li>
+                            <li id="mainMenuLogin" style={{display:"none"}}><a href="login.html">用户登录</a></li>
+                            <li id="mainMenuSelectCompany" style={{display:"none"}}><a href="select_company.html">选择企业</a></li>
+                            <li id="mainMenuRegisterUser" style={{display:"none"}}><a href="register_user.html">注册用户</a></li>
+                            <li id="mainMenuAccountProfile" style={{display:"none"}}><a href="account_profile.html">账户设置</a></li>
+                            <li id="mainMenuIndex"><a href="index.html">首页</a></li>
                             <li id="mainMenuService"><a href="javascript:void(0)">服务产品</a></li>
                             <li id="mainMenuOrg"><a href="javascript:void(0)">服务机构</a></li>
                         </ul>

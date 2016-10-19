@@ -20,3 +20,14 @@
     float: left;
     margin-left: 10px;
 }
+
+.top-left-menu{
+    height: 35px;
+    line-height: 35px;
+    float: left;
+}
+
+.top-left-menu li{
+    float: left;
+    margin-left: 10px;
+}

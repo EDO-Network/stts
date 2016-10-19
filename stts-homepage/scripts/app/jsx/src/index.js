@@ -107,21 +107,21 @@ var Slide = React.createClass({
 
                         <div className="carousel-inner" role="listbox">
                             <div className="item active">
-                                <img src="img/index/header-bg.jpg" alt="..."/>
+                                <img src="../img/index/header-bg.jpg" alt="..."/>
 
                                 <div className="carousel-caption">
                                     ...
                                 </div>
                             </div>
                             <div className="item">
-                                <img src="img/index/header-bg.jpg" alt="..."/>
+                                <img src="../img/index/header-bg.jpg" alt="..."/>
 
                                 <div className="carousel-caption">
                                     ...
                                 </div>
                             </div>
                             <div className="item">
-                                <img src="img/index/header-bg.jpg" alt="..."/>
+                                <img src="../img/index/header-bg.jpg" alt="..."/>
 
                                 <div className="carousel-caption">
                                     ...

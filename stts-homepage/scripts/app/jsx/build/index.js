@@ -107,21 +107,21 @@ var Slide = React.createClass({displayName: "Slide",
 
                         React.createElement("div", {className: "carousel-inner", role: "listbox"}, 
                             React.createElement("div", {className: "item active"}, 
-                                React.createElement("img", {src: "img/index/header-bg.jpg", alt: "..."}), 
+                                React.createElement("img", {src: "../img/index/header-bg.jpg", alt: "..."}), 
 
                                 React.createElement("div", {className: "carousel-caption"}, 
                                     "..."
                                 )
                             ), 
                             React.createElement("div", {className: "item"}, 
-                                React.createElement("img", {src: "img/index/header-bg.jpg", alt: "..."}), 
+                                React.createElement("img", {src: "../img/index/header-bg.jpg", alt: "..."}), 
 
                                 React.createElement("div", {className: "carousel-caption"}, 
                                     "..."
                                 )
                             ), 
                             React.createElement("div", {className: "item"}, 
-                                React.createElement("img", {src: "img/index/header-bg.jpg", alt: "..."}), 
+                                React.createElement("img", {src: "../img/index/header-bg.jpg", alt: "..."}), 
 
                                 React.createElement("div", {className: "carousel-caption"}, 
                                     "..."

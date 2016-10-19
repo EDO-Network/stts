@@ -3,12 +3,12 @@ var ServicePreview = React.createClass({
         return (
             <div className="service-preview-wrap text-center clearfix">
                 <div>
-                    <div><img className="w-per-100" src="img/common/service-preview.png"/></div>
+                    <div><img className="w-per-100" src="../img/common/service-preview.png"/></div>
                     <div className="mt-5 mb-5">财务审计</div>
                 </div>
                 <div>
                     <div className="pull-left">
-                        <img className="w-60" src="img/common/org-preview-small.jpg"/>
+                        <img className="w-60" src="../img/common/org-preview-small.jpg"/>
                     </div>
                     <div className="ml-80 text-left">
                         <div>服务费用：1000元</div>
