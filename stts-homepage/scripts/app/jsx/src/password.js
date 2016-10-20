@@ -65,7 +65,7 @@ var Password = React.createClass({
             <div>
                 <Header activeMenuID="mainMenuBussinessManage"/>
 
-                <div id="main" className="container-fluid margin-top-60 margin-bottom-60">
+                <div id="main" className="container-fluid mt-60 mb-60">
                     <SideBar activeMainMenuID="mainMenuBussinessManage" activeMenuID="sideMenuPassword"/>
                     <div className="content-page">
                         <Breadcrumb page={Page.password}/>

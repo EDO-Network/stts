@@ -187,12 +187,12 @@ var OrderItem = React.createClass({
                         <div className="col-sm-2">
                             <img src="../../img/sample/service_small.jpg"/>
                         </div>
-                        <div className="col-sm-3 border-right-solid">
+                        <div className="col-sm-3 border-right-dotted">
                             <div><a href="#">财务审计</a></div>
                             <br/>
                             <div><a href="#">中国出口信用保险公司</a></div>
                         </div>
-                        <div className="col-sm-2 border-right-solid">
+                        <div className="col-sm-2 border-right-dotted">
                             <div>总金额：2000元</div>
                             <br/>
                             <div>服务券：1000元</div>
@@ -202,7 +202,7 @@ var OrderItem = React.createClass({
                             <br/>
                             <div>倒计时：5天</div>
                         </div>
-                        <div className="col-sm-3 border-left-solid">
+                        <div className="col-sm-3 border-left-dotted">
                             <div><a href="#">取消</a> | <a href="#">确认</a></div>
                             <br/>
                             <div><a href="#">退款</a> | <a href="order_detail.html">详细</a></div>

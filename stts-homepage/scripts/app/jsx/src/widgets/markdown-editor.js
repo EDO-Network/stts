@@ -68,7 +68,7 @@ var MarkdownEditor = React.createClass({
             <div id="markdownEditor">
                 <MarkdownPictureDialog/>
                 <div className="row">
-                    <nav className="navbar navbar-default margin-bottom-0">
+                    <nav className="navbar navbar-default mb-0">
                         <div className="navbar-collapse collapse">
                             <ul className="nav navbar-nav">
                                 <li><a href="javascript:void(0)" title="标题" data-toggle="tooltip" data-placement="top" onClick={this.insertFontSize}><i className="fa fa-header fa-lg"></i></a></li>
@@ -87,7 +87,7 @@ var MarkdownEditor = React.createClass({
                     </nav>
                 </div>
                 <div className="row">
-                    <div className="col-sm-6 padding-left-0 padding-right-0">
+                    <div className="col-sm-6 pl-0 pr-0">
                          <textarea id="markdownContent" ref="markdownContent"
                                           className="form-control"
                                           onChange={this.handleEdit} onScroll={this.handleScroll}></textarea>

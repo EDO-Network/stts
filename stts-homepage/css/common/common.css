@@ -110,7 +110,9 @@ img {
 .text-dark {
     color: #797979 !important;
 }
-
+.text-gold{
+    color: #fbed50;
+}
 .border-clear{
     border: transparent;
 }
@@ -211,11 +213,11 @@ img {
     margin: 0;
 }
 
-.margin-left-5 {
+.ml-5 {
     margin-left: 5px;
 }
 
-.margin-left-240 {
+.ml-240 {
     margin-left: 240px;
 }
 
@@ -272,35 +274,35 @@ img {
     margin-left: 240px;
 }
 
-.margin-top-60 {
+.mt-60 {
     margin-top: 60px;
 }
 
-.margin-top-70 {
+.mt-70 {
     margin-top: 70px;
 }
 
-.margin-bottom-0 {
+.mb-0 {
     margin-bottom: 0;
 }
 
-.margin-bottom-10 {
+.mb-10 {
     margin-bottom: 10px;
 }
 
-.margin-bottom-20 {
+.mb-20 {
     margin-bottom: 20px;
 }
 
-.margin-bottom-60 {
+.mb-60 {
     margin-bottom: 60px;
 }
 
-.margin-bottom-70 {
+.mb-70 {
     margin-bottom: 70px;
 }
 
-.margin-right-10 {
+.mr-10 {
     margin-right: 10px;
 }
 
@@ -308,19 +310,19 @@ img {
     padding-top: 7px;
 }
 
-.padding-5 {
+.p-5 {
     padding: 5px;
 }
 
-.padding-20 {
+.p-20 {
     padding: 20px;
 }
 
-.padding-left-0 {
+.pl-0 {
     padding-left: 0px;
 }
 
-.padding-right-0 {
+.pr-0 {
     padding-right: 0px;
 }
 
@@ -391,10 +393,11 @@ img {
     text-overflow: ellipsis;
 }
 
-.border-right-solid {
+.border-right-dotted {
     border-right: dotted 1px #cccccc;
 }
 
-.border-left-solid {
+.border-left-dotted {
     border-left: dotted 1px #cccccc;
 }
+

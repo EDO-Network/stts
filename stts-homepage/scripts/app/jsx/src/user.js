@@ -144,7 +144,7 @@ var User = React.createClass({
             <div>
                 <Header/>
 
-                <div id="main" className="container-fluid margin-top-60">
+                <div id="main" className="container-fluid mt-60">
                     <SideBar activeMenuID="menuUsersManage"/>
                     <div className="content-page">
                         <Breadcrumb page={Page.user}/>

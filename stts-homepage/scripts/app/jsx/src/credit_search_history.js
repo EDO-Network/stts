@@ -62,7 +62,7 @@ var SearchHistory = React.createClass({
             <div>
                 <Header activeMenuID="mainMenuBussinessManage"/>
 
-                <div id="main" className="container-fluid margin-top-60">
+                <div id="main" className="container-fluid mt-60">
                     <SideBar activeMainMenuID="mainMenuBussinessManage" activeMenuID="sideMenuCreditSearchHistory"/>
                     <div className="content-page">
                         <Breadcrumb page={Page.creditSearchHistory}/>
