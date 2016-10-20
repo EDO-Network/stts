@@ -35,7 +35,9 @@ var ServiceItem = React.createClass({
         return (
             <div className="overflow-hidden border-bottom-dotted mb-10 pv-10">
                 <div className="col-sm-2">
-                    <img src="../img/sample/service_small.jpg"/>
+                    <a href="service_detail.html">
+                        <img src="../img/sample/service_small.jpg"/>
+                    </a>
                 </div>
                 <div className="col-sm-4 border-right-dotted">
                     <div><a href="service_detail.html">财务审计</a></div>

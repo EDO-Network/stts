@@ -43,62 +43,7 @@ var Order = React.createClass({
     render: function () {
         return (
             <div>
-                <div className="order-process">
-                    <div className="node">
-                        <div><i className="icon fa fa-shopping-basket" aria-hidden="true"></i></div>
-                        <div>服务申请</div>
-                        <div>2016-01-01</div>
-                        <div>18:00:00</div>
-                    </div>
-                    <div className="node process">
-                        <div className="arrow"></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div className="node">
-                        <div><i className="icon fa fa-legal" aria-hidden="true"></i></div>
-                        <div>服务受理</div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div className="node process">
-                        <div className="arrow"></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div className="node">
-                        <div><i className="icon fa fa-credit-card" aria-hidden="true"></i></div>
-                        <div>完成并付款</div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div className="node process">
-                        <div className="arrow"></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div className="node">
-                        <div><i className="icon fa fa-commenting" aria-hidden="true"></i></div>
-                        <div>服务评价</div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div className="node process">
-                        <div className="arrow"></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div className="node">
-                        <div><i className="icon fa fa-check-square" aria-hidden="true"></i></div>
-                        <div>交易完成</div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
+                <OrderProcess step="1"/>
                 <div className="panel panel-info">
                     <div className="panel-heading">订单信息</div>
                     <div className="panel-body">

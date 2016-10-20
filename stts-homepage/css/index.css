@@ -1,14 +1,10 @@
-.main{
-    margin: 30px auto;
-}
-
 .main .left-wrap{
     width: 222px;
     float: left;
 }
 
 .main .right-wrap{
-    margin-left: 232px;
+    margin-left: 240px;
 }
 
 .main .statistics-wrap{
