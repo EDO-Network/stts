@@ -3,7 +3,11 @@ var ServicePreview = React.createClass({
         return (
             <div className="service-preview-wrap text-center clearfix">
                 <div>
-                    <div><img className="w-per-100" src="../img/common/service-preview.png"/></div>
+                    <div>
+                        <a href="service_detail.html">
+                            <img className="w-per-100" src="../img/common/service-preview.png"/>
+                        </a>
+                    </div>
                     <div className="mt-5 mb-5"><a href="service_detail.html">财务审计</a></div>
                 </div>
                 <div>

@@ -60,7 +60,7 @@ var ServiceSummary = React.createClass({
                         <br/>
                         <br/>
                         <br/>
-                        <a className="btn btn-warning btn-lg btn-block">立即下单</a>
+                        <a href="service_order.html" className="btn btn-warning btn-lg btn-block">立即下单</a>
                     </div>
                 </div>
             </div>
