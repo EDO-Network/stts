@@ -7,13 +7,6 @@ var AccountSafety = React.createClass({displayName: "AccountSafety",
 
                 React.createElement("div", {className: "container"}, 
 
-                    React.createElement("ol", {className: "breadcrumb"}, 
-                        React.createElement("li", null, "您所在的位置："), 
-                        React.createElement("li", null, React.createElement("a", {href: "index.html"}, "首页")), 
-                        React.createElement("li", null, React.createElement("a", {href: "account_profile.html"}, "账户设置")), 
-                        React.createElement("li", {className: "active"}, "账户安全")
-                    ), 
-
                     React.createElement("div", null, 
                         React.createElement("div", {className: "pull-left w-222"}, 
                             React.createElement("div", {className: "list-group"}, 
@@ -26,6 +19,12 @@ var AccountSafety = React.createClass({displayName: "AccountSafety",
                             React.createElement("div", {className: "panel panel-default"}, 
                                 React.createElement("div", {className: "panel-heading"}, "账户安全"), 
                                 React.createElement("div", {className: "panel-body"}, 
+                                    React.createElement("ol", {className: "breadcrumb"}, 
+                                        React.createElement("li", null, "您所在的位置："), 
+                                        React.createElement("li", null, React.createElement("a", {href: "index.html"}, "首页")), 
+                                        React.createElement("li", null, React.createElement("a", {href: "account_profile.html"}, "账户设置")), 
+                                        React.createElement("li", {className: "active"}, "账户安全")
+                                    ), 
                                     React.createElement("div", null, 
                                         React.createElement("ul", {className: "nav nav-tabs", role: "tablist"}, 
                                             React.createElement("li", {role: "presentation", className: "active"}, React.createElement("a", {href: "#password", role: "tab", 
