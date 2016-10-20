@@ -25,8 +25,57 @@ var Coupon = React.createClass({displayName: "Coupon",
                             React.createElement("div", {className: "panel panel-default"}, 
                                 React.createElement("div", {className: "panel-heading"}, "服务券流水"), 
                                 React.createElement("div", {className: "panel-body"}, 
-                                    React.createElement("div", null
+                                    React.createElement("div", {className: "row form-horizontal"}, 
+                                        React.createElement("div", {className: "col-sm-3"}, 
+                                            React.createElement("div", {className: "form-group"}, 
+                                                React.createElement("div", {className: "control-label col-sm-4"}, 
+                                                    React.createElement("label", null, "时间")
+                                                ), 
+                                                React.createElement("div", {className: "col-sm-8"}, 
+                                                    React.createElement("select", {className: "form-control"}, 
+                                                        React.createElement("option", null, "全部"), 
+                                                        React.createElement("option", null, "1年以内"), 
+                                                        React.createElement("option", null, "2年以内"), 
+                                                        React.createElement("option", null, "3年以内")
+                                                    )
+                                                )
+                                            )
+                                        ), 
+                                        React.createElement("div", {className: "col-sm-3"}, 
+                                            React.createElement("div", {className: "form-group"}, 
+                                                React.createElement("div", {className: "control-label col-sm-4"}, 
+                                                    React.createElement("label", null, "流向")
+                                                ), 
+                                                React.createElement("div", {className: "col-sm-8"}, 
+                                                    React.createElement("select", {className: "form-control"}, 
+                                                        React.createElement("option", null, "全部"), 
+                                                        React.createElement("option", null, "收入"), 
+                                                        React.createElement("option", null, "支出")
+                                                    )
+                                                )
+                                            )
+                                        ), 
+                                        React.createElement("div", {className: "col-sm-4"}, 
+                                            React.createElement("div", {className: "form-group"}, 
+                                                React.createElement("div", {className: "control-label col-sm-4"}, 
+                                                    React.createElement("label", null, "金额")
+                                                ), 
 
+                                                React.createElement("div", {className: "col-sm-8"}, 
+                                                    React.createElement("div", {className: "input-group"}, 
+                                                        React.createElement("input", {type: "text", className: "form-control"}), 
+                                                        React.createElement("span", {
+                                                            className: "input-group-addon bg-clear border-clear"}, "~"), 
+                                                        React.createElement("input", {type: "text", className: "form-control"}), 
+                                                        React.createElement("span", {
+                                                            className: "input-group-addon bg-clear border-clear"}, "元")
+                                                    )
+                                                )
+                                            )
+                                        ), 
+                                        React.createElement("div", {className: "col-sm-2"}, 
+                                            React.createElement("button", {type: "button", className: "btn btn-default"}, "搜 索")
+                                        )
                                     ), 
                                     React.createElement("table", {className: "table table-hover"}, 
                                         React.createElement("thead", null, 

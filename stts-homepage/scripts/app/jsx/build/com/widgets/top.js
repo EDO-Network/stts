@@ -20,7 +20,7 @@ var Top = React.createClass({displayName: "Top",
                         React.createElement("li", null, React.createElement("a", {href: "../index.html"}, "企服超市")), 
                         React.createElement("li", null, React.createElement("a", {href: "#"}, "我是服务机构")), 
                         React.createElement("li", null, React.createElement("a", {href: "#"}, "帮助中心")), 
-                        React.createElement("li", null, React.createElement("a", {href: "#"}, "退出"))
+                        React.createElement("li", null, React.createElement("a", {href: "../login.html"}, "退出"))
                     )
                 )
             )

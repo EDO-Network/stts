@@ -48,10 +48,10 @@ var TopLogin = React.createClass({displayName: "TopLogin",
                     React.createElement("ul", {className: "top-right-menu"}, 
                         React.createElement("li", null, "您好：", this.state.user.userName), 
                         React.createElement("li", null, React.createElement("a", {href: "account_profile.html"}, "账户设置")), 
-                        React.createElement("li", null, React.createElement("a", {href: "#"}, "我的平台")), 
+                        React.createElement("li", null, React.createElement("a", {href: "com/dashboard.html"}, "我的平台")), 
                         React.createElement("li", null, React.createElement("a", {href: "#"}, "我是服务机构")), 
                         React.createElement("li", null, React.createElement("a", {href: "#"}, "帮助中心")), 
-                        React.createElement("li", null, React.createElement("a", {href: "#"}, "退出"))
+                        React.createElement("li", null, React.createElement("a", {href: "login.html"}, "退出"))
                     )
                 )
             )

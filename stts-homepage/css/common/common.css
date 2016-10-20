@@ -20,6 +20,9 @@ img {
 /*End*/
 
 /*重写bootstrap默认样式*/
+.form-control {
+    border-radius: 0px;
+}
 
 .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
     background-color: #0c63a9;
@@ -87,6 +90,11 @@ img {
 /*End*/
 
 /*定义一些常用背景色*/
+
+.bg-clear {
+    background-color: transparent;
+}
+
 .bg-222 {
     background-color: #222222;
 }
@@ -103,6 +111,9 @@ img {
     color: #797979 !important;
 }
 
+.border-clear{
+    border: transparent;
+}
 /*End*/
 
 .box-shadow {
@@ -237,8 +248,16 @@ img {
     margin-bottom: 5px;
 }
 
+.mb-10 {
+    margin-bottom: 10px;
+}
+
 .mb-20{
     margin-bottom: 20px;
+}
+
+.ml-10 {
+    margin-left: 10px;
 }
 
 .ml-80 {
@@ -370,4 +389,12 @@ img {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.border-right-solid {
+    border-right: dotted 1px #cccccc;
+}
+
+.border-left-solid {
+    border-left: dotted 1px #cccccc;
 }

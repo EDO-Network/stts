@@ -1,33 +1,33 @@
 /**
  * Created by Ethan on 16/9/19.
  */
-var ReportAsset = React.createClass({
+var ReportAsset = React.createClass({displayName: "ReportAsset",
     render: function () {
         return (
-            <div>
-                <h3 className="title">五、资产信息</h3>
-                <h4 className="sub-title">1、房产信息</h4>
+            React.createElement("div", null, 
+                React.createElement("h3", {className: "title"}, "五、资产信息"), 
+                React.createElement("h4", {className: "sub-title"}, "1、房产信息"), 
 
-                <div className="row">
-                    <div className="col-xs-6">
-                        <ReportAssetHouseSelf/>
-                    </div>
-                    <div className="col-xs-6">
-                        <ReportAssetHouseMate/>
-                    </div>
-                </div>
+                React.createElement("div", {className: "row"}, 
+                    React.createElement("div", {className: "col-xs-6"}, 
+                        React.createElement(ReportAssetHouseSelf, null)
+                    ), 
+                    React.createElement("div", {className: "col-xs-6"}, 
+                        React.createElement(ReportAssetHouseMate, null)
+                    )
+                ), 
 
-                <h4 className="sub-title">2、车辆信息</h4>
+                React.createElement("h4", {className: "sub-title"}, "2、车辆信息"), 
 
-                <div className="row">
-                    <div className="col-xs-6">
-                        <ReportAssetVehicleSelf/>
-                    </div>
-                    <div className="col-xs-6">
-                        <ReportAssetVehicleMate/>
-                    </div>
-                </div>
-            </div>
+                React.createElement("div", {className: "row"}, 
+                    React.createElement("div", {className: "col-xs-6"}, 
+                        React.createElement(ReportAssetVehicleSelf, null)
+                    ), 
+                    React.createElement("div", {className: "col-xs-6"}, 
+                        React.createElement(ReportAssetVehicleMate, null)
+                    )
+                )
+            )
         );
     }
 });
@@ -59,7 +59,7 @@ var ReportAssetHouseSelfStore = Reflux.createStore({
         ajaxPost(url, data, callback);
     },
 });
-var ReportAssetHouseSelf = React.createClass({
+var ReportAssetHouseSelf = React.createClass({displayName: "ReportAssetHouseSelf",
     mixins: [Reflux.connect(ReportAssetHouseSelfStore, 'houseList')],
     getInitialState: function () {
         return {
@@ -72,17 +72,17 @@ var ReportAssetHouseSelf = React.createClass({
     },
     render: function () {
         return (
-            <table className="table table-bordered table-condensed table_inline">
-                <tbody>
-                <tr>
-                    <th colSpan="4" className="text-center">借款人</th>
-                </tr>
-                <tr>
-                    <th className="col-xs-3">反馈结果</th>
-                    <td colSpan="3" className="text-center">详情</td>
-                </tr>
-                </tbody>
-            </table>
+            React.createElement("table", {className: "table table-bordered table-condensed table_inline"}, 
+                React.createElement("tbody", null, 
+                React.createElement("tr", null, 
+                    React.createElement("th", {colSpan: "4", className: "text-center"}, "借款人")
+                ), 
+                React.createElement("tr", null, 
+                    React.createElement("th", {className: "col-xs-3"}, "反馈结果"), 
+                    React.createElement("td", {colSpan: "3", className: "text-center"}, "详情")
+                )
+                )
+            )
         );
     }
 });
@@ -114,7 +114,7 @@ var ReportAssetHouseMateStore = Reflux.createStore({
         ajaxPost(url, data, callback);
     },
 });
-var ReportAssetHouseMate = React.createClass({
+var ReportAssetHouseMate = React.createClass({displayName: "ReportAssetHouseMate",
     mixins: [Reflux.connect(ReportAssetHouseMateStore, 'houseList')],
     getInitialState: function () {
         return {
@@ -127,17 +127,17 @@ var ReportAssetHouseMate = React.createClass({
     },
     render: function () {
         return (
-            <table className="table table-bordered table-condensed table_inline">
-                <tbody>
-                <tr>
-                    <th colSpan="4" className="text-center">配偶</th>
-                </tr>
-                <tr>
-                    <th className="col-xs-3">反馈结果</th>
-                    <td colSpan="3" className="text-center">详情</td>
-                </tr>
-                </tbody>
-            </table>
+            React.createElement("table", {className: "table table-bordered table-condensed table_inline"}, 
+                React.createElement("tbody", null, 
+                React.createElement("tr", null, 
+                    React.createElement("th", {colSpan: "4", className: "text-center"}, "配偶")
+                ), 
+                React.createElement("tr", null, 
+                    React.createElement("th", {className: "col-xs-3"}, "反馈结果"), 
+                    React.createElement("td", {colSpan: "3", className: "text-center"}, "详情")
+                )
+                )
+            )
         );
     }
 });
@@ -169,7 +169,7 @@ var ReportAssetVehicleSelfStore = Reflux.createStore({
         ajaxPost(url, data, callback);
     },
 });
-var ReportAssetVehicleSelf = React.createClass({
+var ReportAssetVehicleSelf = React.createClass({displayName: "ReportAssetVehicleSelf",
     mixins: [Reflux.connect(ReportAssetVehicleSelfStore, 'vehicleList')],
     getInitialState: function () {
         return {
@@ -182,25 +182,25 @@ var ReportAssetVehicleSelf = React.createClass({
     },
     render: function () {
         return (
-            <table className="table table-bordered table-condensed table_inline">
-                <tbody>
-                <tr>
-                    <th colSpan="3" className="text-center">借款人</th>
-                </tr>
-                <tr>
-                    <th className="col-xs-4 text-center">车辆品牌</th>
-                    <th className="col-xs-4 text-center">是否沪牌</th>
-                    <th className="col-xs-4 text-center">抵押状态</th>
-                </tr>
-                {this.state.vehicleList.map(function (item, index) {
-                    return <ReportAssetVehicleItemSelf key={item.vehicleID} item={item} index={index}/>
-                })}
-                </tbody>
-            </table>
+            React.createElement("table", {className: "table table-bordered table-condensed table_inline"}, 
+                React.createElement("tbody", null, 
+                React.createElement("tr", null, 
+                    React.createElement("th", {colSpan: "3", className: "text-center"}, "借款人")
+                ), 
+                React.createElement("tr", null, 
+                    React.createElement("th", {className: "col-xs-4 text-center"}, "车辆品牌"), 
+                    React.createElement("th", {className: "col-xs-4 text-center"}, "是否沪牌"), 
+                    React.createElement("th", {className: "col-xs-4 text-center"}, "抵押状态")
+                ), 
+                this.state.vehicleList.map(function (item, index) {
+                    return React.createElement(ReportAssetVehicleItemSelf, {key: item.vehicleID, item: item, index: index})
+                })
+                )
+            )
         );
     }
 });
-var ReportAssetVehicleItemSelf = React.createClass({
+var ReportAssetVehicleItemSelf = React.createClass({displayName: "ReportAssetVehicleItemSelf",
     render: function () {
         var isShanghai = "";
         if(this.props.item.isShanghai){
@@ -209,11 +209,11 @@ var ReportAssetVehicleItemSelf = React.createClass({
             isShanghai = "否";
         }
         return (
-            <tr>
-                <td className="text-center">{this.props.item.maker}</td>
-                <td className="text-center">{isShanghai}</td>
-                <td className="text-center">{this.props.item.status}</td>
-            </tr>
+            React.createElement("tr", null, 
+                React.createElement("td", {className: "text-center"}, this.props.item.maker), 
+                React.createElement("td", {className: "text-center"}, isShanghai), 
+                React.createElement("td", {className: "text-center"}, this.props.item.status)
+            )
         );
     }
 });
@@ -245,7 +245,7 @@ var ReportAssetVehicleMateStore = Reflux.createStore({
         ajaxPost(url, data, callback);
     },
 });
-var ReportAssetVehicleMate = React.createClass({
+var ReportAssetVehicleMate = React.createClass({displayName: "ReportAssetVehicleMate",
     mixins: [Reflux.connect(ReportAssetVehicleMateStore, 'vehicleList')],
     getInitialState: function () {
         return {
@@ -258,25 +258,25 @@ var ReportAssetVehicleMate = React.createClass({
     },
     render: function () {
         return (
-            <table className="table table-bordered table-condensed table_inline">
-                <tbody>
-                <tr>
-                    <th colSpan="3" className="text-center">配偶</th>
-                </tr>
-                <tr>
-                    <th className="col-xs-4 text-center">车辆品牌</th>
-                    <th className="col-xs-4 text-center">是否沪牌</th>
-                    <th className="col-xs-4 text-center">抵押状态</th>
-                </tr>
-                {this.state.vehicleList.map(function (item, index) {
-                    return <ReportAssetVehicleItemMate key={item.vehicleID} item={item} index={index}/>
-                })}
-                </tbody>
-            </table>
+            React.createElement("table", {className: "table table-bordered table-condensed table_inline"}, 
+                React.createElement("tbody", null, 
+                React.createElement("tr", null, 
+                    React.createElement("th", {colSpan: "3", className: "text-center"}, "配偶")
+                ), 
+                React.createElement("tr", null, 
+                    React.createElement("th", {className: "col-xs-4 text-center"}, "车辆品牌"), 
+                    React.createElement("th", {className: "col-xs-4 text-center"}, "是否沪牌"), 
+                    React.createElement("th", {className: "col-xs-4 text-center"}, "抵押状态")
+                ), 
+                this.state.vehicleList.map(function (item, index) {
+                    return React.createElement(ReportAssetVehicleItemMate, {key: item.vehicleID, item: item, index: index})
+                })
+                )
+            )
         );
     }
 });
-var ReportAssetVehicleItemMate = React.createClass({
+var ReportAssetVehicleItemMate = React.createClass({displayName: "ReportAssetVehicleItemMate",
     render: function () {
         var isShanghai = "";
         if(this.props.item.isShanghai){
@@ -285,11 +285,11 @@ var ReportAssetVehicleItemMate = React.createClass({
             isShanghai = "否";
         }
         return (
-            <tr>
-                <td className="text-center">{this.props.item.maker}</td>
-                <td className="text-center">{isShanghai}</td>
-                <td className="text-center">{this.props.item.status}</td>
-            </tr>
+            React.createElement("tr", null, 
+                React.createElement("td", {className: "text-center"}, this.props.item.maker), 
+                React.createElement("td", {className: "text-center"}, isShanghai), 
+                React.createElement("td", {className: "text-center"}, this.props.item.status)
+            )
         );
     }
 });

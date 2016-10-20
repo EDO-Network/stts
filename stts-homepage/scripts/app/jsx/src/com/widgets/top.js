@@ -20,7 +20,7 @@ var Top = React.createClass({
                         <li><a href="../index.html">企服超市</a></li>
                         <li><a href="#">我是服务机构</a></li>
                         <li><a href="#">帮助中心</a></li>
-                        <li><a href="#">退出</a></li>
+                        <li><a href="../login.html">退出</a></li>
                     </ul>
                 </div>
             </div>

@@ -45,14 +45,14 @@ var Register = React.createClass({
                             <input type="checkbox"/>同意<a href="#">《企服超市平台会员服务协议》</a>
                         </div>
                         <div className="form-group">
-                            <button type="button" className="btn btn-primary  btn-block" onClick={this.handleLogin}>
+                            <a href="login.html" className="btn btn-primary  btn-block">
                                 注册
-                            </button>
+                            </a>
                         </div>
 
                         <div>
                             <div className="text-right">
-                                <label>已有账号？</label><a href="#">立即登陆</a>
+                                <label>已有账号？</label><a href="login.html">立即登陆</a>
                             </div>
                         </div>
                     </div>

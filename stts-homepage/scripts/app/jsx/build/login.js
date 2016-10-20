@@ -17,7 +17,7 @@ var LoginForm = React.createClass({displayName: "LoginForm",
     },
     render: function () {
         return (
-            React.createElement("div", {className: "login-form hot-tab-wrap mt-20"}, 
+            React.createElement("div", {className: "login-form hot-tab-wrap"}, 
                 React.createElement("ul", {className: "nav nav-tabs login-tabs", role: "tablist"}, 
                     React.createElement("li", {role: "presentation", className: "active"}, React.createElement("a", {href: "#verify", role: "tab", "data-toggle": "tab"}, "验证码登录")
                     ), 

@@ -45,14 +45,14 @@ var Register = React.createClass({displayName: "Register",
                             React.createElement("input", {type: "checkbox"}), "同意", React.createElement("a", {href: "#"}, "《企服超市平台会员服务协议》")
                         ), 
                         React.createElement("div", {className: "form-group"}, 
-                            React.createElement("button", {type: "button", className: "btn btn-primary  btn-block", onClick: this.handleLogin}, 
+                            React.createElement("a", {href: "login.html", className: "btn btn-primary  btn-block"}, 
                                 "注册"
                             )
                         ), 
 
                         React.createElement("div", null, 
                             React.createElement("div", {className: "text-right"}, 
-                                React.createElement("label", null, "已有账号？"), React.createElement("a", {href: "#"}, "立即登陆")
+                                React.createElement("label", null, "已有账号？"), React.createElement("a", {href: "login.html"}, "立即登陆")
                             )
                         )
                     )

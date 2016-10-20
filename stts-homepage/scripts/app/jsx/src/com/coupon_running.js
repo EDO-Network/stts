@@ -25,8 +25,57 @@ var Coupon = React.createClass({
                             <div className="panel panel-default">
                                 <div className="panel-heading">服务券流水</div>
                                 <div className="panel-body">
-                                    <div>
+                                    <div className="row form-horizontal">
+                                        <div className="col-sm-3">
+                                            <div className="form-group">
+                                                <div className="control-label col-sm-4">
+                                                    <label>时间</label>
+                                                </div>
+                                                <div className="col-sm-8">
+                                                    <select className="form-control">
+                                                        <option>全部</option>
+                                                        <option>1年以内</option>
+                                                        <option>2年以内</option>
+                                                        <option>3年以内</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-sm-3">
+                                            <div className="form-group">
+                                                <div className="control-label col-sm-4">
+                                                    <label>流向</label>
+                                                </div>
+                                                <div className="col-sm-8">
+                                                    <select className="form-control">
+                                                        <option>全部</option>
+                                                        <option>收入</option>
+                                                        <option>支出</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-sm-4">
+                                            <div className="form-group">
+                                                <div className="control-label col-sm-4">
+                                                    <label>金额</label>
+                                                </div>
 
+                                                <div className="col-sm-8">
+                                                    <div className="input-group">
+                                                        <input type="text" className="form-control"/>
+                                                        <span
+                                                            className="input-group-addon bg-clear border-clear">~</span>
+                                                        <input type="text" className="form-control"/>
+                                                        <span
+                                                            className="input-group-addon bg-clear border-clear">元</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-sm-2">
+                                            <button type="button" className="btn btn-default">搜&nbsp;索</button>
+                                        </div>
                                     </div>
                                     <table className="table table-hover">
                                         <thead>

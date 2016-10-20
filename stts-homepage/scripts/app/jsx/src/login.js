@@ -17,7 +17,7 @@ var LoginForm = React.createClass({
     },
     render: function () {
         return (
-            <div className="login-form hot-tab-wrap mt-20">
+            <div className="login-form hot-tab-wrap">
                 <ul className="nav nav-tabs login-tabs" role="tablist">
                     <li role="presentation" className="active"><a href="#verify" role="tab" data-toggle="tab">验证码登录</a>
                     </li>
