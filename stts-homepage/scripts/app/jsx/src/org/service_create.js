@@ -4,15 +4,14 @@ var OrderList = React.createClass({
         return (
             <div>
                 <Top/>
-                <Header activeMenuID="服务产品"/>
+                <Header activeMenuID="mainMenuService"/>
 
                 <div className="container">
                     <div>
                         <div className="pull-left w-222">
                             <div className="list-group">
-                                <a href="service_list.html" className="list-group-item ">全部服务</a>
-                                <a href="service_list.html" className="list-group-item">上架服务</a>
-                                <a href="service_list.html" className="list-group-item">下架服务</a>
+                                <a href="service_list.html" className="list-group-item ">服务一览</a>
+
                                 <a href="service_create.html" className="list-group-item active">服务发布</a>
                             </div>
                         </div>
@@ -21,16 +20,63 @@ var OrderList = React.createClass({
                             <ol className="breadcrumb">
                                 <li>您所在的位置：</li>
                                 <li><a href="dashboard.html">服务机构</a></li>
-                                <li><a href="dashboard.html">服务产品</a></li>
+                                <li><a href="service_list.html">服务产品</a></li>
                                 <li className='active'>服务发布</li>
                             </ol>
-                            <SearchArea/>
-                            <ServiceItem/>
-                            <ServiceItem/>
-                            <ServiceItem/>
-                            <ServiceItem/>
-                            <ServiceItem/>
-                            <Paging/>
+
+                            <ul className="nav nav-tabs text-center" role="tablist" style={{width:"100%"}}>
+                                <li role="presentation" className="tab active" style={{width:"25%"}}>
+                                    <a href="#all" role="tab" data-toggle="tab">全部</a>
+                                </li>
+                                <li role="presentation" style={{width:"25%"}}>
+                                    <a href="#onSale" role="tab" data-toggle="tab">上架
+                                        <span className=" text-pink  ml-5">5</span>
+                                    </a>
+                                </li>
+
+                                <li role="presentation" style={{width:"25%"}}>
+                                    <a href="#inApproval" role="tab" data-toggle="tab">申请中
+                                        <span className=" text-pink ml-5">2</span></a>
+                                </li>
+                            </ul>
+                            <div className="tab-content">
+                                <div role="tabpanel" className="tab-pane active" id="all">
+                                    <SearchArea/>
+                                    <ServiceItem/>
+                                    <ServiceItem/>
+                                    <ServiceItem/>
+                                    <ServiceItem/>
+                                    <ServiceItem/>
+                                    <Paging/>
+                                </div>
+                                <div role="tabpanel" className="tab-pane " id="onSale">
+                                    <SearchArea/>
+                                    <ServiceItem/>
+                                    <ServiceItem/>
+                                    <ServiceItem/>
+                                    <ServiceItem/>
+                                    <ServiceItem/>
+                                    <Paging/>
+                                </div>
+                                <div role="tabpanel" className="tab-pane " id="inStock">
+                                    <SearchArea/>
+                                    <ServiceItem/>
+                                    <ServiceItem/>
+                                    <ServiceItem/>
+                                    <ServiceItem/>
+                                    <ServiceItem/>
+                                    <Paging/>
+                                </div>
+                                <div role="tabpanel" className="tab-pane " id="inApproval">
+                                    <SearchArea/>
+                                    <ServiceItem/>
+                                    <ServiceItem/>
+                                    <ServiceItem/>
+                                    <ServiceItem/>
+                                    <ServiceItem/>
+                                    <Paging/>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -4,14 +4,13 @@ var OrderList = React.createClass({
         return (
             <div>
                 <Top/>
-                <Header activeMenuID="服务产品"/>
+                <Header activeMenuID="mainMenuService"/>
 
                 <div className="container">
                     <div>
                         <div className="pull-left w-222">
                             <div className="list-group">
                                 <a href="service_list.html" className="list-group-item active">服务一览</a>
-
                                 <a href="service_create.html" className="list-group-item">服务发布</a>
                             </div>
                         </div>
@@ -30,18 +29,18 @@ var OrderList = React.createClass({
                                 </li>
                                 <li role="presentation" style={{width:"25%"}}>
                                     <a href="#onSale" role="tab" data-toggle="tab">上架
-                                        <span className="badge badge-success badge-sm ml-5">5</span>
+                                        <span className=" text-pink  ml-5">5</span>
                                     </a>
                                 </li>
                                 <li role="presentation" style={{width:"25%"}}>
                                     <a href="#inStock" role="tab" data-toggle="tab">下架
-                                        <span className="badge badge-default badge-sm ml-5">4</span>
+                                        <span className=" text-pink ml-5">4</span>
                                     </a>
 
                                 </li>
                                 <li role="presentation" style={{width:"25%"}}>
                                     <a href="#inApproval" role="tab" data-toggle="tab">申请中
-                                        <span className="badge badge-danger badge-sm ml-5">2</span></a>
+                                        <span className=" text-pink ml-5">2</span></a>
                                 </li>
                             </ul>
                             <div className="tab-content">

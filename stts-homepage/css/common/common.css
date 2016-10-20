@@ -439,3 +439,37 @@ img {
 .badge-inverse {
     background-color: #212121;
 }
+
+.text-white {
+    color: #ffffff;
+}
+.text-danger {
+    color: #ef5350;
+}
+.text-muted {
+    color: #98a6ad;
+}
+.text-primary {
+    color: #317eeb;
+}
+.text-warning {
+    color: #ffd740;
+}
+.text-success {
+    color: #33b86c;
+}
+.text-info {
+    color: #29b6f6;
+}
+.text-inverse {
+    color: #212121;
+}
+.text-pink {
+    color: #ec407a;
+}
+.text-purple {
+    color: #7e57c2;
+}
+.text-dark {
+    color: #797979 !important;
+}
