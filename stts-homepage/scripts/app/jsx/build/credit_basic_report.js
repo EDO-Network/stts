@@ -56,7 +56,7 @@ var CreditReport = React.createClass({displayName: "CreditReport",
             React.createElement("div", null, 
                 React.createElement(Header, {activeMenuID: "mainMenuBussinessManage"}), 
 
-                React.createElement("div", {id: "main", className: "container-fluid margin-top-60"}, 
+                React.createElement("div", {id: "main", className: "container-fluid mt-60"}, 
                     React.createElement(SideBar, {activeMainMenuID: "mainMenuBussinessManage", activeMenuID: "sideMenuCreditSearchHistory"}), 
 
                     React.createElement("div", {className: "content-page"}, 

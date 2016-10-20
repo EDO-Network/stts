@@ -94,7 +94,7 @@ var Admin = React.createClass({displayName: "Admin",
             React.createElement("div", null, 
                 React.createElement(Header, null), 
 
-                React.createElement("div", {id: "main", className: "container-fluid margin-top-60"}, 
+                React.createElement("div", {id: "main", className: "container-fluid mt-60"}, 
                     React.createElement(SideBar, {activeMenuID: "menuAdminsManage"}), 
                     React.createElement("div", {className: "content-page"}, 
                         React.createElement(Breadcrumb, {page: Page.admin}), 

@@ -60,7 +60,7 @@ var OrderList = React.createClass({displayName: "OrderList",
             React.createElement("div", null, 
                 React.createElement(Header, {activeMenuID: "mainMenuSysManage"}), 
 
-                React.createElement("div", {id: "main", className: "container-fluid margin-top-60"}, 
+                React.createElement("div", {id: "main", className: "container-fluid mt-60"}, 
                     React.createElement(SideBar, {activeMainMenuID: "mainMenuSysManage", activeMenuID: "sideMenuBigDOrderHistory"}), 
                     React.createElement("div", {className: "content-page"}, 
                         React.createElement(Breadcrumb, {page: Page.bigdOrderList}), 

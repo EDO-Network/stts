@@ -187,12 +187,12 @@ var OrderItem = React.createClass({displayName: "OrderItem",
                         React.createElement("div", {className: "col-sm-2"}, 
                             React.createElement("img", {src: "../../img/sample/service_small.jpg"})
                         ), 
-                        React.createElement("div", {className: "col-sm-3 border-right-solid"}, 
+                        React.createElement("div", {className: "col-sm-3 border-right-dotted"}, 
                             React.createElement("div", null, React.createElement("a", {href: "#"}, "财务审计")), 
                             React.createElement("br", null), 
                             React.createElement("div", null, React.createElement("a", {href: "#"}, "中国出口信用保险公司"))
                         ), 
-                        React.createElement("div", {className: "col-sm-2 border-right-solid"}, 
+                        React.createElement("div", {className: "col-sm-2 border-right-dotted"}, 
                             React.createElement("div", null, "总金额：2000元"), 
                             React.createElement("br", null), 
                             React.createElement("div", null, "服务券：1000元")
@@ -202,7 +202,7 @@ var OrderItem = React.createClass({displayName: "OrderItem",
                             React.createElement("br", null), 
                             React.createElement("div", null, "倒计时：5天")
                         ), 
-                        React.createElement("div", {className: "col-sm-3 border-left-solid"}, 
+                        React.createElement("div", {className: "col-sm-3 border-left-dotted"}, 
                             React.createElement("div", null, React.createElement("a", {href: "#"}, "取消"), " | ", React.createElement("a", {href: "#"}, "确认")), 
                             React.createElement("br", null), 
                             React.createElement("div", null, React.createElement("a", {href: "#"}, "退款"), " | ", React.createElement("a", {href: "order_detail.html"}, "详细"))
