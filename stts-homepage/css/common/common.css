@@ -313,6 +313,19 @@ img {
     padding-top: 7px;
 }
 
+.pt-10 {
+    padding-top: 10px;
+}
+
+.pb-10 {
+    padding-bottom: 10px;
+}
+
+.pv-10{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .p-5 {
     padding: 5px;
 }
@@ -396,6 +409,7 @@ img {
     text-overflow: ellipsis;
 }
 
+/*线的样式*/
 .border-right-dotted {
     border-right: dotted 1px #cccccc;
 }
@@ -404,6 +418,10 @@ img {
     border-left: dotted 1px #cccccc;
 }
 
+.border-bottom-dotted {
+    border-bottom: dotted 1px #cccccc;
+}
+/*线的样式*/
 
 .badge-xs {
     font-size: 9px;
@@ -440,6 +458,7 @@ img {
     background-color: #212121;
 }
 
+
 .text-white {
     color: #ffffff;
 }
@@ -472,4 +491,13 @@ img {
 }
 .text-dark {
     color: #797979 !important;
+}
+/*主画面的全局布局*/
+.left-area-wrap{
+    float: left;
+    width: 222px;
+}
+
+.right-area-wrap{
+    margin-left: 232px;
 }

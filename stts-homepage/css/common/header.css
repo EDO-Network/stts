@@ -39,11 +39,13 @@
     border-bottom: 1px solid #c7c7c7;
     margin: 0;
     min-width: 26px;
+    font-size: 20px;
+    color: #0c63a9;
 }
 
 .header-wrap .menu-main .title .service-icon{
     color: #cccccc;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .header-wrap .menu-main .title-bg {

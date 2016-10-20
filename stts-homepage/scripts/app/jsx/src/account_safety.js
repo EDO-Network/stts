@@ -7,13 +7,6 @@ var AccountSafety = React.createClass({
 
                 <div className="container">
 
-                    <ol className="breadcrumb">
-                        <li>您所在的位置：</li>
-                        <li><a href="index.html">首页</a></li>
-                        <li><a href="account_profile.html">账户设置</a></li>
-                        <li className='active'>账户安全</li>
-                    </ol>
-
                     <div>
                         <div className="pull-left w-222">
                             <div className="list-group">
@@ -26,6 +19,12 @@ var AccountSafety = React.createClass({
                             <div className="panel panel-default">
                                 <div className="panel-heading">账户安全</div>
                                 <div className="panel-body">
+                                    <ol className="breadcrumb">
+                                        <li>您所在的位置：</li>
+                                        <li><a href="index.html">首页</a></li>
+                                        <li><a href="account_profile.html">账户设置</a></li>
+                                        <li className='active'>账户安全</li>
+                                    </ol>
                                     <div>
                                         <ul className="nav nav-tabs" role="tablist">
                                             <li role="presentation" className="active"><a href="#password" role="tab"
