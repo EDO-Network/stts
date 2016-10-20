@@ -2,7 +2,7 @@ var ServiceList = React.createClass({displayName: "ServiceList",
     render: function () {
         return (
             React.createElement("div", null, 
-                React.createElement(Top, null), 
+                React.createElement(Top, {isLogin: "true"}), 
                 React.createElement(Header, {activeMenuID: "mainMenuService"}), 
 
                 React.createElement("div", {className: "container"}, 
@@ -13,7 +13,8 @@ var ServiceList = React.createClass({displayName: "ServiceList",
                         React.createElement("ol", {className: "breadcrumb"}, 
                             React.createElement("li", null, "您所在的位置："), 
                             React.createElement("li", null, React.createElement("a", {href: "index.html"}, "首页")), 
-                            React.createElement("li", null, React.createElement("a", {href: "service_list.html"}, "服务产品"))
+                            React.createElement("li", null, React.createElement("a", {href: "service_list.html"}, "服务产品")), 
+                            React.createElement("li", {className: "active"}, "服务产品一览")
                         ), 
                         React.createElement(ServiceSearchArea, null), 
                         React.createElement(ServiceItem, null), 
@@ -32,7 +33,7 @@ var ServiceList = React.createClass({displayName: "ServiceList",
 var ServiceItem = React.createClass({displayName: "ServiceItem",
     render: function () {
         return (
-            React.createElement("div", {className: "overflow-hidden border-bottom-dotted mb-5"}, 
+            React.createElement("div", {className: "overflow-hidden border-bottom-dotted mb-10 pv-10"}, 
                 React.createElement("div", {className: "col-sm-2"}, 
                     React.createElement("img", {src: "../img/sample/service_small.jpg"})
                 ), 

@@ -2,7 +2,7 @@ var ServiceList = React.createClass({
     render: function () {
         return (
             <div>
-                <Top/>
+                <Top isLogin="true"/>
                 <Header activeMenuID="mainMenuService"/>
 
                 <div className="container">
@@ -14,6 +14,7 @@ var ServiceList = React.createClass({
                             <li>您所在的位置：</li>
                             <li><a href="index.html">首页</a></li>
                             <li><a href="service_list.html">服务产品</a></li>
+                            <li className='active'>服务产品一览</li>
                         </ol>
                         <ServiceSearchArea/>
                         <ServiceItem/>
@@ -32,7 +33,7 @@ var ServiceList = React.createClass({
 var ServiceItem = React.createClass({
     render: function () {
         return (
-            <div className="overflow-hidden border-bottom-dotted mb-5">
+            <div className="overflow-hidden border-bottom-dotted mb-10 pv-10">
                 <div className="col-sm-2">
                     <img src="../img/sample/service_small.jpg"/>
                 </div>

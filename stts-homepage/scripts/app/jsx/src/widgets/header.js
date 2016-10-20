@@ -23,7 +23,7 @@ var Header = React.createClass({
                             <li id="mainMenuAccountProfile" style={{display:"none"}}><a href="account_profile.html">账户设置</a></li>
                             <li id="mainMenuIndex"><a href="index.html">首页</a></li>
                             <li id="mainMenuService"><a href="service_list.html">服务产品</a></li>
-                            <li id="mainMenuOrg"><a href="javascript:void(0)">服务机构</a></li>
+                            <li id="mainMenuOrg"><a href="org_list.html">服务机构</a></li>
                         </ul>
                     </div>
                     {

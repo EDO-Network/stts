@@ -313,6 +313,19 @@ img {
     padding-top: 7px;
 }
 
+.pt-10 {
+    padding-top: 10px;
+}
+
+.pb-10 {
+    padding-bottom: 10px;
+}
+
+.pv-10{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .p-5 {
     padding: 5px;
 }
