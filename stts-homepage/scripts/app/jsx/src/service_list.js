@@ -6,10 +6,10 @@ var ServiceList = React.createClass({
                 <Header activeMenuID="mainMenuService"/>
 
                 <div className="container">
-                    <div className="left-area-wrap">
+                    <div className="pull-left w-222">
                         <NavCategory/>
                     </div>
-                    <div className="right-area-wrap">
+                    <div className="ml-240">
                         <ol className="breadcrumb">
                             <li>您所在的位置：</li>
                             <li><a href="index.html">首页</a></li>

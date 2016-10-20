@@ -12,9 +12,9 @@ var ServiceDetail = React.createClass({displayName: "ServiceDetail",
                         React.createElement("li", null, React.createElement("a", {href: "service_list.html"}, "服务产品")), 
                         React.createElement("li", {className: "active"}, "服务详细")
                     ), 
-                    React.createElement("div", {className: "left-area-wrap"}
+                    React.createElement("div", {className: "pull-left w-222"}
                     ), 
-                    React.createElement("div", {className: "right-area-wrap"}
+                    React.createElement("div", {className: "ml-240"}
                     )
                 )
             )

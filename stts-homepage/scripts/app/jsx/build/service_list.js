@@ -6,10 +6,10 @@ var ServiceList = React.createClass({displayName: "ServiceList",
                 React.createElement(Header, {activeMenuID: "mainMenuService"}), 
 
                 React.createElement("div", {className: "container"}, 
-                    React.createElement("div", {className: "left-area-wrap"}, 
+                    React.createElement("div", {className: "pull-left w-222"}, 
                         React.createElement(NavCategory, null)
                     ), 
-                    React.createElement("div", {className: "right-area-wrap"}, 
+                    React.createElement("div", {className: "ml-240"}, 
                         React.createElement("ol", {className: "breadcrumb"}, 
                             React.createElement("li", null, "您所在的位置："), 
                             React.createElement("li", null, React.createElement("a", {href: "index.html"}, "首页")), 

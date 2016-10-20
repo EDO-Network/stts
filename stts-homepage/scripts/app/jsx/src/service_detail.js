@@ -12,9 +12,9 @@ var ServiceDetail = React.createClass({
                         <li><a href="service_list.html">服务产品</a></li>
                         <li className='active'>服务详细</li>
                     </ol>
-                    <div className="left-area-wrap">
+                    <div className="pull-left w-222">
                     </div>
-                    <div className="right-area-wrap">
+                    <div className="ml-240">
                     </div>
                 </div>
             </div>

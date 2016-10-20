@@ -492,12 +492,3 @@ img {
 .text-dark {
     color: #797979 !important;
 }
-/*主画面的全局布局*/
-.left-area-wrap{
-    float: left;
-    width: 222px;
-}
-
-.right-area-wrap{
-    margin-left: 232px;
-}
