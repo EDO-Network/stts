@@ -63,7 +63,7 @@ var ServiceNew = React.createClass({
                 <div className="row">
                     <div className="col-sm-3">
                         <img className="w-per-100" src="../../img/common/org-preview.jpg"/>
-                        <button className="col-sm-12 btn btn-info mt-20 ">展示标题图上传</button>
+                        <button className="col-sm-12 btn btn-default mt-20 ">展示标题图上传</button>
                     </div>
                     <div className="col-sm-9 form form-horizontal " role="form">
                         <div className="form-group">
@@ -196,6 +196,15 @@ var ServiceNew = React.createClass({
                                         <input type="radio" disabled/> 不可用
                                     </label>
                                 </div>
+                            </div>
+                        </div>
+                        <div className="form-group">
+                            <label className="control-label col-sm-3">
+                                合同模版<span className="text-danger ml-5">*</span>
+                            </label>
+
+                            <div className="col-sm-7">
+                                <button className=" col-sm-3 btn btn-default btn-sm">上传</button>
                             </div>
                         </div>
                     </div>

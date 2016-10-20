@@ -22,6 +22,7 @@ var Header = React.createClass({
                             <li id="mainMenuOrder"><a href="company.html">订单处理</a></li>
                             <li id="mainMenuService"><a href="service_list.html">服务产品</a></li>
                             <li id="mainMenuCoupon"><a href="coupon.html">服务券帐户</a></li>
+                            <li id="mainMenuOrgInfo"><a href="org_info.html">资质审核</a></li>
                         </ul>
                     </div>
                 </div>

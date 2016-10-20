@@ -33,7 +33,7 @@ var CouponExcharge = React.createClass({
 
                                 </div>
                                 <div className="col-sm-8 text-right text-pink">
-                                    <span className="fa fa-warning mr-10"></span>必须包括服务券和现金发票
+                                    <span className="fa fa-exclamation"></span> 必须包括服务券和现金发票
                                     </div>
                                 </div>
                             <TableInfo/>
