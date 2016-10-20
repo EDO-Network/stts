@@ -22,7 +22,7 @@ var Header = React.createClass({
                             <li id="mainMenuRegisterUser" style={{display:"none"}}><a href="register_user.html">注册用户</a></li>
                             <li id="mainMenuAccountProfile" style={{display:"none"}}><a href="account_profile.html">账户设置</a></li>
                             <li id="mainMenuIndex"><a href="index.html">首页</a></li>
-                            <li id="mainMenuService"><a href="javascript:void(0)">服务产品</a></li>
+                            <li id="mainMenuService"><a href="service_list.html">服务产品</a></li>
                             <li id="mainMenuOrg"><a href="javascript:void(0)">服务机构</a></li>
                         </ul>
                     </div>

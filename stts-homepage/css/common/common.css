@@ -396,6 +396,7 @@ img {
     text-overflow: ellipsis;
 }
 
+/*线的样式*/
 .border-right-dotted {
     border-right: dotted 1px #cccccc;
 }
@@ -404,6 +405,10 @@ img {
     border-left: dotted 1px #cccccc;
 }
 
+.border-bottom-dotted {
+    border-bottom: dotted 1px #cccccc;
+}
+/*线的样式*/
 
 .badge-xs {
     font-size: 9px;
@@ -438,4 +443,14 @@ img {
 }
 .badge-inverse {
     background-color: #212121;
+}
+
+/*主画面的全局布局*/
+.left-area-wrap{
+    float: left;
+    width: 222px;
+}
+
+.right-area-wrap{
+    margin-left: 232px;
 }

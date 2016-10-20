@@ -46,7 +46,7 @@ var OrderList = React.createClass({
                             </ul>
                             <div className="tab-content">
                                 <div role="tabpanel" className="tab-pane active" id="all">
-                                    <SearchArea/>
+                                    <ServiceSearchArea/>
                                     <ServiceItem/>
                                     <ServiceItem/>
                                     <ServiceItem/>
@@ -55,7 +55,7 @@ var OrderList = React.createClass({
                                     <Paging/>
                                 </div>
                                 <div role="tabpanel" className="tab-pane " id="onSale">
-                                    <SearchArea/>
+                                    <ServiceSearchArea/>
                                     <ServiceItem/>
                                     <ServiceItem/>
                                     <ServiceItem/>
@@ -64,7 +64,7 @@ var OrderList = React.createClass({
                                     <Paging/>
                                 </div>
                                 <div role="tabpanel" className="tab-pane " id="inStock">
-                                    <SearchArea/>
+                                    <ServiceSearchArea/>
                                     <ServiceItem/>
                                     <ServiceItem/>
                                     <ServiceItem/>
@@ -73,7 +73,7 @@ var OrderList = React.createClass({
                                     <Paging/>
                                 </div>
                                 <div role="tabpanel" className="tab-pane " id="inApproval">
-                                    <SearchArea/>
+                                    <ServiceSearchArea/>
                                     <ServiceItem/>
                                     <ServiceItem/>
                                     <ServiceItem/>
@@ -89,134 +89,7 @@ var OrderList = React.createClass({
         );
     }
 });
-var SearchArea = React.createClass({
-    handleCondition: function () {
-        var $moreConditionWrap = $("#moreConditionWrap");
-        if ($moreConditionWrap.is(":visible")) {
-            $("#moreConditionWrap").hide(1000);
-            $("#btnCondition").text("更多筛选条件");
-        } else {
-            $("#moreConditionWrap").show(500);
-            $("#btnCondition").text("收起筛选条件");
-        }
-    },
-    render: function () {
-        return (
-            <div className="panel panel-default">
-                <div className="panel-body">
-                    <div className="row  mb-10">
-                        <div className="col-sm-6">
-                            <div className="input-group">
-                                <input type="text" className="form-control"/>
-                                    <span className="input-group-btn">
-                                    <button className="btn btn-default" type="button">搜&nbsp;索</button>
-                                    </span>
-                            </div>
-                        </div>
-                        <div className="col-sm-6">
-                            <button id="btnCondition" className="btn btn-default"
-                                    onClick={this.handleCondition}>更多筛选条件
-                            </button>
-                        </div>
-                    </div>
-                    <div id="moreConditionWrap" style={{display: "none"}}
-                         className="form-horizontal overflow-hidden font-size-12">
-                        <hr/>
-                        <div className="row">
-                            <div className="form-group col-sm-4">
-                                <label className="control-label col-sm-4">服务名称</label>
 
-                                <div className=" col-sm-8">
-                                    <input className="form-control input-sm" type="text"/>
-                                </div>
-                            </div>
-                            <div className="form-group col-sm-3">
-                                <label className="control-label col-sm-4">状态</label>
-
-                                <div className=" col-sm-8">
-                                    <select className="form-control input-sm">
-                                        <option></option>
-                                        <option>上架审核中</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div className="form-group col-sm-5">
-                                <label className="control-label col-sm-4">修改时间</label>
-
-                                <div className=" col-sm-8 ">
-                                    <div className="input-group input-group-sm">
-                                        <input type="text" className="form-control input-sm "
-                                               defaultValue="2016-10-23"/>
-                                        <span className="input-group-btn font-size-12 width-10 text-center">-</span>
-                                        <input type="text" className="form-control input-sm" defaultValue="2016-12-23"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="form-group col-sm-4">
-                                <label className="control-label col-sm-4">大分类</label>
-
-                                <div className=" col-sm-8">
-                                    <select className="form-control input-sm">
-                                        <option></option>
-                                        <option>大分类1</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div className="form-group col-sm-3">
-                                <label className="control-label col-sm-4 pl-0">小分类</label>
-
-                                <div className=" col-sm-8">
-                                    <select className="form-control input-sm">
-                                        <option></option>
-                                        <option>小分类1</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div className="form-group col-sm-5">
-                                <label className="control-label col-sm-4">服务费用</label>
-
-                                <div className=" col-sm-8 ">
-                                    <div className="input-group input-group-sm">
-
-                                        <input type="text" className="form-control input-sm text-right"
-                                               defaultValue="100"/>
-
-                                        <span className="input-group-btn text-center font-size-12 width-10">-</span>
-
-
-                                        <input type="text" className="form-control input-sm text-right"
-                                               defaultValue="500"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row ">
-                            <div className="col-sm-6 col-sm-offset-3">
-                                <div className="col-sm-4">
-                                    <button className="btn btn-sm btn-default col-sm-12">
-                                        <span className="fa fa-clear"></span>清空条件
-                                    </button>
-                                </div>
-                                <div className="col-sm-4">
-                                    <button className=" btn btn-sm btn-primary col-sm-12">
-                                        <span className="fa fa-search"></span>搜索
-                                    </button>
-                                </div>
-                                <div className="col-sm-4">
-                                    <button className=" btn btn-sm btn-warning col-sm-12">
-                                        <span className="fa fa-file-text-o"></span>导出
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-});
 var ServiceItem = React.createClass({
     render: function () {
         return (

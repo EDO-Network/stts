@@ -22,7 +22,7 @@ var Header = React.createClass({displayName: "Header",
                             React.createElement("li", {id: "mainMenuRegisterUser", style: {display:"none"}}, React.createElement("a", {href: "register_user.html"}, "注册用户")), 
                             React.createElement("li", {id: "mainMenuAccountProfile", style: {display:"none"}}, React.createElement("a", {href: "account_profile.html"}, "账户设置")), 
                             React.createElement("li", {id: "mainMenuIndex"}, React.createElement("a", {href: "index.html"}, "首页")), 
-                            React.createElement("li", {id: "mainMenuService"}, React.createElement("a", {href: "javascript:void(0)"}, "服务产品")), 
+                            React.createElement("li", {id: "mainMenuService"}, React.createElement("a", {href: "service_list.html"}, "服务产品")), 
                             React.createElement("li", {id: "mainMenuOrg"}, React.createElement("a", {href: "javascript:void(0)"}, "服务机构"))
                         )
                     )

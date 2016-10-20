@@ -25,7 +25,12 @@ var OrderDetail = React.createClass({
                                 <li><a href="order_list.html">我的订单</a></li>
                                 <li className='active'>订单号：201601010001</li>
                             </ol>
-                            <Order/>
+                            <div className="panel panel-default">
+                                <div className="panel-heading">订单详细</div>
+                                <div className="panel-body">
+                                    <Order/>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

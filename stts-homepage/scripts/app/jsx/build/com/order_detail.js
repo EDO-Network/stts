@@ -25,7 +25,12 @@ var OrderDetail = React.createClass({displayName: "OrderDetail",
                                 React.createElement("li", null, React.createElement("a", {href: "order_list.html"}, "我的订单")), 
                                 React.createElement("li", {className: "active"}, "订单号：201601010001")
                             ), 
-                            React.createElement(Order, null)
+                            React.createElement("div", {className: "panel panel-default"}, 
+                                React.createElement("div", {className: "panel-heading"}, "订单详细"), 
+                                React.createElement("div", {className: "panel-body"}, 
+                                    React.createElement(Order, null)
+                                )
+                            )
                         )
                     )
                 )
