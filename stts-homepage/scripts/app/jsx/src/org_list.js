@@ -83,7 +83,7 @@ var OrgItem = React.createClass({
                     <div>宁波市海曙区中山东路145号</div>
                 </div>
                 <div className="col-sm-3 border-right-dotted">
-                    <div>服务产品数：6个</div>
+                    <div>服务产品：6个</div>
                     <br/>
 
                     <div>服务次数：114次</div>

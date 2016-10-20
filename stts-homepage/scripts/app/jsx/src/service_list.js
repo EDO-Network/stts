@@ -38,7 +38,7 @@ var ServiceItem = React.createClass({
                     <img src="../img/sample/service_small.jpg"/>
                 </div>
                 <div className="col-sm-4 border-right-dotted">
-                    <div><a href="#">财务审计</a></div>
+                    <div><a href="service_detail.html">财务审计</a></div>
                     <br/>
                     <div><a href="#">中国出口信用保险公司</a></div>
                 </div>
