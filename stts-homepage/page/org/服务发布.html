@@ -36,7 +36,7 @@
         </ul>
 
 
-        <div class="tab-content" id="">
+        <div class="tab-content" >
             <div role="tabpanel" class="tab-pane active" id="info">
                 <div class="row">
                     <div class="col-sm-3">
@@ -55,7 +55,7 @@
                         </div>
                         <div class="form-group">
                             <label class="control-label col-sm-3">
-                                所属大分类<span class="text-danger ml-5">*</span>
+                                大分类<span class="text-danger ml-5">*</span>
                             </label>
 
                             <div class="col-sm-6">
@@ -67,7 +67,7 @@
 
                         <div class="form-group">
                             <label class="control-label col-sm-3">
-                                所属小分类<span class="text-danger ml-5">*</span>
+                                小分类<span class="text-danger ml-5">*</span>
                             </label>
 
                             <div class="col-sm-6">
@@ -171,15 +171,215 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4>服务详细内容描述</h4>
+                        <textarea name="content" class="w-per-100 " style="height: 300px;"></textarea>
+                    </div>
+                </div>
             </div>
             <div role="tabpanel" class="tab-pane" id="history">
 
+                <div>
+                    <button class="btn btn-success btn-sm w-100" data-toggle="modal" data-target="#addModal">
+                        <span class="fa fa-plus mr-10"></span>添加
+                    </button>
+                    <button class="btn badge-warning btn-sm w-100"><span class="fa fa-upload mr-10"></span>批量导入</button>
+                    <button class="btn btn-info btn-sm w-100"><span class="fa fa-download mr-10"></span>批量导出</button>
+                    <button class="btn btn-default btn-sm w-100"><span class="fa fa-times-circle-o mr-10"></span>批量删除
+                    </button>
+                </div>
+
+                <div class="mt-20">
+                    <table class="table  table-hover font-size-12">
+
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th>服务时间</th>
+                            <th>企业名称</th>
+                            <th>服务名称</th>
+                            <th>服务评价</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                            <td class="text-center"><input type="checkbox"/></td>
+                            <td>2016-01-01&nbsp;～&nbsp;2016-01-10</td>
+                            <td>xxx科技有限公司</td>
+                            <td>质量检测</td>
+                            <td class="text-gold">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <input type="checkbox"/></td>
+                            <td>2016-01-01&nbsp;～&nbsp;2016-01-10</td>
+                            <td>xxx科技有限公司</td>
+                            <td>质量检测</td>
+                            <td class="text-gold">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><input type="checkbox"/></td>
+                            <td>2016-01-01&nbsp;～&nbsp;2016-01-10</td>
+                            <td>xxx科技有限公司</td>
+                            <td>质量检测</td>
+                            <td class="text-gold">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <input type="checkbox"/></td>
+                            <td>2016-01-01&nbsp;～&nbsp;2016-01-10</td>
+                            <td>xxx科技有限公司</td>
+                            <td>质量检测</td>
+                            <td class="text-gold">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span
+                                        aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <h4 class="modal-title" id="addModalLabel">初始案例添加</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form form-horizontal " role="form">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3">
+                                            大分类<span class="text-danger ml-5">*</span>
+                                        </label>
+
+                                        <div class="col-sm-8">
+                                            <select class="form-control">
+                                                <option/>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3">
+                                            小分类<span class="text-danger ml-5">*</span>
+                                        </label>
+
+                                        <div class="col-sm-8">
+                                            <select class="form-control">
+                                                <option/>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3">
+                                            服务名称<span class="text-danger ml-5">*</span>
+                                        </label>
+
+                                        <div class="col-sm-8">
+                                            <input class="form-control" type="text"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group form-inline">
+                                        <label class="control-label col-sm-3">
+                                            服务时间<span class="text-danger ml-5">*</span>
+                                        </label>
+
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control">
+                                            <span class="w-50 text-center"> ～ </span>
+                                            <input type="text" class="form-control">
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3">
+                                            实际费用<span class="text-danger ml-5">*</span>
+                                        </label>
+
+                                        <div class="col-sm-8  ">
+                                            <div class="input-group">
+                                                <span class="input-group-addon "><span class="fa fa-rmb"></span></span>
+                                                <input class="form-control" type="text"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3">
+                                            服务评价<span class="text-danger ml-5">*</span>
+                                        </label>
+
+                                        <div class="col-sm-8 ">
+
+                                            <div class="form-control-static text-gold">
+
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3">
+                                            服务名称<span class="text-danger ml-5">*</span>
+                                        </label>
+
+                                        <div class="col-sm-6">
+                                            <input class="form-control" type="text"/>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer ">
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-primary "><span class="fa fa-save "></span> 保存</button>
+                                    <button type="button" class="btn btn-default " data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-
     </div>
+</div>
 
 
 </div>
@@ -190,10 +390,21 @@
 <script src="../../scripts/react-15.0.1/build/react-dom.js"></script>
 <script src="../../scripts/refluxjs-0.4.1/reflux.js"></script>
 <script src="../../scripts/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+<script src="../../scripts/kindeditor-4.1.10/kindeditor.js"></script>
+
 <script src="../../scripts/app/js/common.js"></script>
-<script src="../../scripts/app/jsx/build/common/top.js"></script>
-<script src="../../scripts/app/jsx/build/common/header.js"></script>
-<script src="../../scripts/app/jsx/build/common/nav_category.js"></script>
+<script src="../../scripts/app/jsx/build/widgets/top.js"></script>
+<script src="../../scripts/app/jsx/build/widgets/header.js"></script>
+<script src="../../scripts/app/jsx/build/widgets/nav_category.js"></script>
 <!--<script src="../../scripts/app/jsx/build/index.js"></script>-->
+<script>
+    var editor;
+    KindEditor.ready(function (K) {
+        editor = K.create('textarea[name="content"]', {
+            allowFileManager: true
+        });
+
+    });
+</script>
 </body>
 </html>

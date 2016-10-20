@@ -1,4 +1,4 @@
-var OrderList = React.createClass({
+var ServiceCreate = React.createClass({
 
     render: function () {
         return (
@@ -24,58 +24,20 @@ var OrderList = React.createClass({
                                 <li className='active'>服务发布</li>
                             </ol>
 
-                            <ul className="nav nav-tabs text-center" role="tablist" style={{width:"100%"}}>
-                                <li role="presentation" className="tab active" style={{width:"25%"}}>
-                                    <a href="#all" role="tab" data-toggle="tab">全部</a>
-                                </li>
-                                <li role="presentation" style={{width:"25%"}}>
-                                    <a href="#onSale" role="tab" data-toggle="tab">上架
-                                        <span className=" text-pink  ml-5">5</span>
-                                    </a>
-                                </li>
 
-                                <li role="presentation" style={{width:"25%"}}>
-                                    <a href="#inApproval" role="tab" data-toggle="tab">申请中
-                                        <span className=" text-pink ml-5">2</span></a>
+                            <ul className="nav nav-tabs text-center" role="tablist">
+                                <li role="presentation" className="tab active">
+                                    <a href="#info" role="tab" data-toggle="tab">服务产品</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#history" role="tab" data-toggle="tab">初始案例</a>
                                 </li>
                             </ul>
                             <div className="tab-content">
-                                <div role="tabpanel" className="tab-pane active" id="all">
-                                    <SearchArea/>
-                                    <ServiceItem/>
-                                    <ServiceItem/>
-                                    <ServiceItem/>
-                                    <ServiceItem/>
-                                    <ServiceItem/>
-                                    <Paging/>
-                                </div>
-                                <div role="tabpanel" className="tab-pane " id="onSale">
-                                    <SearchArea/>
-                                    <ServiceItem/>
-                                    <ServiceItem/>
-                                    <ServiceItem/>
-                                    <ServiceItem/>
-                                    <ServiceItem/>
-                                    <Paging/>
-                                </div>
-                                <div role="tabpanel" className="tab-pane " id="inStock">
-                                    <SearchArea/>
-                                    <ServiceItem/>
-                                    <ServiceItem/>
-                                    <ServiceItem/>
-                                    <ServiceItem/>
-                                    <ServiceItem/>
-                                    <Paging/>
-                                </div>
-                                <div role="tabpanel" className="tab-pane " id="inApproval">
-                                    <SearchArea/>
-                                    <ServiceItem/>
-                                    <ServiceItem/>
-                                    <ServiceItem/>
-                                    <ServiceItem/>
-                                    <ServiceItem/>
-                                    <Paging/>
-                                </div>
+
+                                <ServiceNew/>
+                                <ServiceHistory/>
+
                             </div>
                         </div>
                     </div>
@@ -84,207 +46,389 @@ var OrderList = React.createClass({
         );
     }
 });
-var SearchArea = React.createClass({
-    handleCondition: function () {
-        var $moreConditionWrap = $("#moreConditionWrap");
-        if ($moreConditionWrap.is(":visible")) {
-            $("#moreConditionWrap").hide(1000);
-            $("#btnCondition").text("更多筛选条件");
-        } else {
-            $("#moreConditionWrap").show(500);
-            $("#btnCondition").text("收起筛选条件");
-        }
+
+var ServiceNew = React.createClass({
+
+    componentDidMount: function () {
+        var editor;
+        KindEditor.ready(function (K) {
+            editor = K.create('textarea[name="content"]', {
+                allowFileManager: true
+            });
+        });
     },
     render: function () {
         return (
-            <div className="panel panel-default">
-                <div className="panel-body">
-                    <div className="row  mb-10">
-                        <div className="col-sm-6">
-                            <div className="input-group">
-                                <input type="text" className="form-control"/>
-                                    <span className="input-group-btn">
-                                    <button className="btn btn-default" type="button">搜&nbsp;索</button>
-                                    </span>
+            <div role="tabpanel" className="tab-pane active" id="info">
+                <div className="row">
+                    <div className="col-sm-3">
+                        <img className="w-per-100" src="../../img/common/org-preview.jpg"/>
+                        <button className="col-sm-12 btn btn-info mt-20 ">展示标题图上传</button>
+                    </div>
+                    <div className="col-sm-9 form form-horizontal " role="form">
+                        <div className="form-group">
+                            <label className="control-label col-sm-3">
+                                服务名称<span className="text-danger ml-5">*</span>
+                            </label>
+
+                            <div className="col-sm-7">
+                                <input className="form-control" type="text"/>
                             </div>
                         </div>
-                        <div className="col-sm-6">
-                            <button id="btnCondition" className="btn btn-default"
-                                    onClick={this.handleCondition}>更多筛选条件
-                            </button>
+                        <div className="form-group">
+                            <label className="control-label col-sm-3">
+                                大分类<span className="text-danger ml-5">*</span>
+                            </label>
+
+                            <div className="col-sm-7">
+                                <select className="form-control">
+                                    <option/>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div className="form-group">
+                            <label className="control-label col-sm-3">
+                                小分类<span className="text-danger ml-5">*</span>
+                            </label>
+
+                            <div className="col-sm-7">
+                                <select className="form-control">
+                                    <option/>
+                                </select>
+                            </div>
+                        </div>
+                        <div className="form-group form-inline">
+                            <label className="control-label col-sm-3">
+                                服务对象<span className="text-danger ml-5">*</span>
+                            </label>
+
+                            <div className="col-sm-7">
+                                <div className="checkbox mr-10">
+                                    <label>
+                                        <input type="checkbox"/> 普通企业
+                                    </label>
+                                </div>
+
+                                <div className="checkbox mr-10">
+                                    <label>
+                                        <input type="checkbox"/> 小型企业
+                                    </label>
+                                </div>
+
+                                <div className="checkbox mr-10">
+                                    <label>
+                                        <input type="checkbox"/> 微型企业
+                                    </label>
+                                </div>
+
+                                <div className="checkbox">
+                                    <label>
+                                        <input type="checkbox"/> 小升规
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div className="form-group form-inline">
+                            <label className="control-label col-sm-3">
+                                服务价格<span className="text-danger ml-5">*</span>
+                            </label>
+
+                            <div className="col-sm-7">
+                                <input type="text" className="form-control"/>
+                                <span className="w-50 text-center"> ~ </span>
+                                <input type="text" className="form-control"/>
+                            </div>
+
+                        </div>
+
+                        <div className="form-group form-inline">
+                            <label className="control-label col-sm-3">
+                                收费标准<span className="text-danger ml-5">*</span>
+                            </label>
+
+                            <div className="col-sm-7">
+                                <textarea rows="3" className=" form-control" cols="48"></textarea>
+                            </div>
+
+                        </div>
+                        <div className="form-group form-inline">
+                            <label className="control-label col-sm-3">
+                                服务方式<span className="text-danger ml-5">*</span>
+                            </label>
+
+                            <div className="col-sm-7">
+                                <div className="checkbox mr-10">
+                                    <label>
+                                        <input type="checkbox"/> 电话服务
+                                    </label>
+                                </div>
+
+                                <div className="checkbox mr-10">
+                                    <label>
+                                        <input type="checkbox"/> 上门服务
+                                    </label>
+                                </div>
+
+                                <div className="checkbox">
+                                    <label>
+                                        <input type="checkbox"/> 网络服务
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="form-group form-inline">
+                            <label className="control-label col-sm-3">
+                                支付服务券<span className="text-danger ml-5">*</span>
+                            </label>
+
+                            <div className="col-sm-7">
+                                <div className="radio disabled  mr-10">
+                                    <label>
+                                        <input type="radio" checked="checked"
+                                               disabled/> 可用
+                                    </label>
+                                </div>
+
+                                <div className="radio disabled">
+                                    <label>
+                                        <input type="radio" disabled/> 不可用
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div id="moreConditionWrap" style={{display: "none"}}
-                         className="form-horizontal overflow-hidden font-size-12">
-                        <hr/>
-                        <div className="row">
-                            <div className="form-group col-sm-4">
-                                <label className="control-label col-sm-4">服务名称</label>
-
-                                <div className=" col-sm-8">
-                                    <input className="form-control input-sm" type="text"/>
-                                </div>
-                            </div>
-                            <div className="form-group col-sm-3">
-                                <label className="control-label col-sm-4">状态</label>
-
-                                <div className=" col-sm-8">
-                                    <select className="form-control input-sm">
-                                        <option></option>
-                                        <option>上架审核中</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div className="form-group col-sm-5">
-                                <label className="control-label col-sm-4">修改时间</label>
-
-                                <div className=" col-sm-8 ">
-                                    <div className="input-group input-group-sm">
-                                        <input type="text" className="form-control input-sm "
-                                               defaultValue="2016-10-23"/>
-                                        <span className="input-group-btn font-size-12 width-10 text-center">-</span>
-                                        <input type="text" className="form-control input-sm" defaultValue="2016-12-23"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="form-group col-sm-4">
-                                <label className="control-label col-sm-4">大分类</label>
-
-                                <div className=" col-sm-8">
-                                    <select className="form-control input-sm">
-                                        <option></option>
-                                        <option>大分类1</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div className="form-group col-sm-3">
-                                <label className="control-label col-sm-4 pl-0">小分类</label>
-
-                                <div className=" col-sm-8">
-                                    <select className="form-control input-sm">
-                                        <option></option>
-                                        <option>小分类1</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div className="form-group col-sm-5">
-                                <label className="control-label col-sm-4">服务费用</label>
-
-                                <div className=" col-sm-8 ">
-                                    <div className="input-group input-group-sm">
-
-                                        <input type="text" className="form-control input-sm text-right"
-                                               defaultValue="100"/>
-
-                                        <span className="input-group-btn text-center font-size-12 width-10">-</span>
-
-
-                                        <input type="text" className="form-control input-sm text-right"
-                                               defaultValue="500"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row ">
-                            <div className="col-sm-6 col-sm-offset-3">
-                                <div className="col-sm-4">
-                                    <button className="btn btn-sm btn-default col-sm-12">
-                                        <span className="fa fa-clear"></span>清空条件
-                                    </button>
-                                </div>
-                                <div className="col-sm-4">
-                                    <button className=" btn btn-sm btn-primary col-sm-12">
-                                        <span className="fa fa-search"></span>搜索
-                                    </button>
-                                </div>
-                                <div className="col-sm-4">
-                                    <button className=" btn btn-sm btn-warning col-sm-12">
-                                        <span className="fa fa-file-text-o"></span>导出
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+                <div className="row">
+                    <div className="col-sm-12">
+                        <h4>服务详细内容描述</h4>
+                <textarea name="content" className="w-per-100 "
+                          style={{height: "300px"}}></textarea>
                     </div>
                 </div>
             </div>
         );
     }
 });
-var ServiceItem = React.createClass({
+
+
+var ServiceHistory = React.createClass({
     render: function () {
         return (
-            <div className=" panel panel-info">
-                <div className="panel-heading">
-                    <div className="row">
-                        <span className="col-sm-4 panel-title"> 服务名称：XXXXX服务1</span>
-                        <span className="col-sm-4"> 最后修改时间：2016-06-01 18:00:29</span>
-                        <span className="col-sm-4"> 最近上架时间：2016-06-01 18:00:29</span>
-                    </div>
-
+            <div role="tabpanel" className="tab-pane" id="history">
+                <div className="col-sm-12">
+                    <button className="btn btn-success btn-sm w-100 mr-10" data-toggle="modal" data-target="#addModal">
+                        <span className="fa fa-plus mr-10"></span>添加
+                    </button>
+                    <button className="btn badge-warning btn-sm w-100 mr-10"><span className="fa fa-upload mr-10"></span>批量导入
+                    </button>
+                    <button className="btn btn-info btn-sm w-100 mr-10"><span className="fa fa-download mr-10"></span>批量导出
+                    </button>
+                    <button className="btn btn-default btn-sm w-100"><span
+                        className="fa fa-times-circle-o mr-10"></span>批量删除
+                    </button>
                 </div>
-                <div className="panel-body">
-                    <div className="row"></div>
-                    <div className="col-sm-2 mt-10">
-                        <img src="../../img/common/org-preview-small.jpg"/>
-                    </div>
-                    <div className="col-sm-10 row">
 
-                        <div className="col-sm-3 border-right-dotted">
-                            <div className="row mt-20">
-                                <strong className="col-sm-5 pl-0 text-right">大分类:</strong>
-                                <span className="col-sm-7 pl-0">人才引培</span></div>
-                            <div className="row mt-20 mb-20 ">
-                                <strong className="col-sm-5 pl-0 text-right">小分类:</strong>
-                                <span className="col-sm-7 pl-0">高层培训</span>
-                            </div>
-                        </div>
-                        <div className="col-sm-3 border-right-dotted">
-                            <div className="row mt-20">
-                                <strong className="col-sm-6 pl-0 text-right">服务价格:</strong>
-                                <span className="col-sm-6 pl-0">2000 元</span></div>
-                            <div className="row mt-20 mb-20 ">
-                                <strong className="col-sm-6 pl-0 text-right">好评率:</strong>
+                <div className="mt-20 col-sm-12">
+                    <table className="table  table-hover font-size-12">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th>服务时间</th>
+                            <th>企业名称</th>
+                            <th>服务名称</th>
+                            <th>服务评价</th>
+                        </tr>
+                        </thead>
 
-                                <div className="col-sm-6 pl-0 text-gold">
-                                    <span className="fa fa-star"/><span className="fa fa-star"/>
-                                    <span className="fa fa-star"/><span className="fa fa-star"/>
-                                    <span className="fa fa-star"/>
+                        <tbody>
+                        <tr>
+                            <td className="text-center"><input type="checkbox"/></td>
+                            <td>2016-01-01&nbsp;～&nbsp;2016-01-10</td>
+                            <td>xxx科技有限公司</td>
+                            <td>质量检测</td>
+                            <td className="text-gold">
+                                <span className="fa fa-star"></span>
+                                <span className="fa fa-star"></span>
+                                <span className="fa fa-star"></span>
+                                <span className="fa fa-star"></span>
+                                <span className="fa fa-star"></span>
 
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-sm-3 border-right-dotted">
-                            <div className="row mt-20">
-                                <strong className="col-sm-6 pl-0 text-right">状态:</strong>
-                                <span className="col-sm-6 pl-0">上架审核中</span>
-                            </div>
-                            <div className="row mt-20 mb-20 ">
-                                <strong className="col-sm-6 pl-0 text-right">申请数:</strong>
-                                <span className="col-sm-6 pl-0">27 次</span>
-                            </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className="text-center">
+                                <input type="checkbox"/></td>
+                            <td>2016-01-01&nbsp;～&nbsp;2016-01-10</td>
+                            <td>xxx科技有限公司</td>
+                            <td>质量检测</td>
+                            <td className="text-gold">
+                                <span className="fa fa-star"></span>
+                                <span className="fa fa-star"></span>
+                                <span className="fa fa-star"></span>
+                                <span className="fa fa-star"></span>
+                                <span className="fa fa-star"></span>
 
-                        </div>
-                        <div className="col-sm-3  text-center">
-                            <div className="pl-0 row mt-20 ">
-                                <a href="#" className="col-sm-7 ">重新上架</a>
-                                <a href="#" className="col-sm-5 ">修改</a>
-                            </div>
-                            <div className="pl-0 row mt-20 mb-20 ">
-                                <a href="#" className="col-sm-7 ">详情</a>
-                                <a href="#" className="col-sm-5 ">删除</a>
-                            </div>
-                        </div>
-                    </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className="text-center"><input type="checkbox"/></td>
+                            <td>2016-01-01&nbsp;～&nbsp;2016-01-10</td>
+                            <td>xxx科技有限公司</td>
+                            <td>质量检测</td>
+                            <td className="text-gold">
+                                <span className="fa fa-star"></span>
+                                <span className="fa fa-star"></span>
+                                <span className="fa fa-star"></span>
+                                <span className="fa fa-star"></span>
+                                <span className="fa fa-star"></span>
 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className="text-center">
+                                <input type="checkbox"/></td>
+                            <td>2016-01-01&nbsp;～&nbsp;2016-01-10</td>
+                            <td>xxx科技有限公司</td>
+                            <td>质量检测</td>
+                            <td className="text-gold">
+                                <span className="fa fa-star"></span>
+                                <span className="fa fa-star"></span>
+                                <span className="fa fa-star"></span>
+                                <span className="fa fa-star"></span>
+                                <span className="fa fa-star"></span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <HistoryNewModal/>
                 </div>
             </div>
         );
     }
 });
 
+var HistoryNewModal = React.createClass({
+    render: function () {
+        return (
+            <div className="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel"
+                 aria-hidden="true">
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <button type="button" className="close" data-dismiss="modal"><span
+                                aria-hidden="true">&times;</span><span className="sr-only">Close</span></button>
+                            <h4 className="modal-title" id="addModalLabel">初始案例添加</h4>
+                        </div>
+                        <div className="modal-body">
+                            <div className="form form-horizontal " role="form">
+                                <div className="form-group">
+                                    <label className="control-label col-sm-3">
+                                        大分类<span className="text-danger ml-5">*</span>
+                                    </label>
+
+                                    <div className="col-sm-8">
+                                        <select className="form-control">
+                                            <option/>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div className="form-group">
+                                    <label className="control-label col-sm-3">
+                                        小分类<span className="text-danger ml-5">*</span>
+                                    </label>
+
+                                    <div className="col-sm-8">
+                                        <select className="form-control">
+                                            <option/>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div className="form-group">
+                                    <label className="control-label col-sm-3">
+                                        服务名称<span className="text-danger ml-5">*</span>
+                                    </label>
+
+                                    <div className="col-sm-8">
+                                        <input className="form-control" type="text"/>
+                                    </div>
+                                </div>
+
+                                <div className="form-group form-inline">
+                                    <label className="control-label col-sm-3">
+                                        服务时间<span className="text-danger ml-5">*</span>
+                                    </label>
+
+                                    <div className="col-sm-8">
+                                        <input type="text" className="form-control"/>
+                                        <span className="w-50 text-center"> ～ </span>
+                                        <input type="text" className="form-control"/>
+                                    </div>
+
+                                </div>
+
+                                <div className="form-group">
+                                    <label className="control-label col-sm-3">
+                                        实际费用<span className="text-danger ml-5">*</span>
+                                    </label>
+
+                                    <div className="col-sm-8  ">
+                                        <div className="input-group">
+                                                    <span className="input-group-addon "><span
+                                                        className="fa fa-rmb"></span></span>
+                                            <input className="form-control" type="text"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="form-group">
+                                    <label className="control-label col-sm-3">
+                                        服务评价<span className="text-danger ml-5">*</span>
+                                    </label>
+
+                                    <div className="col-sm-8 ">
+
+                                        <div className="form-control-static text-gold">
+
+                                            <span className="fa fa-star"></span>
+                                            <span className="fa fa-star"></span>
+                                            <span className="fa fa-star"></span>
+                                            <span className="fa fa-star"></span>
+                                            <span className="fa fa-star"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div className="form-group">
+                                    <label className="control-label col-sm-3">
+                                        服务名称<span className="text-danger ml-5">*</span>
+                                    </label>
+
+                                    <div className="col-sm-8">
+                                        <input className="form-control" type="text"/>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div className="modal-footer ">
+                            <div className="text-center">
+                                <button type="button" className="btn btn-primary "><span className="fa fa-save "></span>
+                                    保存
+                                </button>
+                                <button type="button" className="btn btn-default " data-dismiss="modal">取消</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+});
 ReactDOM.render(
-    <OrderList />,
+    <ServiceCreate />,
     document.getElementById('page')
 );

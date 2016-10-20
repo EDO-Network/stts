@@ -1,4 +1,4 @@
-var OrderList = React.createClass({
+var ServiceList = React.createClass({
 
     render: function () {
         return (
@@ -289,6 +289,6 @@ var ServiceItem = React.createClass({
 });
 
 ReactDOM.render(
-    <OrderList />,
+    <ServiceList />,
     document.getElementById('page')
 );
