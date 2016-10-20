@@ -177,22 +177,58 @@ var Order = React.createClass({displayName: "Order",
                             React.createElement("div", {className: "col-sm-6"}, 
                                 React.createElement("h3", null, "对服务机构的评价"), 
 
-                                React.createElement("p", null, "综合评价：⭐️️️️️⭐️⭐️⭐️⭐️"), 
+                                React.createElement("p", null, "综合评价：", 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"})
+                                ), 
 
-                                React.createElement("p", null, "服务态度：⭐️⭐️⭐️⭐️⭐️"), 
+                                React.createElement("p", null, "服务态度：", 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"})
+                                ), 
 
-                                React.createElement("p", null, "专业水平：⭐️⭐️⭐️⭐️⭐️"), 
+                                React.createElement("p", null, "专业水平：", 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"})
+                                ), 
 
-                                React.createElement("p", null, "描述属实：⭐️⭐️⭐️⭐️⭐️"), 
+                                React.createElement("p", null, "描述属实：", 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"})
+                                ), 
 
                                 React.createElement("p", null, "补充说明：xxxxxxxxxxxxxxxxxxxxxxx")
                             ), 
                             React.createElement("div", {className: "col-sm-6"}, 
                                 React.createElement("h3", null, "对企业的评价"), 
 
-                                React.createElement("p", null, "综合评价：⭐️⭐️⭐️⭐️⭐️"), 
+                                React.createElement("p", null, "综合评价：", 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"})
+                                ), 
 
-                                React.createElement("p", null, "付款及时：⭐️⭐️⭐️⭐️⭐️"), 
+                                React.createElement("p", null, "付款及时：", 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"}), 
+                                    React.createElement("i", {className: "fa fa-star text-gold", "aria-hidden": "true"})
+                                ), 
 
                                 React.createElement("p", null, "补充说明：xxxxxxxxxxxxxxxxxxxxxxx")
                             )

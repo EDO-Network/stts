@@ -177,22 +177,58 @@ var Order = React.createClass({
                             <div className="col-sm-6">
                                 <h3>对服务机构的评价</h3>
 
-                                <p>综合评价：⭐️️️️️⭐️⭐️⭐️⭐️</p>
+                                <p>综合评价：
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                </p>
 
-                                <p>服务态度：⭐️⭐️⭐️⭐️⭐️</p>
+                                <p>服务态度：
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                </p>
 
-                                <p>专业水平：⭐️⭐️⭐️⭐️⭐️</p>
+                                <p>专业水平：
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                </p>
 
-                                <p>描述属实：⭐️⭐️⭐️⭐️⭐️</p>
+                                <p>描述属实：
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                </p>
 
                                 <p>补充说明：xxxxxxxxxxxxxxxxxxxxxxx</p>
                             </div>
                             <div className="col-sm-6">
                                 <h3>对企业的评价</h3>
 
-                                <p>综合评价：⭐️⭐️⭐️⭐️⭐️</p>
+                                <p>综合评价：
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                </p>
 
-                                <p>付款及时：⭐️⭐️⭐️⭐️⭐️</p>
+                                <p>付款及时：
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                                </p>
 
                                 <p>补充说明：xxxxxxxxxxxxxxxxxxxxxxx</p>
                             </div>
