@@ -416,8 +416,8 @@ var HistoryNewModal = React.createClass({
                         </div>
                         <div className="modal-footer ">
                             <div className="text-center">
-                                <button type="button" className="btn btn-primary "><span className="fa fa-save "></span>
-                                    保存
+                                <button type="button" className="btn btn-primary ">
+                                    <span className="fa fa-save "></span> 保存
                                 </button>
                                 <button type="button" className="btn btn-default " data-dismiss="modal">取消</button>
                             </div>
