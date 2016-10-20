@@ -6,12 +6,6 @@ var Coupon = React.createClass({displayName: "Coupon",
                 React.createElement(Header, {activeMenuID: "mainMenuCoupon"}), 
 
                 React.createElement("div", {className: "container"}, 
-                    React.createElement("ol", {className: "breadcrumb"}, 
-                        React.createElement("li", null, "您所在的位置："), 
-                        React.createElement("li", null, React.createElement("a", {href: "dashboard.html"}, "企业机构")), 
-                        React.createElement("li", null, React.createElement("a", {href: "company.html"}, "服务券")), 
-                        React.createElement("li", {className: "active"}, "服务券流水")
-                    ), 
 
                     React.createElement("div", null, 
                         React.createElement("div", {className: "pull-left w-222"}, 
@@ -22,6 +16,12 @@ var Coupon = React.createClass({displayName: "Coupon",
                         ), 
 
                         React.createElement("div", {className: "ml-240"}, 
+                            React.createElement("ol", {className: "breadcrumb"}, 
+                                React.createElement("li", null, "您所在的位置："), 
+                                React.createElement("li", null, React.createElement("a", {href: "dashboard.html"}, "企业机构")), 
+                                React.createElement("li", null, React.createElement("a", {href: "company.html"}, "服务券")), 
+                                React.createElement("li", {className: "active"}, "服务券流水")
+                            ), 
                             React.createElement("div", {className: "panel panel-default"}, 
                                 React.createElement("div", {className: "panel-heading"}, "服务券流水"), 
                                 React.createElement("div", {className: "panel-body"}, 

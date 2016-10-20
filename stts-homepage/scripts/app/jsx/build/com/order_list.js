@@ -16,12 +16,6 @@ var OrderList = React.createClass({displayName: "OrderList",
                 React.createElement(Header, {activeMenuID: "mainMenuOrder"}), 
 
                 React.createElement("div", {className: "container"}, 
-                    React.createElement("ol", {className: "breadcrumb"}, 
-                        React.createElement("li", null, "您所在的位置："), 
-                        React.createElement("li", null, React.createElement("a", {href: "dashboard.html"}, "企业机构")), 
-                        React.createElement("li", null, React.createElement("a", {href: "order_list.html"}, "我的订单")), 
-                        React.createElement("li", {className: "active"}, "订单一览")
-                    ), 
 
                     React.createElement("div", null, 
                         React.createElement("div", {className: "pull-left w-222"}, 
@@ -35,6 +29,12 @@ var OrderList = React.createClass({displayName: "OrderList",
                         ), 
 
                         React.createElement("div", {className: "ml-240"}, 
+                            React.createElement("ol", {className: "breadcrumb"}, 
+                                React.createElement("li", null, "您所在的位置："), 
+                                React.createElement("li", null, React.createElement("a", {href: "dashboard.html"}, "企业机构")), 
+                                React.createElement("li", null, React.createElement("a", {href: "order_list.html"}, "我的订单")), 
+                                React.createElement("li", {className: "active"}, "订单一览")
+                            ), 
                             React.createElement("div", {className: "panel panel-default"}, 
                                 React.createElement("div", {className: "panel-heading"}, "订单一览"), 
                                 React.createElement("div", {className: "panel-body"}, 

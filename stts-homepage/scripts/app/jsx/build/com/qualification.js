@@ -6,12 +6,6 @@ var Qualification = React.createClass({displayName: "Qualification",
                 React.createElement(Header, {activeMenuID: "mainMenuCompany"}), 
 
                 React.createElement("div", {className: "container"}, 
-                    React.createElement("ol", {className: "breadcrumb"}, 
-                        React.createElement("li", null, "您所在的位置："), 
-                        React.createElement("li", null, React.createElement("a", {href: "dashboard.html"}, "企业机构")), 
-                        React.createElement("li", null, React.createElement("a", {href: "company.html"}, "资质审核")), 
-                        React.createElement("li", {className: "active"}, "审核历史一览")
-                    ), 
 
                     React.createElement("div", null, 
                         React.createElement("div", {className: "pull-left w-222"}, 
@@ -22,6 +16,12 @@ var Qualification = React.createClass({displayName: "Qualification",
                         ), 
 
                         React.createElement("div", {className: "ml-240"}, 
+                            React.createElement("ol", {className: "breadcrumb"}, 
+                                React.createElement("li", null, "您所在的位置："), 
+                                React.createElement("li", null, React.createElement("a", {href: "dashboard.html"}, "企业机构")), 
+                                React.createElement("li", null, React.createElement("a", {href: "company.html"}, "资质审核")), 
+                                React.createElement("li", {className: "active"}, "审核历史一览")
+                            ), 
                             React.createElement("div", {className: "panel panel-default"}, 
                                 React.createElement("div", {className: "panel-heading"}, "资质审核"), 
                                 React.createElement("div", {className: "panel-body"}, 

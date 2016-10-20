@@ -16,12 +16,6 @@ var OrderList = React.createClass({
                 <Header activeMenuID="mainMenuOrder"/>
 
                 <div className="container">
-                    <ol className="breadcrumb">
-                        <li>您所在的位置：</li>
-                        <li><a href="dashboard.html">企业机构</a></li>
-                        <li><a href="order_list.html">我的订单</a></li>
-                        <li className='active'>订单一览</li>
-                    </ol>
 
                     <div>
                         <div className="pull-left w-222">
@@ -35,6 +29,12 @@ var OrderList = React.createClass({
                         </div>
 
                         <div className="ml-240">
+                            <ol className="breadcrumb">
+                                <li>您所在的位置：</li>
+                                <li><a href="dashboard.html">企业机构</a></li>
+                                <li><a href="order_list.html">我的订单</a></li>
+                                <li className='active'>订单一览</li>
+                            </ol>
                             <div className="panel panel-default">
                                 <div className="panel-heading">订单一览</div>
                                 <div className="panel-body">
