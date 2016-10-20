@@ -6,15 +6,16 @@ var ServiceDetail = React.createClass({
                 <Header activeMenuID="mainMenuService"/>
 
                 <div className="container">
-                    <ol className="breadcrumb">
-                        <li>您所在的位置：</li>
-                        <li><a href="index.html">首页</a></li>
-                        <li><a href="service_list.html">服务产品</a></li>
-                        <li className='active'>服务详细</li>
-                    </ol>
                     <div className="pull-left w-222">
+                        <OrgCard/>
                     </div>
                     <div className="ml-240">
+                        <ol className="breadcrumb">
+                            <li>您所在的位置：</li>
+                            <li><a href="index.html">首页</a></li>
+                            <li><a href="service_list.html">服务产品</a></li>
+                            <li className='active'>服务详细</li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -22,33 +23,26 @@ var ServiceDetail = React.createClass({
     }
 });
 
-var ServiceItem = React.createClass({
+var ServiceSummary = React.createClass({
     render: function () {
         return (
-            <div className="overflow-hidden border-bottom-dotted mb-10 pv-10">
-                <div className="col-sm-2">
-                    <img src="../img/sample/service_small.jpg"/>
-                </div>
-                <div className="col-sm-4 border-right-dotted">
-                    <div><a href="#">财务审计</a></div>
-                    <br/>
-                    <div><a href="#">中国出口信用保险公司</a></div>
-                </div>
-                <div className="col-sm-3 border-right-dotted">
-                    <div>服务分类：财务指导</div>
-                    <br/>
-                    <div>服务价格：1000元</div>
-                </div>
-                <div className="col-sm-3">
-                    <div>申请次数：14次</div>
-                    <br/>
-                    <div>好评率：
-                        <i className="fa fa-star text-gold" aria-hidden="true"></i>
-                        <i className="fa fa-star text-gold" aria-hidden="true"></i>
-                        <i className="fa fa-star text-gold" aria-hidden="true"></i>
-                        <i className="fa fa-star text-gold" aria-hidden="true"></i>
-                        <i className="fa fa-star text-gold" aria-hidden="true"></i>
+            <div>
+                <h2>财务审计</h2>
+                <div>
+                    <div className="col-sm-4">
+                        <p>所属分类：财务指导</p>
+                        <p>服务价格：1～2万元</p>
+                        <p>服务方式：电话服务,上门服务,网络服务</p>
+                        <p>累计评价：
+                            <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                            <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                            <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                            <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                            <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                        </p>
                     </div>
+                    <div className="col-sm-4"></div>
+                    <div className="col-sm-4"></div>
                 </div>
             </div>
         );
