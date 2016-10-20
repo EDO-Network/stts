@@ -3,10 +3,10 @@ var Dashboard = React.createClass({
         return (
             <div>
                 <Top/>
-                <Header activeMenuID="mainMenuDashboard"/>
+                <Header activeMenuID="mainMenuOrgShow"/>
 
                 <div className="container">
-                    <h3>服务机构平台</h3>
+                    <h3>机构展示</h3>
 
 
                 </div>
