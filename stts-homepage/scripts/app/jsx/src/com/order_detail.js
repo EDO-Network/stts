@@ -6,12 +6,6 @@ var OrderDetail = React.createClass({
                 <Header activeMenuID="mainMenuOrder"/>
 
                 <div className="container">
-                    <ol className="breadcrumb">
-                        <li>您所在的位置：</li>
-                        <li><a href="dashboard.html">企业机构</a></li>
-                        <li><a href="order_list.html">我的订单</a></li>
-                        <li className='active'>订单号：201601010001</li>
-                    </ol>
 
                     <div>
                         <div className="pull-left w-222">
@@ -25,12 +19,13 @@ var OrderDetail = React.createClass({
                         </div>
 
                         <div className="ml-240">
-                            <div className="panel panel-default">
-                                <div className="panel-heading">服务券汇总</div>
-                                <div className="panel-body">
-                                    <Order/>
-                                </div>
-                            </div>
+                            <ol className="breadcrumb">
+                                <li>您所在的位置：</li>
+                                <li><a href="dashboard.html">企业机构</a></li>
+                                <li><a href="order_list.html">我的订单</a></li>
+                                <li className='active'>订单号：201601010001</li>
+                            </ol>
+                            <Order/>
                         </div>
                     </div>
                 </div>
@@ -44,35 +39,59 @@ var Order = React.createClass({
         return (
             <div>
                 <div className="order-process">
-                    <div>
-                        <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <ul>
-                            <li></li>
-                        </ul>
+                    <div className="node">
+                        <div><i className="icon fa fa-shopping-basket" aria-hidden="true"></i></div>
+                        <div>服务申请</div>
+                        <div>2016-01-01</div>
+                        <div>18:00:00</div>
                     </div>
-                    <div>
-                        <i className="fa fa-legal" aria-hidden="true"></i>
-                        <ul>
-                            <li></li>
-                        </ul>
+                    <div className="node process">
+                        <div className="arrow"></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
-                    <div>
-                        <i className="fa fa-credit-card" aria-hidden="true"></i>
-                        <ul>
-                            <li></li>
-                        </ul>
+                    <div className="node">
+                        <div><i className="icon fa fa-legal" aria-hidden="true"></i></div>
+                        <div>服务受理</div>
+                        <div></div>
+                        <div></div>
                     </div>
-                    <div>
-                        <i className="fa fa-commenting" aria-hidden="true"></i>
-                        <ul>
-                            <li></li>
-                        </ul>
+                    <div className="node process">
+                        <div className="arrow"></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
-                    <div>
-                        <i className="fa fa-check-square" aria-hidden="true"></i>
-                        <ul>
-                            <li></li>
-                        </ul>
+                    <div className="node">
+                        <div><i className="icon fa fa-credit-card" aria-hidden="true"></i></div>
+                        <div>完成并付款</div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div className="node process">
+                        <div className="arrow"></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div className="node">
+                        <div><i className="icon fa fa-commenting" aria-hidden="true"></i></div>
+                        <div>服务评价</div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div className="node process">
+                        <div className="arrow"></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div className="node">
+                        <div><i className="icon fa fa-check-square" aria-hidden="true"></i></div>
+                        <div>交易完成</div>
+                        <div></div>
+                        <div></div>
                     </div>
                 </div>
                 <div className="panel panel-info">
@@ -113,31 +132,6 @@ var Order = React.createClass({
                             </div>
                             <div className="col-sm-3">
                                 <p>联系人：王睿智</p>
-                            </div>
-                            <div className="col-sm-3">
-                                <p>联系电话：1234323456</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="panel panel-info">
-                    <div className="panel-heading">服务机构信息</div>
-                    <div className="panel-body">
-                        <div>
-                            <div className="col-sm-6">
-                                <p>服务机构：<a href="#">中国出口信用保险公司（快照）</a></p>
-
-                                <p>处理人员：赵四喜</p>
-
-                                <p>服务机构留言：
-                                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                    xxxxxxxxxxxxxxxxx
-                                    xxxxxxxxxxxxxxxxxxxxxxx</p>
-                            </div>
-                            <div className="col-sm-3">
-                                <p>类型：小升规</p>
-
-                                <p>负责人：金喜善</p>
                             </div>
                             <div className="col-sm-3">
                                 <p>联系电话：1234323456</p>

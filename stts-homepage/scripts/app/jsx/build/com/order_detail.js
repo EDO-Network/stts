@@ -6,12 +6,6 @@ var OrderDetail = React.createClass({displayName: "OrderDetail",
                 React.createElement(Header, {activeMenuID: "mainMenuOrder"}), 
 
                 React.createElement("div", {className: "container"}, 
-                    React.createElement("ol", {className: "breadcrumb"}, 
-                        React.createElement("li", null, "您所在的位置："), 
-                        React.createElement("li", null, React.createElement("a", {href: "dashboard.html"}, "企业机构")), 
-                        React.createElement("li", null, React.createElement("a", {href: "order_list.html"}, "我的订单")), 
-                        React.createElement("li", {className: "active"}, "订单号：201601010001")
-                    ), 
 
                     React.createElement("div", null, 
                         React.createElement("div", {className: "pull-left w-222"}, 
@@ -25,12 +19,13 @@ var OrderDetail = React.createClass({displayName: "OrderDetail",
                         ), 
 
                         React.createElement("div", {className: "ml-240"}, 
-                            React.createElement("div", {className: "panel panel-default"}, 
-                                React.createElement("div", {className: "panel-heading"}, "服务券汇总"), 
-                                React.createElement("div", {className: "panel-body"}, 
-                                    React.createElement(Order, null)
-                                )
-                            )
+                            React.createElement("ol", {className: "breadcrumb"}, 
+                                React.createElement("li", null, "您所在的位置："), 
+                                React.createElement("li", null, React.createElement("a", {href: "dashboard.html"}, "企业机构")), 
+                                React.createElement("li", null, React.createElement("a", {href: "order_list.html"}, "我的订单")), 
+                                React.createElement("li", {className: "active"}, "订单号：201601010001")
+                            ), 
+                            React.createElement(Order, null)
                         )
                     )
                 )
@@ -44,35 +39,59 @@ var Order = React.createClass({displayName: "Order",
         return (
             React.createElement("div", null, 
                 React.createElement("div", {className: "order-process"}, 
-                    React.createElement("div", null, 
-                        React.createElement("i", {className: "fa fa-shopping-cart", "aria-hidden": "true"}), 
-                        React.createElement("ul", null, 
-                            React.createElement("li", null)
-                        )
+                    React.createElement("div", {className: "node"}, 
+                        React.createElement("div", null, React.createElement("i", {className: "icon fa fa-shopping-basket", "aria-hidden": "true"})), 
+                        React.createElement("div", null, "服务申请"), 
+                        React.createElement("div", null, "2016-01-01"), 
+                        React.createElement("div", null, "18:00:00")
                     ), 
-                    React.createElement("div", null, 
-                        React.createElement("i", {className: "fa fa-legal", "aria-hidden": "true"}), 
-                        React.createElement("ul", null, 
-                            React.createElement("li", null)
-                        )
+                    React.createElement("div", {className: "node process"}, 
+                        React.createElement("div", {className: "arrow"}), 
+                        React.createElement("div", null), 
+                        React.createElement("div", null), 
+                        React.createElement("div", null)
                     ), 
-                    React.createElement("div", null, 
-                        React.createElement("i", {className: "fa fa-credit-card", "aria-hidden": "true"}), 
-                        React.createElement("ul", null, 
-                            React.createElement("li", null)
-                        )
+                    React.createElement("div", {className: "node"}, 
+                        React.createElement("div", null, React.createElement("i", {className: "icon fa fa-legal", "aria-hidden": "true"})), 
+                        React.createElement("div", null, "服务受理"), 
+                        React.createElement("div", null), 
+                        React.createElement("div", null)
                     ), 
-                    React.createElement("div", null, 
-                        React.createElement("i", {className: "fa fa-commenting", "aria-hidden": "true"}), 
-                        React.createElement("ul", null, 
-                            React.createElement("li", null)
-                        )
+                    React.createElement("div", {className: "node process"}, 
+                        React.createElement("div", {className: "arrow"}), 
+                        React.createElement("div", null), 
+                        React.createElement("div", null), 
+                        React.createElement("div", null)
                     ), 
-                    React.createElement("div", null, 
-                        React.createElement("i", {className: "fa fa-check-square", "aria-hidden": "true"}), 
-                        React.createElement("ul", null, 
-                            React.createElement("li", null)
-                        )
+                    React.createElement("div", {className: "node"}, 
+                        React.createElement("div", null, React.createElement("i", {className: "icon fa fa-credit-card", "aria-hidden": "true"})), 
+                        React.createElement("div", null, "完成并付款"), 
+                        React.createElement("div", null), 
+                        React.createElement("div", null)
+                    ), 
+                    React.createElement("div", {className: "node process"}, 
+                        React.createElement("div", {className: "arrow"}), 
+                        React.createElement("div", null), 
+                        React.createElement("div", null), 
+                        React.createElement("div", null)
+                    ), 
+                    React.createElement("div", {className: "node"}, 
+                        React.createElement("div", null, React.createElement("i", {className: "icon fa fa-commenting", "aria-hidden": "true"})), 
+                        React.createElement("div", null, "服务评价"), 
+                        React.createElement("div", null), 
+                        React.createElement("div", null)
+                    ), 
+                    React.createElement("div", {className: "node process"}, 
+                        React.createElement("div", {className: "arrow"}), 
+                        React.createElement("div", null), 
+                        React.createElement("div", null), 
+                        React.createElement("div", null)
+                    ), 
+                    React.createElement("div", {className: "node"}, 
+                        React.createElement("div", null, React.createElement("i", {className: "icon fa fa-check-square", "aria-hidden": "true"})), 
+                        React.createElement("div", null, "交易完成"), 
+                        React.createElement("div", null), 
+                        React.createElement("div", null)
                     )
                 ), 
                 React.createElement("div", {className: "panel panel-info"}, 
@@ -113,31 +132,6 @@ var Order = React.createClass({displayName: "Order",
                             ), 
                             React.createElement("div", {className: "col-sm-3"}, 
                                 React.createElement("p", null, "联系人：王睿智")
-                            ), 
-                            React.createElement("div", {className: "col-sm-3"}, 
-                                React.createElement("p", null, "联系电话：1234323456")
-                            )
-                        )
-                    )
-                ), 
-                React.createElement("div", {className: "panel panel-info"}, 
-                    React.createElement("div", {className: "panel-heading"}, "服务机构信息"), 
-                    React.createElement("div", {className: "panel-body"}, 
-                        React.createElement("div", null, 
-                            React.createElement("div", {className: "col-sm-6"}, 
-                                React.createElement("p", null, "服务机构：", React.createElement("a", {href: "#"}, "中国出口信用保险公司（快照）")), 
-
-                                React.createElement("p", null, "处理人员：赵四喜"), 
-
-                                React.createElement("p", null, "服务机构留言：" + ' ' +
-                                    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" + ' ' +
-                                    "xxxxxxxxxxxxxxxxx" + ' ' +
-                                    "xxxxxxxxxxxxxxxxxxxxxxx")
-                            ), 
-                            React.createElement("div", {className: "col-sm-3"}, 
-                                React.createElement("p", null, "类型：小升规"), 
-
-                                React.createElement("p", null, "负责人：金喜善")
                             ), 
                             React.createElement("div", {className: "col-sm-3"}, 
                                 React.createElement("p", null, "联系电话：1234323456")

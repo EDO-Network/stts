@@ -1,0 +1,29 @@
+.order-process {
+    padding-left: 50px;
+    height: 100px;
+}
+
+.order-process .node {
+    float: left;
+}
+
+.order-process .node div{
+    text-align: center;
+    overflow: hidden;
+}
+
+.order-process .node .icon{
+    color: #419641;
+    width: 45px;
+    font-size: 30px;
+}
+.order-process .process {
+    width: 124px;
+    height: 5px;
+}
+.order-process .process .arrow {
+    width: 124px;
+    height: 30px;
+    background-image: url(../../img/proce_icons.png);
+    background-position: 0 -27px;
+}
