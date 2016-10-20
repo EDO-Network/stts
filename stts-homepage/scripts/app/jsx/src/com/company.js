@@ -6,13 +6,6 @@ var Company = React.createClass({
                 <Header activeMenuID="mainMenuCompany"/>
 
                 <div className="container">
-                    <ol className="breadcrumb">
-                        <li>您所在的位置：</li>
-                        <li><a href="dashboard.html">企业机构</a></li>
-                        <li><a href="company.html">资质审核</a></li>
-                        <li className='active'>企业信息</li>
-                    </ol>
-
                     <div>
                         <div className="pull-left w-222">
                             <div className="list-group">
@@ -22,6 +15,13 @@ var Company = React.createClass({
                         </div>
 
                         <div className="ml-240">
+
+                            <ol className="breadcrumb">
+                                <li>您所在的位置：</li>
+                                <li><a href="dashboard.html">企业机构</a></li>
+                                <li><a href="company.html">资质审核</a></li>
+                                <li className='active'>企业信息</li>
+                            </ol>
                             <div className="panel panel-default">
                                 <div className="panel-heading">企业信息</div>
                                 <div className="panel-body">

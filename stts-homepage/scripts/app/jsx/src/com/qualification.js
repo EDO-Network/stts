@@ -6,12 +6,6 @@ var Qualification = React.createClass({
                 <Header activeMenuID="mainMenuCompany"/>
 
                 <div className="container">
-                    <ol className="breadcrumb">
-                        <li>您所在的位置：</li>
-                        <li><a href="dashboard.html">企业机构</a></li>
-                        <li><a href="company.html">资质审核</a></li>
-                        <li className='active'>审核历史一览</li>
-                    </ol>
 
                     <div>
                         <div className="pull-left w-222">
@@ -22,6 +16,12 @@ var Qualification = React.createClass({
                         </div>
 
                         <div className="ml-240">
+                            <ol className="breadcrumb">
+                                <li>您所在的位置：</li>
+                                <li><a href="dashboard.html">企业机构</a></li>
+                                <li><a href="company.html">资质审核</a></li>
+                                <li className='active'>审核历史一览</li>
+                            </ol>
                             <div className="panel panel-default">
                                 <div className="panel-heading">资质审核</div>
                                 <div className="panel-body">

@@ -1,4 +1,4 @@
-var ServiceList = React.createClass({
+var ServiceDetail = React.createClass({
     render: function () {
         return (
             <div>
@@ -6,23 +6,15 @@ var ServiceList = React.createClass({
                 <Header activeMenuID="mainMenuService"/>
 
                 <div className="container">
+                    <ol className="breadcrumb">
+                        <li>您所在的位置：</li>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="service_list.html">服务产品</a></li>
+                        <li className='active'>服务详细</li>
+                    </ol>
                     <div className="pull-left w-222">
-                        <NavCategory/>
                     </div>
                     <div className="ml-240">
-                        <ol className="breadcrumb">
-                            <li>您所在的位置：</li>
-                            <li><a href="index.html">首页</a></li>
-                            <li><a href="service_list.html">服务产品</a></li>
-                            <li className='active'>服务产品一览</li>
-                        </ol>
-                        <ServiceSearchArea/>
-                        <ServiceItem/>
-                        <ServiceItem/>
-                        <ServiceItem/>
-                        <ServiceItem/>
-                        <ServiceItem/>
-                        <Paging/>
                     </div>
                 </div>
             </div>
@@ -64,6 +56,6 @@ var ServiceItem = React.createClass({
 });
 
 ReactDOM.render(
-    <ServiceList />,
+    <ServiceDetail />,
     document.getElementById('page')
 );

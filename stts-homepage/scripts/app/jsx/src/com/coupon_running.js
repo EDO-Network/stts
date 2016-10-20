@@ -6,12 +6,6 @@ var Coupon = React.createClass({
                 <Header activeMenuID="mainMenuCoupon"/>
 
                 <div className="container">
-                    <ol className="breadcrumb">
-                        <li>您所在的位置：</li>
-                        <li><a href="dashboard.html">企业机构</a></li>
-                        <li><a href="company.html">服务券</a></li>
-                        <li className='active'>服务券流水</li>
-                    </ol>
 
                     <div>
                         <div className="pull-left w-222">
@@ -22,6 +16,12 @@ var Coupon = React.createClass({
                         </div>
 
                         <div className="ml-240">
+                            <ol className="breadcrumb">
+                                <li>您所在的位置：</li>
+                                <li><a href="dashboard.html">企业机构</a></li>
+                                <li><a href="company.html">服务券</a></li>
+                                <li className='active'>服务券流水</li>
+                            </ol>
                             <div className="panel panel-default">
                                 <div className="panel-heading">服务券流水</div>
                                 <div className="panel-body">
