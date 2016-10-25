@@ -203,12 +203,12 @@ var ServiceItem = React.createClass({
                     <div>收费标准：每月3000元</div>
                 </div>
                 <div className="col-sm-2">
-                    <div className="font-size-12">好评率：
-                        <i className="fa fa-star text-gold" aria-hidden="true"></i>
-                        <i className="fa fa-star text-gold" aria-hidden="true"></i>
-                        <i className="fa fa-star text-gold" aria-hidden="true"></i>
-                        <i className="fa fa-star text-gold" aria-hidden="true"></i>
-                        <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                    <div>好评率：
+                        <i className="fa fa-star text-danger font-size-12" aria-hidden="true"></i>
+                        <i className="fa fa-star text-danger font-size-12" aria-hidden="true"></i>
+                        <i className="fa fa-star text-danger font-size-12" aria-hidden="true"></i>
+                        <i className="fa fa-star text-danger font-size-12" aria-hidden="true"></i>
+                        <i className="fa fa-star text-danger font-size-12" aria-hidden="true"></i>
                     </div>
                     <br/>
 

@@ -8,7 +8,7 @@ var ServicePreview = React.createClass({
                             <img className="w-per-100" src="../img/common/service-preview.png"/>
                         </a>
                     </div>
-                    <div className="mt-5 mb-5"><a href="service_detail.html">财务审计</a></div>
+                    <div className="mt-5 mb-5"><a href="service_detail.html">服务名称</a></div>
                 </div>
                 <div>
                     <div className="pull-left">
@@ -17,7 +17,7 @@ var ServicePreview = React.createClass({
                     <div className="ml-80 text-left">
                         <div>服务费用：1000元</div>
                         <div>申请次数：100次</div>
-                        <div className="text-over-ellipsis">中国出口信用保险公司</div>
+                        <div className="text-over-ellipsis">服务机构名称</div>
                     </div>
                 </div>
             </div>
