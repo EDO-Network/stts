@@ -37,7 +37,7 @@ var OrderProcess = React.createClass({
             <div className="order-process">
                 <div className="node step">
                     <div><i className="icon fa fa-shopping-basket todo" aria-hidden="true"></i></div>
-                    <div>服务申请</div>
+                    <div>申请服务</div>
                     <div style={{display:"none"}}>2016-01-01</div>
                     <div style={{display:"none"}}>18:00:00</div>
                 </div>
@@ -49,7 +49,7 @@ var OrderProcess = React.createClass({
                 </div>
                 <div className="node step">
                     <div><i className="icon fa fa-legal todo" aria-hidden="true"></i></div>
-                    <div>服务受理</div>
+                    <div>服务机构受理</div>
                     <div style={{display:"none"}}>2016-01-03</div>
                     <div style={{display:"none"}}>19:00:00</div>
                 </div>

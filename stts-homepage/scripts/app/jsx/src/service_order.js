@@ -8,11 +8,14 @@ var ServiceOrder = React.createClass({
                 <div className="container">
 
                     <div>
-                        <div className="pull-left w-222">
-                            <OrgCard/>
-                        </div>
-
-                        <div className="ml-240">
+                        {
+                            //<div className="pull-left w-222">
+                            //    <OrgCard/>
+                            //</div>
+                        }
+                        {
+                        //<div className="ml-240">
+                            }
                             <ol className="breadcrumb">
                                 <li>您所在的位置：</li>
                                 <li><a href="index.html">首页</a></li>
@@ -26,7 +29,9 @@ var ServiceOrder = React.createClass({
                                     <Order/>
                                 </div>
                             </div>
-                        </div>
+                        {
+                        //</div>
+                            }
                     </div>
                 </div>
             </div>
@@ -44,9 +49,9 @@ var Order = React.createClass({
                     <div className="panel-heading">订单信息</div>
                     <div className="panel-body">
                         <div className="col-sm-4">
-                            <p>服务机构：中国出口信用保险公司</p>
+                            <p>服务机构名：宁波xxx信息服务机构</p>
 
-                            <p>服务产品：<a href="#">财务审计（快照）</a></p>
+                            <p>服务产品名：<a href="service_detail.html">xxxx服务</a></p>
                         </div>
                         <div className="col-sm-4">
                             <p>服务价格：1.2 万元</p>
@@ -54,7 +59,7 @@ var Order = React.createClass({
                             <p>收费标准：1.2 万 元/年</p>
                         </div>
                         <div className="col-sm-4">
-                            <p>状态：新申请</p>
+                            <p>状态：申请服务</p>
 
                             <p>申请时间：2016-01-01 18:00:00</p>
                         </div>
@@ -66,10 +71,10 @@ var Order = React.createClass({
                         <div className="form-horizontal">
                             <div className="form-group">
                                 <div className="col-sm-2">
-                                    <label>企业名称</label>
+                                    <label>企业名</label>
                                 </div>
                                 <div className="col-sm-4">
-                                    <a href="#">宁波睿智信息技术有限公司（快照）</a>
+                                    <a href="#">宁波xxx信息服务机构</a>
                                 </div>
                             </div>
                             <div className="form-group">
@@ -94,22 +99,6 @@ var Order = React.createClass({
                                 </div>
                                 <div className="col-sm-4">
                                     <input type="text" className="form-control"/>
-                                </div>
-                            </div>
-                            <div className="form-group">
-                                <div className="col-sm-2 pt-7">
-                                    <label>服务券额</label>
-                                </div>
-                                <div className="col-sm-4">
-                                    <input type="text" className="form-control"/>
-                                </div>
-                                <div className="col-sm-1">
-                                    <a className="btn btn-warning btn-sm">自动获取</a>
-                                </div>
-                                <div className="col-sm-5 pt-7">
-                                    <label className="text-info">
-                                        &nbsp;<i className="fa fa-exclamation" aria-hidden="true"></i> &nbsp;当前批次（2016）服务券可用额度&nbsp;5000&nbsp;元
-                                    </label>
                                 </div>
                             </div>
                             <div className="form-group">
