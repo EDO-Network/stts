@@ -177,6 +177,7 @@ var Coupon = React.createClass({
                         </div>
                     </div>
                 </div>
+                <Footer/>
             </div>
         );
     }
