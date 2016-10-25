@@ -19,8 +19,8 @@ var Header = React.createClass({
                         <ul className="clearfix">
                             <li id="mainMenuDashboard"><a href="dashboard.html">我的平台</a></li>
                             <li id="mainMenuOrder"><a href="order_list.html">我的订单</a></li>
-                            <li id="mainMenuEvaluate"><a href="order_list.html">我的评价</a></li>
-                            <li id="mainMenuMessage"><a href="order_list.html">我的消息</a></li>
+                            <li id="mainMenuEvaluate"><a href="evaluate_receive.html">我的评价</a></li>
+                            <li id="mainMenuMessage"><a href="message_list.html">我的消息</a></li>
                             <li id="mainMenuCompany"><a href="company.html">资质审核</a></li>
                             <li id="mainMenuCoupon"><a href="coupon.html">服务券</a></li>
                         </ul>
