@@ -1,0 +1,113 @@
+.header-wrap{
+    margin-bottom: 20px;
+    background: url("../../img/com/bg_header.png") no-repeat;
+    /*background-size:cover;*/
+    /*height: 230px;*/
+    color: #FFFFFF;
+}
+
+.header-wrap .title{
+    /*font-size: 48px;*/
+    /*font-weight: 600;*/
+    /*color: white;*/
+    /*line-height: 230px;*/
+}
+
+.header-wrap .title .fa{
+    /*color: #F5633C;*/
+}
+
+.header-wrap .title .service-icon{
+    color: #cccccc;
+    font-size: 14px;
+}
+
+.header-wrap .menu-main {
+    height: 36px;
+    line-height: 36px;
+    padding: 0 0 10px;
+    /*border-bottom: 1px solid #eeeeee;*/
+    margin: 45px auto 0;
+}
+
+.header-wrap .menu-main li {
+    float: left;
+    font-size: 18px;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 0 10px;
+    margin: 0 20px;
+}
+
+.header-wrap .menu-main li a{
+    color: #CCCCCC;
+    text-decoration: none;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 0 10px;
+}
+
+/*.header-wrap .menu-main .active {*/
+    /*border-bottom: 2px solid #FFFFFF;*/
+    /*font-weight: bold;*/
+/*}*/
+
+.header-wrap .menu-main .active a{
+    color: #FFFFFF;
+}
+
+.header-wrap .menu-main .title {
+    height: 36px;
+    line-height: 36px;
+    padding: 0 10px 10px 0;
+    border-bottom: 1px solid #c7c7c7;
+    margin: 0;
+    min-width: 26px;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.header-wrap .menu-main .title-bg {
+    height: 25px;
+    line-height: 25px;
+    padding: 0 9px 0 9px;
+    position: relative;
+    background: #FFFFFF;
+    color: #ffffff;
+    display: inline-block;
+}
+
+.header-wrap .menu-main li .title-ico {
+    border-color: transparent #ffffff transparent transparent;
+    border-style: solid;
+    border-width: 4px;
+    font-size: 0;
+    height: 0;
+    position: absolute;
+    right: 0px;
+    top: 9px;
+    width: 0;
+}
+
+/*.header-wrap .nav-tabs{*/
+/*border-bottom: 0px;*/
+/*}*/
+
+/*.header-wrap .nav>li>a {*/
+/*padding: 5px 15px;*/
+/*border-radius: 0px 0px 0 0;*/
+/*}*/
+
+/*.header-wrap .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{*/
+/*color: #fff;*/
+/*background-color: #428bca;*/
+/*}*/
+
+/*.header-wrap .search-wrap{*/
+/*margin-left: 5%;*/
+/*width: 50%;*/
+/*}*/
+
+/*.header-wrap .search-content{*/
+/*border-radius: 0px;*/
+/*}*/
