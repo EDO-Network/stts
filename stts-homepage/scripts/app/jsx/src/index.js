@@ -17,9 +17,22 @@ var Index = React.createClass({
                     </div>
                     <div className="clearfix"></div>
                     <Statistics/>
-                    <Choice/>
+                    <GroupOrg/>
                     <Hot/>
+                    <div className="row">
+                        <div className="col-sm-4">
+                            <News/>
+                        </div>
+                        <div className="col-sm-4">
+                            <Question/>
+                        </div>
+                        <div className="col-sm-4">
+                            <Notice/>
+                        </div>
+                    </div>
                 </div>
+
+                <Footer/>
             </div>
         );
     }
@@ -146,6 +159,28 @@ var Slide = React.createClass({
     }
 });
 
+var GroupOrg = React.createClass({
+    render: function () {
+        return (
+            <div>
+                <div className="block-title">联营机构</div>
+
+
+                <a className="more" href="javascript:void(0)">
+                    <span>更多</span>&nbsp;&gt;&gt;
+                </a>
+
+                <div className="row">
+                    <div className="col-sm-3"><OrgPreview/></div>
+                    <div className="col-sm-3"><OrgPreview/></div>
+                    <div className="col-sm-3"><OrgPreview/></div>
+                    <div className="col-sm-3"><OrgPreview/></div>
+                </div>
+            </div>
+        );
+    }
+});
+
 var Choice = React.createClass({
     render: function () {
         return (
@@ -166,47 +201,6 @@ var Choice = React.createClass({
                     <div className="col-sm-3"><ServicePreview/></div>
                     <div className="col-sm-3"><ServicePreview/></div>
                 </div>
-                {
-                    //<div>
-                    //    <div className="left-wrap">
-                    //        <div className="panel panel-default">
-                    //            <div className="panel-heading">
-                    //                <i className="fa fa-search" aria-hidden="true"></i>
-                    //                <span>&nbsp;您要寻找什么服务？</span>
-                    //            </div>
-                    //            <div className="panel-body">
-                    //                <div>
-                    //                    <div className="pull-left w-90">分类</div>
-                    //                    <div>
-                    //                        <select className="form-control input-sm">
-                    //                            <option>全部</option>
-                    //                            <option>人才引培</option>
-                    //                            <option>技术创新</option>
-                    //                            <option>财务指导</option>
-                    //                            <option>......</option>
-                    //                        </select>
-                    //                    </div>
-                    //                </div>
-                    //                <div className="mt-10">
-                    //                    <div className="pull-left w-90">子分类</div>
-                    //                    <div>
-                    //                        <select className="form-control input-sm">
-                    //                            <option>全部</option>
-                    //                            <option>高管培训</option>
-                    //                            <option>人才引进</option>
-                    //                            <option>财务指导</option>
-                    //                            <option>......</option>
-                    //                        </select>
-                    //                    </div>
-                    //                </div>
-                    //            </div>
-                    //        </div>
-                    //    </div>
-                    //    <div className="right-wrap container-fluid">
-                    //
-                    //    </div>
-                    //</div>
-                }
             </div>
         );
     }
@@ -216,14 +210,14 @@ var Hot = React.createClass({
     render: function () {
         return (
             <div className="hot-tab-wrap mt-20">
-                <ul className="nav nav-tabs" role="tablist">
+                <ul className="nav nav-tabs font-size-18" role="tablist">
                     <li role="presentation" className="active"><a href="#service" role="tab" data-toggle="tab">热门服务</a>
                     </li>
                     <li role="presentation"><a href="#org" role="tab" data-toggle="tab">加盟机构</a></li>
                 </ul>
 
                 <a className="more" href="javascript:void(0)">
-                    <span>更多</span>&nbsp;<i className="fa fa-ellipsis-h" aria-hidden="true"></i>
+                    <span>更多</span>&nbsp;&gt;&gt;
                 </a>
 
                 <div className="tab-content">
@@ -243,17 +237,20 @@ var Service = React.createClass({
     render: function () {
         return (
             <div className="service-wrap">
-                <div className="row">
+                <div className="row mb-10">
                     <div className="col-sm-3"><ServicePreview/></div>
                     <div className="col-sm-3"><ServicePreview/></div>
                     <div className="col-sm-3"><ServicePreview/></div>
                     <div className="col-sm-3"><ServicePreview/></div>
                 </div>
-                <div className="row mt-10">
+                <div className="row mb-20">
                     <div className="col-sm-3"><ServicePreview/></div>
                     <div className="col-sm-3"><ServicePreview/></div>
                     <div className="col-sm-3"><ServicePreview/></div>
                     <div className="col-sm-3"><ServicePreview/></div>
+                </div>
+                <div className="text-center">
+                    <button className="btn btn-default w-200">点击加载更多 &gt;&gt;</button>
                 </div>
             </div>
         );
@@ -264,22 +261,116 @@ var Org = React.createClass({
     render: function () {
         return (
             <div className="org-wrap">
-                <div className="row">
+                <div className="row mb-10">
                     <div className="col-sm-3"><OrgPreview/></div>
                     <div className="col-sm-3"><OrgPreview/></div>
                     <div className="col-sm-3"><OrgPreview/></div>
                     <div className="col-sm-3"><OrgPreview/></div>
                 </div>
-                <div className="row mt-10">
+                <div className="row mb-20">
                     <div className="col-sm-3"><OrgPreview/></div>
                     <div className="col-sm-3"><OrgPreview/></div>
                     <div className="col-sm-3"><OrgPreview/></div>
                     <div className="col-sm-3"><OrgPreview/></div>
+                </div>
+                <div className="text-center">
+                    <button className="btn btn-default w-200">点击加载更多 &gt;&gt;</button>
                 </div>
             </div>
         );
     }
 });
+
+var News = React.createClass({
+    render: function () {
+        return (
+            <div>
+                <h2>新闻动态</h2>
+                <a className="more" href="javascript:void(0)">
+                    <span>更多</span>&nbsp;&gt;&gt;
+                </a>
+                <NewsItem/>
+                <NewsItem/>
+                <NewsItem/>
+            </div>
+        );
+    }
+});
+
+var NewsItem = React.createClass({
+    render: function () {
+        return (
+            <div className="border-bottom-dotted mb-10 h-80">
+                <div className="title">新闻标题</div>
+                <p>
+                    新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容
+                </p>
+
+            </div>
+        );
+    }
+});
+
+var Question = React.createClass({
+    render: function () {
+        return (
+            <div>
+                <h2>热门问答</h2>
+                <a className="more" href="javascript:void(0)">
+                    <span>更多</span>&nbsp;&gt;&gt;
+                </a>
+                <QuestionItem/>
+                <QuestionItem/>
+                <QuestionItem/>
+            </div>
+        );
+    }
+});
+
+var QuestionItem = React.createClass({
+    render: function () {
+        return (
+            <div className="border-bottom-dotted mb-10 h-80">
+                <p>问题标题</p>
+                <p>
+                    回答内容回答内容回答内容回答内容回答内容回答内容回答内容
+                </p>
+
+            </div>
+        );
+    }
+});
+
+var Notice = React.createClass({
+    render: function () {
+        return (
+            <div>
+                <h2>通知公告</h2>
+                <a className="more" href="javascript:void(0)">
+                    <span>更多</span>&nbsp;&gt;&gt;
+                </a>
+                <NoticeItem/>
+                <NoticeItem/>
+                <NoticeItem/>
+                <NoticeItem/>
+                <NoticeItem/>
+                <NoticeItem/>
+            </div>
+        );
+    }
+});
+
+var NoticeItem = React.createClass({
+    render: function () {
+        return (
+            <div className="border-bottom-dotted mb-10 h-35">
+                <div className="pull-left">2017年度服务机构年审公告</div>
+                <div className="pull-right">2016-6-30</div>
+            </div>
+        );
+    }
+});
+
 
 ReactDOM.render(
     <Index/>,

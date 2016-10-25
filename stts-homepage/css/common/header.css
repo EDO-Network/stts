@@ -1,5 +1,24 @@
 .header-wrap{
     margin-bottom: 20px;
+    /*background: url("../../img/bg_header.png") no-repeat;*/
+    /*background-size:cover;*/
+    /*height: 230px;*/
+}
+
+.header-wrap .title{
+    /*font-size: 48px;*/
+    /*font-weight: 600;*/
+    /*color: white;*/
+    /*line-height: 230px;*/
+}
+
+.header-wrap .title .fa{
+    /*color: #F5633C;*/
+}
+
+.header-wrap .title .service-icon{
+    color: #cccccc;
+    font-size: 14px;
 }
 
 .header-wrap .menu-main {
@@ -39,13 +58,8 @@
     border-bottom: 1px solid #c7c7c7;
     margin: 0;
     min-width: 26px;
-    font-size: 20px;
+    font-size: 24px;
     color: #0c63a9;
-}
-
-.header-wrap .menu-main .title .service-icon{
-    color: #cccccc;
-    font-size: 14px;
 }
 
 .header-wrap .menu-main .title-bg {
@@ -53,7 +67,7 @@
     line-height: 25px;
     padding: 0 9px 0 9px;
     position: relative;
-    background: #149bbc;
+    background: #0c63a9;
     color: #ffffff;
     display: inline-block;
 }

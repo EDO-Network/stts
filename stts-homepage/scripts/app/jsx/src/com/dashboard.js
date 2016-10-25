@@ -11,6 +11,25 @@ var Dashboard = React.createClass({
                         <li><a href="dashboard.html">企业机构</a></li>
                         <li className='active'>我的平台</li>
                     </ol>
+                    <div className="text-center">
+                        <div className="row">
+                            <div className="col-sm-6">
+                                <img src="../../img/com/dashboard_1.png"/>
+                            </div>
+                            <div className="col-sm-6">
+                                <img src="../../img/com/dashboard_2.png"/>
+                            </div>
+                        </div>
+                        <br/>
+                        <div className="row">
+                            <div className="col-sm-6">
+                                <img src="../../img/com/dashboard_3.png"/>
+                            </div>
+                            <div className="col-sm-6">
+                                <img src="../../img/com/dashboard_4.png"/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         );

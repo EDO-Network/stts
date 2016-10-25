@@ -17,6 +17,10 @@ img {
     border: 0;
 }
 
+div{
+    position: relative;
+}
+
 /*End*/
 
 /*重写bootstrap默认样式*/
@@ -27,6 +31,16 @@ img {
 .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
     background-color: #0c63a9;
     border-color: #0c63a9;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-tabs li.active a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+    background-color: #0c63a9;
+    color: #FFFFFF;
+    border: 1px solid #0c63a9;
 }
 
 .panel {
@@ -103,12 +117,20 @@ img {
     background-color: #f5f5f5;
 }
 
+.bg-dark {
+    background-color: #797979;
+}
+
 .bg-white {
     background-color: #ffffff;
 }
 
 .text-dark {
     color: #797979 !important;
+}
+
+.text-white {
+    color: #ffffff !important;
 }
 
 .text-gold {
@@ -208,8 +230,16 @@ img {
     width: 40%;
 }
 
-.height-30 {
-    height: 30px;
+.h-35 {
+    height: 35px;
+}
+
+.h-40 {
+    height: 40px;
+}
+
+.h-80 {
+    height: 80px;
 }
 
 .lh-66 {
@@ -389,12 +419,16 @@ img {
 }
 
 /*定义字体样式*/
-.font-size-24 {
-    font-size: 24px;
-}
-
 .font-size-12 {
     font-size: 12px;
+}
+
+.font-size-18 {
+    font-size: 18px;
+}
+
+.font-size-20 {
+    font-size: 20px;
 }
 
 .font-weight-600 {
@@ -491,4 +525,12 @@ img {
 }
 .text-dark {
     color: #797979 !important;
+}
+
+.block-title{
+    border-left: solid 4px #0c63a9;
+    padding-left: 5px;
+    color: #0c63a9;
+    font-size: 20px;
+    margin-bottom: 10px;
 }

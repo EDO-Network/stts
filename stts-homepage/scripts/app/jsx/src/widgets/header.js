@@ -10,17 +10,27 @@ var Header = React.createClass({
         return (
             <div className="header-wrap">
                 <div className="container">
+                    {
+                        //<div className="logo-title">
+                        //    <i className="fa fa-shopping-basket" aria-hidden="true"></i>
+                        //    &nbsp;小微企业创业创新服务券网上平台&nbsp;
+                        //    <span className="service-icon">SERVICE</span>
+                        //</div>
+                    }
                     <div className="menu-main">
                         <ul className="clearfix">
                             <li className="title">
                                 <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-                                &nbsp;企服超市&nbsp;
+                                &nbsp;小微企业创业创新服务券网上平台&nbsp;
                                 <span className="service-icon">SERVICE</span>
                             </li>
                             <li id="mainMenuLogin" style={{display:"none"}}><a href="login.html">用户登录</a></li>
-                            <li id="mainMenuSelectCompany" style={{display:"none"}}><a href="select_company.html">选择企业</a></li>
-                            <li id="mainMenuRegisterUser" style={{display:"none"}}><a href="register_user.html">注册用户</a></li>
-                            <li id="mainMenuAccountProfile" style={{display:"none"}}><a href="account_profile.html">账户设置</a></li>
+                            <li id="mainMenuSelectCompany" style={{display:"none"}}><a
+                                href="select_company.html">选择企业</a></li>
+                            <li id="mainMenuRegisterUser" style={{display:"none"}}><a href="register_user.html">注册用户</a>
+                            </li>
+                            <li id="mainMenuAccountProfile" style={{display:"none"}}><a
+                                href="account_profile.html">账户设置</a></li>
                             <li id="mainMenuIndex"><a href="index.html">首页</a></li>
                             <li id="mainMenuService"><a href="service_list.html">服务产品</a></li>
                             <li id="mainMenuOrg"><a href="org_list.html">服务机构</a></li>

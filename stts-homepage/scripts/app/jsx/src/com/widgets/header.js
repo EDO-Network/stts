@@ -14,7 +14,7 @@ var Header = React.createClass({
                         <ul className="clearfix">
                             <li className="title">
                                 <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-                                &nbsp;企服超市&nbsp;
+                                &nbsp;小微企业创业创新服务券网上平台&nbsp;
                                 <span className="service-icon">企业机构</span>
                             </li>
                             <li id="mainMenuDashboard"><a href="dashboard.html">我的平台</a></li>

@@ -47,6 +47,7 @@ var TopLogin = React.createClass({
                     </ul>
                     <ul className="top-right-menu">
                         <li>您好：{this.state.user.userName}</li>
+                        <li></li>
                         <li><a href="account_profile.html">账户设置</a></li>
                         <li><a href="com/dashboard.html">我的平台</a></li>
                         <li><a href="org/service_list.html">我是服务机构</a></li>

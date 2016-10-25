@@ -75,6 +75,7 @@ var ServiceContent = React.createClass({
                 <ul className="nav nav-tabs login-tabs" role="tablist">
                     <li role="presentation" className="active"><a href="#desc" role="tab" data-toggle="tab">服务介绍</a>
                     </li>
+                    <li role="presentation"><a href="#anylize" role="tab" data-toggle="tab">服务分析</a></li>
                     <li role="presentation"><a href="#evaluate" role="tab" data-toggle="tab">累计评价</a></li>
                     <li role="presentation"><a href="#record" role="tab" data-toggle="tab">服务记录</a></li>
                     <li role="presentation"><a href="#contact" role="tab" data-toggle="tab">联系方式</a></li>
@@ -94,6 +95,26 @@ var ServiceContent = React.createClass({
                         <p>
                             xxxxxxxxxxxxxxxxxxxx
                         </p>
+                    </div>
+
+                    <div role="tabpanel" className="tab-pane" id="anylize">
+                        <div className="row">
+                            <div className="col-sm-6">
+                                <img src="../img/service_detail/anylize_1.png"/>
+                            </div>
+                            <div className="col-sm-6">
+                                <img src="../img/service_detail/anylize_1.png"/>
+                            </div>
+                        </div>
+                        <br/>
+                        <div className="row">
+                            <div className="col-sm-6">
+                                <img src="../img/service_detail/anylize_3.png"/>
+                            </div>
+                            <div className="col-sm-6">
+                                <img src="../img/service_detail/anylize_3.png"/>
+                            </div>
+                        </div>
                     </div>
                     <div role="tabpanel" className="tab-pane" id="evaluate">
                         <table className="table table-hover">
