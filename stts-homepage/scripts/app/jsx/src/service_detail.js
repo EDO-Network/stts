@@ -33,28 +33,28 @@ var ServiceSummary = React.createClass({
 
                 <div>
                     <div className="col-sm-4">
-                        <p>所属分类：财务指导</p>
+                        <p>所属分类：解决方案</p>
 
                         <p>服务价格：1～2万元</p>
 
                         <p>服务方式：电话服务，上门服务，网络服务</p>
 
                         <p>累计评价：
-                            <i className="fa fa-star text-gold" aria-hidden="true"></i>
-                            <i className="fa fa-star text-gold" aria-hidden="true"></i>
-                            <i className="fa fa-star text-gold" aria-hidden="true"></i>
-                            <i className="fa fa-star text-gold" aria-hidden="true"></i>
-                            <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
+                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
+                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
+                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
+                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
                         </p>
                     </div>
                     <div className="col-sm-4">
-                        <p>服务对象：小型企业，微型企业，小升规</p>
+                        <p>服务对象：微型企业，小型企业</p>
 
                         <p>收费标准：按年收费</p>
 
                         <p>申请次数：20次</p>
 
-                        <p>发布时间：2016-01-01</p>
+                        <p>发布时间：2016-07-07</p>
                     </div>
                     <div className="col-sm-4">
                         <br/>
@@ -95,6 +95,16 @@ var ServiceContent = React.createClass({
                         <p>
                             xxxxxxxxxxxxxxxxxxxx
                         </p>
+                        <div className="panel panel-default">
+                            <div className="panel-heading">相关服务</div>
+                            <div className="panel-body">
+                                <img src="../img/sample/service_small.jpg"/>&nbsp;&nbsp;
+                                <img src="../img/sample/service_small.jpg"/>&nbsp;&nbsp;
+                                <img src="../img/sample/service_small.jpg"/>&nbsp;&nbsp;
+                                <img src="../img/sample/service_small.jpg"/>&nbsp;&nbsp;
+                                <img src="../img/sample/service_small.jpg"/>
+                            </div>
+                        </div>
                     </div>
 
                     <div role="tabpanel" className="tab-pane" id="anylize">
@@ -103,14 +113,11 @@ var ServiceContent = React.createClass({
                                 <img src="../img/service_detail/anylize_1.png"/>
                             </div>
                             <div className="col-sm-6">
-                                <img src="../img/service_detail/anylize_1.png"/>
+                                <img src="../img/service_detail/anylize_2.png"/>
                             </div>
                         </div>
                         <br/>
                         <div className="row">
-                            <div className="col-sm-6">
-                                <img src="../img/service_detail/anylize_3.png"/>
-                            </div>
                             <div className="col-sm-6">
                                 <img src="../img/service_detail/anylize_3.png"/>
                             </div>
@@ -120,10 +127,9 @@ var ServiceContent = React.createClass({
                         <table className="table table-hover">
                             <thead>
                             <tr>
-                                <th>企业名称</th>
                                 <th>评价星级</th>
                                 <th>评价内容</th>
-                                <th>评价日期</th>
+                                <th>评价企业</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -140,7 +146,8 @@ var ServiceContent = React.createClass({
                         <table className="table table-hover">
                             <thead>
                             <tr>
-                                <th>企业名称</th>
+                                <th>买家</th>
+                                <th>服务名称</th>
                                 <th>分类</th>
                                 <th>价格</th>
                                 <th>成交时间</th>
@@ -170,16 +177,15 @@ var EvaluateItem = React.createClass({
     render: function () {
         return (
             <tr>
-                <td>宁波ABC信息系统有限公司</td>
                 <td>
-                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
-                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
-                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
-                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
-                    <i className="fa fa-star text-gold" aria-hidden="true"></i>
+                    <i className="fa fa-star text-danger" aria-hidden="true"></i>
+                    <i className="fa fa-star text-danger" aria-hidden="true"></i>
+                    <i className="fa fa-star text-danger" aria-hidden="true"></i>
+                    <i className="fa fa-star text-danger" aria-hidden="true"></i>
+                    <i className="fa fa-star text-danger" aria-hidden="true"></i>
                 </td>
                 <td>服务非常到位，细致周到</td>
-                <td>2016-01-01</td>
+                <td>xxx企业</td>
             </tr>
         );
     }
@@ -189,7 +195,8 @@ var RecordItem = React.createClass({
     render: function () {
         return (
             <tr>
-                <td>宁波ABC信息系统有限公司</td>
+                <td>xxx企业</td>
+                <td>xxx服务</td>
                 <td>线上</td>
                 <td>10000</td>
                 <td>2016-01-01</td>
@@ -203,6 +210,7 @@ var Contact = React.createClass({
     render: function () {
         return (
             <div className="alert alert-warning" role="alert">
+                <h2>宁波市xxx信息服务机构</h2>
                 <h2>联系人：张一山</h2>
                 <h2>联系电话：12387645362</h2>
                 <h2>联系邮箱：xxx@163.com</h2>
