@@ -163,10 +163,10 @@ var OrgItem = React.createClass({
         return (
             <div className="overflow-hidden border-bottom-dotted mb-10">
                 <div className="col-sm-1">
-                    <img src="../img/sample/org_small.jpg"/>
+                    <a href="org_detail.html"><img src="../img/sample/org_small.jpg"/></a>
                 </div>
                 <div className="col-sm-3 border-right-dotted">
-                    <div><a href="#">中国出口信用保险公司</a></div>
+                    <div><a href="org_detail.html">中国出口信用保险公司</a></div>
                     <br/>
 
                     <div>宁波市海曙区中山东路145号</div>

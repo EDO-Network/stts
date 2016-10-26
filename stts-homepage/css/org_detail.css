@@ -1,0 +1,32 @@
+.org-title-wrap{
+    background: url("../img/com/bg_header.png") no-repeat;
+    color: #FFFFFF;
+    height: 134px;
+    line-height: 134px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.org-title-wrap .org-title{
+    font-size: 24px;
+    height: 92px;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+    height: 42px;
+}
+
+.nav-tabs a{
+    color: #FFFFFF;
+}
+
+.nav-tabs li.active a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 1px solid #ddd;
+}
+
+.tab-content{
+    padding: 0;
+}

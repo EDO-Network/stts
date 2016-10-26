@@ -20,6 +20,7 @@ var ServiceDetail = React.createClass({
                         <ServiceContent/>
                     </div>
                 </div>
+                <Footer/>
             </div>
         );
     }

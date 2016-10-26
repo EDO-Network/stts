@@ -16,7 +16,7 @@ var OrgCard = React.createClass({
                 <p>联系地址：宁波市海曙区中山东路145号</p>
                 <p>机构名称：中国出口信用保险公司</p>
                 <p>认证状态：<span className="label label-success">已认证</span></p>
-                <a href="#" className="btn btn-default btn-block">进入服务机构主页</a>
+                <a href="org_detail.html" className="btn btn-default btn-block">进入服务机构主页</a>
             </div>
         </div>
         );

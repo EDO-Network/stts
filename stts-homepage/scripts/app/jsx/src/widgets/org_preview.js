@@ -3,8 +3,12 @@ var OrgPreview = React.createClass({
         return (
             <div className="org-preview-wrap text-center clearfix mb-10">
                 <div>
-                    <div><img className="w-per-100" src="../img/common/org-preview.png"/></div>
-                    <div className="mt-5 mb-5">服务机构名称</div>
+                    <div>
+                        <a href="org_detail.html">
+                            <img className="w-per-100" src="../img/common/org-preview.png"/>
+                        </a>
+                    </div>
+                    <div className="mt-5 mb-5"><a href="org_detail.html">服务机构名称</a></div>
                 </div>
                 <div>
                     <div>好评率：
