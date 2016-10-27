@@ -10,7 +10,9 @@ var ServiceList = React.createClass({
                     <div>
                         <div className="pull-left w-222">
                             <div className="list-group">
-                                <a href="service_list.html" className="list-group-item active">服务一览</a>
+                                <a href="service_list.html" className="list-group-item active">上架服务产品一览</a>
+                                <a href="service_list.html" className="list-group-item">上架服务产品一览</a>
+                                <a href="service_list.html" className="list-group-item">下架服务产品一览</a>
                                 <a href="service_create.html" className="list-group-item">服务发布</a>
                             </div>
                         </div>
@@ -84,6 +86,8 @@ var ServiceList = React.createClass({
                         </div>
                     </div>
                 </div>
+
+                <Footer/>
             </div>
         );
     }
@@ -95,62 +99,71 @@ var ServiceItem = React.createClass({
             <div className=" panel panel-info">
                 <div className="panel-heading">
                     <div className="row">
-                        <span className="col-sm-4 panel-title"> 服务名称：XXXXX服务1</span>
+                        <span className="col-sm-4"> 服务名称：XXXXX服务1</span>
                         <span className="col-sm-4"> 最后修改时间：2016-06-01 18:00:29</span>
                         <span className="col-sm-4"> 最近上架时间：2016-06-01 18:00:29</span>
                     </div>
 
                 </div>
-                <div className="panel-body">
+                <div className="panel-body font-size-12">
                     <div className="row"></div>
-                    <div className="col-sm-2 mt-10">
+                    <div className="col-sm-1 mt-10">
                         <img src="../../img/common/org-preview-small.jpg"/>
                     </div>
-                    <div className="col-sm-10 row">
-
+                    <div className="col-sm-11 ml-10 row">
                         <div className="col-sm-3 border-right-dotted">
                             <div className="row mt-20">
-                                <strong className="col-sm-5 pl-0 text-right">大分类:</strong>
+                                <strong className="col-sm-5 pl-0 text-right">服务大类:</strong>
                                 <span className="col-sm-7 pl-0">人才引培</span></div>
-                            <div className="row mt-20 mb-20 ">
-                                <strong className="col-sm-5 pl-0 text-right">小分类:</strong>
+                            <div className="row mt-20">
+                                <strong className="col-sm-5 pl-0 text-right">服务小类:</strong>
                                 <span className="col-sm-7 pl-0">高层培训</span>
                             </div>
                         </div>
                         <div className="col-sm-3 border-right-dotted">
                             <div className="row mt-20">
                                 <strong className="col-sm-6 pl-0 text-right">服务价格:</strong>
-                                <span className="col-sm-6 pl-0">2000 元</span></div>
+                                <span className="col-sm-6 pl-0">2000～5000元</span></div>
+                            <div className="row">
+                                <strong className="col-sm-6 pl-0 text-right">收费标准:</strong>
+                                <span className="col-sm-6 pl-0">收费标准：每月3000元</span></div>
+                        </div>
+                        <div className="col-sm-2 border-right-dotted">
+                            <br/>
+                            <div className="row mt-20">
+                                <strong className="col-sm-6 pl-0 text-right">状态:</strong>
+                                <span className="col-sm-6 pl-0">已下架</span>
+                            </div>
+                            <br/>
+                        </div>
+                        <div className="col-sm-2 border-right-dotted">
                             <div className="row mt-20 mb-20 ">
                                 <strong className="col-sm-6 pl-0 text-right">好评率:</strong>
 
-                                <div className="col-sm-6 pl-0 text-gold">
+                                <div className="col-sm-6 pl-0 text-danger">
                                     <span className="fa fa-star"/><span className="fa fa-star"/>
                                     <span className="fa fa-star"/><span className="fa fa-star"/>
                                     <span className="fa fa-star"/>
 
                                 </div>
-                            </div>
-                        </div>
-                        <div className="col-sm-3 border-right-dotted">
-                            <div className="row mt-20">
-                                <strong className="col-sm-6 pl-0 text-right">状态:</strong>
-                                <span className="col-sm-6 pl-0">上架审核中</span>
-                            </div>
-                            <div className="row mt-20 mb-20 ">
-                                <strong className="col-sm-6 pl-0 text-right">申请数:</strong>
-                                <span className="col-sm-6 pl-0">27 次</span>
-                            </div>
+                                <div className="row mt-20 ">
+                                    <strong className="col-sm-6 pl-0 text-right">申请数:</strong>
+                                    <span className="col-sm-6 pl-0">27 次</span>
+                                </div>
 
-                        </div>
-                        <div className="col-sm-3  text-center">
-                            <div className="pl-0 row mt-20 ">
-                                <a href="#" className="col-sm-7 ">重新上架</a>
-                                <a href="#" className="col-sm-5 ">修改</a>
                             </div>
-                            <div className="pl-0 row mt-20 mb-20 ">
-                                <a href="#" className="col-sm-7 ">详情</a>
-                                <a href="#" className="col-sm-5 ">删除</a>
+                        </div>
+                        <div className="col-sm-2  text-center">
+                            <div className="text-center mt-20">
+                                <a href="#">上架</a>&nbsp;&nbsp;
+                                <a href="#">删除</a>
+                            </div>
+                            <div className="text-center">
+                                <a href="#">下架</a>&nbsp;&nbsp;
+                                <a href="#">修改</a>
+                            </div>
+                            <div className="text-center">
+                                <a href="#">详细</a>
                             </div>
                         </div>
                     </div>

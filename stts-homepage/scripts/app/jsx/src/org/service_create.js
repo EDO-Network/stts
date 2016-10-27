@@ -9,9 +9,11 @@ var ServiceCreate = React.createClass({
                 <div className="container">
                     <div>
                         <div className="pull-left w-222">
-                            <div className="list-group">
-                                <a href="service_list.html" className="list-group-item ">服务一览</a>
 
+                            <div className="list-group">
+                                <a href="service_list.html" className="list-group-item">上架服务产品一览</a>
+                                <a href="service_list.html" className="list-group-item">上架服务产品一览</a>
+                                <a href="service_list.html" className="list-group-item">下架服务产品一览</a>
                                 <a href="service_create.html" className="list-group-item active">服务发布</a>
                             </div>
                         </div>
@@ -42,6 +44,8 @@ var ServiceCreate = React.createClass({
                         </div>
                     </div>
                 </div>
+
+                <Footer/>
             </div>
         );
     }
@@ -77,7 +81,7 @@ var ServiceNew = React.createClass({
                         </div>
                         <div className="form-group">
                             <label className="control-label col-sm-3">
-                                大分类<span className="text-danger ml-5">*</span>
+                                服务大类<span className="text-danger ml-5">*</span>
                             </label>
 
                             <div className="col-sm-7">
@@ -89,7 +93,7 @@ var ServiceNew = React.createClass({
 
                         <div className="form-group">
                             <label className="control-label col-sm-3">
-                                小分类<span className="text-danger ml-5">*</span>
+                                服务小类<span className="text-danger ml-5">*</span>
                             </label>
 
                             <div className="col-sm-7">
@@ -204,17 +208,22 @@ var ServiceNew = React.createClass({
                             </label>
 
                             <div className="col-sm-7">
-                                <button className=" col-sm-3 btn btn-default btn-sm">上传</button>
+                                <button className="btn btn-default">上&nbsp;传</button>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">去云合同制作模板</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-sm-12">
-                        <h4>服务详细内容描述</h4>
+                <div className="mb-20">
+                    <h4>服务详细内容描述</h4>
                 <textarea name="content" className="w-per-100 "
                           style={{height: "300px"}}></textarea>
-                    </div>
+                </div>
+
+                <div className="text-center">
+                    <button type="button" className="btn btn-primary">提交</button>
+                    &nbsp;&nbsp;
+                    <button type="button" className="btn btn-default">返回</button>
                 </div>
             </div>
         );
@@ -226,21 +235,24 @@ var ServiceHistory = React.createClass({
     render: function () {
         return (
             <div role="tabpanel" className="tab-pane" id="history">
-                <div className="col-sm-12">
+                <div className="col-sm-6">
                     <button className="btn btn-success btn-sm w-100 mr-10" data-toggle="modal" data-target="#addModal">
                         <span className="fa fa-plus mr-10"></span>添加
                     </button>
-                    <button className="btn badge-warning btn-sm w-100 mr-10"><span className="fa fa-upload mr-10"></span>批量导入
+                    <button className="btn btn-default btn-sm w-100"><span
+                        className="fa fa-times-circle-o mr-10"></span>删除
+                    </button>
+                </div>
+                    <div className="col-sm-6">
+                    <button className="btn badge-warning btn-sm w-100 mr-10"><span
+                        className="fa fa-upload mr-10"></span>批量导入
                     </button>
                     <button className="btn btn-info btn-sm w-100 mr-10"><span className="fa fa-download mr-10"></span>批量导出
-                    </button>
-                    <button className="btn btn-default btn-sm w-100"><span
-                        className="fa fa-times-circle-o mr-10"></span>批量删除
                     </button>
                 </div>
 
                 <div className="mt-20 col-sm-12">
-                    <table className="table  table-hover font-size-12">
+                    <table className="table  table-hover">
                         <thead>
                         <tr>
                             <th></th>
@@ -257,7 +269,7 @@ var ServiceHistory = React.createClass({
                             <td>2016-01-01&nbsp;～&nbsp;2016-01-10</td>
                             <td>xxx科技有限公司</td>
                             <td>质量检测</td>
-                            <td className="text-gold">
+                            <td className="text-danger">
                                 <span className="fa fa-star"></span>
                                 <span className="fa fa-star"></span>
                                 <span className="fa fa-star"></span>
@@ -272,7 +284,7 @@ var ServiceHistory = React.createClass({
                             <td>2016-01-01&nbsp;～&nbsp;2016-01-10</td>
                             <td>xxx科技有限公司</td>
                             <td>质量检测</td>
-                            <td className="text-gold">
+                            <td className="text-danger">
                                 <span className="fa fa-star"></span>
                                 <span className="fa fa-star"></span>
                                 <span className="fa fa-star"></span>
@@ -286,7 +298,7 @@ var ServiceHistory = React.createClass({
                             <td>2016-01-01&nbsp;～&nbsp;2016-01-10</td>
                             <td>xxx科技有限公司</td>
                             <td>质量检测</td>
-                            <td className="text-gold">
+                            <td className="text-danger">
                                 <span className="fa fa-star"></span>
                                 <span className="fa fa-star"></span>
                                 <span className="fa fa-star"></span>
@@ -301,7 +313,7 @@ var ServiceHistory = React.createClass({
                             <td>2016-01-01&nbsp;～&nbsp;2016-01-10</td>
                             <td>xxx科技有限公司</td>
                             <td>质量检测</td>
-                            <td className="text-gold">
+                            <td className="text-danger">
                                 <span className="fa fa-star"></span>
                                 <span className="fa fa-star"></span>
                                 <span className="fa fa-star"></span>
@@ -311,6 +323,7 @@ var ServiceHistory = React.createClass({
                         </tr>
                         </tbody>
                     </table>
+                    <Paging/>
                     <HistoryNewModal/>
                 </div>
             </div>
@@ -334,7 +347,7 @@ var HistoryNewModal = React.createClass({
                             <div className="form form-horizontal " role="form">
                                 <div className="form-group">
                                     <label className="control-label col-sm-3">
-                                        大分类<span className="text-danger ml-5">*</span>
+                                        服务大类<span className="text-danger ml-5">*</span>
                                     </label>
 
                                     <div className="col-sm-8">
@@ -346,7 +359,7 @@ var HistoryNewModal = React.createClass({
 
                                 <div className="form-group">
                                     <label className="control-label col-sm-3">
-                                        小分类<span className="text-danger ml-5">*</span>
+                                        服务小类<span className="text-danger ml-5">*</span>
                                     </label>
 
                                     <div className="col-sm-8">
@@ -399,7 +412,7 @@ var HistoryNewModal = React.createClass({
 
                                     <div className="col-sm-8 ">
 
-                                        <div className="form-control-static text-gold">
+                                        <div className="form-control-static text-danger">
 
                                             <span className="fa fa-star"></span>
                                             <span className="fa fa-star"></span>
@@ -413,11 +426,17 @@ var HistoryNewModal = React.createClass({
 
                                 <div className="form-group">
                                     <label className="control-label col-sm-3">
-                                        服务名称<span className="text-danger ml-5">*</span>
+                                        企业名称<span className="text-danger ml-5">*</span>
                                     </label>
 
                                     <div className="col-sm-8">
+                                        <div className="col-sm-8">
                                         <input className="form-control" type="text"/>
+                                        </div>
+
+                                        <div className="col-sm-4">
+                                            <a href="#" className="btn">搜&nbsp;索</a>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -426,7 +445,7 @@ var HistoryNewModal = React.createClass({
                         <div className="modal-footer ">
                             <div className="text-center">
                                 <button type="button" className="btn btn-primary ">
-                                    <span className="fa fa-save "></span> 保存
+                                    <span className="fa fa-save "></span> 提交
                                 </button>
                                 <button type="button" className="btn btn-default " data-dismiss="modal">取消</button>
                             </div>
