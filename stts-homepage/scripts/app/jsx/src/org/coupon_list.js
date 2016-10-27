@@ -27,7 +27,7 @@ var CouponList = React.createClass({
 
                             <div className="panel panel-default overflow-hidden">
                                 <div className="panel-body">
-                                    <div className="form-horizontal font-size-12">
+                                    <div className="form-horizontal">
 
                                         <div className="row">
                                             <div className=" col-sm-5 form-group form-inline">
@@ -134,7 +134,7 @@ var TableInfo = React.createClass({
     render: function () {
         return (
             <div className="mt-20">
-                <table className="table table-hover font-size-12">
+                <table className="table table-hover">
                     <thead>
                     <TableHeader/>
                     </thead>

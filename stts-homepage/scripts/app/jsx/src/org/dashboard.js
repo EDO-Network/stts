@@ -33,6 +33,8 @@ var Dashboard = React.createClass({
                                 <img src="../../img/org/dashboard_5.png"/>
                             </div>
                         </div>
+                    </div>
+                    <div>
 
                         <div className="mb-20">
                             <div className="panel panel-info">
@@ -59,6 +61,8 @@ var Dashboard = React.createClass({
                                 </div>
                             </div>
                         </div>
+
+
                     </div>
                 </div>
                 <Footer/>

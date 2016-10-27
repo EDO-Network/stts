@@ -25,34 +25,29 @@ var Coupon = React.createClass({
                             </ol>
 
 
-                            <div className="col-sm-12">
-                                <div className="col-sm-6">
-                                    <img className="w-400" src="../../img/coupon/coupon_1.png"/>
-
+                            <div className="text-center">
+                                <div className="row mb-20">
+                                    <div className="col-sm-6">
+                                        <img src="../../img/org/dashboard_1.png"/>
+                                    </div>
+                                    <div className="col-sm-6">
+                                        <img src="../../img/org/dashboard_2.png"/>
+                                    </div>
                                 </div>
-                                <div className="col-sm-6">
-                                    <img className="w-400" src="../../img/coupon/coupon_2.png"/>
-
-                                </div>
-                                <div className="col-sm-12 mt-20"></div>
-                                <div className="col-sm-6">
-                                    <img className="w-400" src="../../img/coupon/coupon_3.png"/>
-
-                                </div>
-                                <div className="col-sm-6">
-                                    <img className="w-400" src="../../img/coupon/coupon_4.png"/>
-
-                                </div>
-                                <div className="col-sm-12 mt-20"></div>
-                                <div className="col-sm-6">
-                                    <img className="w-400" src="../../img/coupon/coupon_5.png"/>
-
+                                <div className="row mb-20">
+                                    <div className="col-sm-6">
+                                        <img src="../../img/org/dashboard_6.png"/>
+                                    </div>
+                                    <div className="col-sm-6">
+                                        <img src="../../img/org/dashboard_4.png"/>
+                                    </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
+
+                <Footer/>
             </div>
 
         );

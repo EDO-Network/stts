@@ -71,8 +71,8 @@ var TableHeader = React.createClass({
                 <th>关联订单号</th>
                 <th>下单日期</th>
                 <th>服务名称</th>
-                <th>服务大分类</th>
-                <th>服务小分类</th>
+                <th>服务大类</th>
+                <th>服务小类</th>
                 <th>批次</th>
                 <th>企业名称</th>
                 <th>发票</th>
@@ -85,7 +85,7 @@ var TableInfo = React.createClass({
     render: function () {
         return (
             <div className="mt-20 col-sm-12">
-                <table className="table table-hover font-size-12">
+                <table className="table table-hover">
                     <thead>
                     <TableHeader/>
                     </thead>
