@@ -40,6 +40,8 @@ var CouponExcharge = React.createClass({
                         </div>
                     </div>
                 </div>
+
+                <Footer/>
             </div>
 
         );

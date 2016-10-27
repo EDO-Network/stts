@@ -18,7 +18,7 @@ var Evaluate = React.createClass({
                         <div className="ml-240">
                             <ol className="breadcrumb">
                                 <li>您所在的位置：</li>
-                                <li><a href="dashboard.html">企业机构</a></li>
+                                <li><a href="dashboard.html">服务机构</a></li>
                                 <li><a href="order_list.html">我的评价</a></li>
                                 <li className='active'>我发出的评价</li>
                             </ol>
@@ -30,7 +30,7 @@ var Evaluate = React.createClass({
                                         <tr>
                                             <th>评价星级</th>
                                             <th>评价内容</th>
-                                            <th>评价对象</th>
+                                            <th>企业</th>
                                             <th>服务产品</th>
                                             <th>评价时间</th>
                                         </tr>

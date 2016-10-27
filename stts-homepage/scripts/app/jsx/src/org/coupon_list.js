@@ -87,6 +87,8 @@ var CouponList = React.createClass({
                         </div>
                     </div>
                 </div>
+
+                <Footer/>
             </div>
 
         );

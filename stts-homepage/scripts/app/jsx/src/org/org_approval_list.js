@@ -28,6 +28,7 @@ var OrgApprovalList = React.createClass({
                         </div>
                     </div>
                 </div>
+                <Footer/>
             </div>
 
         );
@@ -83,7 +84,7 @@ var TableInfo = React.createClass({
     render: function () {
         return (
             <div className="mt-20">
-                <table className="table table-hover font-size-12">
+                <table className="table table-hover">
                     <thead>
                     <TableHeader/>
                     </thead>
@@ -94,7 +95,7 @@ var TableInfo = React.createClass({
                     <TableItemx/>
                     </tbody>
                 </table>
-
+                <Paging/>
             </div>
         );
     }

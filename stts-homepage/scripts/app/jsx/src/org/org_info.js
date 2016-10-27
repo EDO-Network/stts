@@ -28,6 +28,7 @@ var OrgInfo = React.createClass({
                         </div>
                     </div>
                 </div>
+                <Footer/>
             </div>
         );
     }
@@ -38,8 +39,19 @@ var Org = React.createClass({
         return (
             <div className="row">
                 <div className="col-sm-3">
-                    <img className="w-per-100" src="../../img/common/org-preview.jpg"/>
-                    <button className="col-sm-12 btn btn-default mt-20 ">展示标题图上传</button>
+                    <div>
+                        <img className="w-per-100" src="../../img/common/org-preview.jpg"/>
+                    </div>
+                    <div className="text-center">
+                        <button className="btn btn-default mt-20 mb-20">上传徽标</button>
+                    </div>
+                    <p>
+                        审核状态：未认证
+                    </p>
+
+                    <p>
+                        帐号状态：正常
+                    </p>
                 </div>
                 <div className="col-sm-9 form form-horizontal " role="form">
                     <div className="form-group">
@@ -48,7 +60,14 @@ var Org = React.createClass({
                         </label>
 
                         <div className="col-sm-7">
-                            <input className="form-control" type="text"/>
+                            <div className="row">
+                                <div className="col-sm-8">
+                                    <input className="form-control" type="text"/>
+                                </div>
+                                <div className="col-sm-4">
+                                    <a href="#" className="btn">查找</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className="form-group form-inline">
@@ -56,9 +75,8 @@ var Org = React.createClass({
                             服务联系人职务
                         </label>
 
-                        <div className="col-sm-7">
+                        <div className="col-sm-9">
                             <select className="form-control  mr-10" style={{width:"150px"}}/>
-                            <input className="form-control" type="text"></input>
                         </div>
                     </div>
                     <div className="form-group form-inline">
@@ -69,7 +87,6 @@ var Org = React.createClass({
 
                         <div className="col-sm-7">
                             <select className="form-control  mr-10" style={{width:"150px"}}/>
-                            <input className="form-control" type="text"></input>
                         </div>
                     </div>
                     <div className="form-group">
@@ -79,18 +96,6 @@ var Org = React.createClass({
 
                         <div className="col-sm-7">
                             <input className="form-control" type="text"/>
-                        </div>
-                    </div>
-                    <div className="form-group">
-                        <label className="control-label col-sm-3">
-                            验证码
-                        </label>
-
-                        <div className="col-sm-4">
-                            <input className="form-control" type="text"/>
-                        </div>
-                        <div className="col-sm-3">
-                            <button className="btn btn-warning">获取验证码</button>
                         </div>
                     </div>
 
@@ -135,6 +140,8 @@ var Org = React.createClass({
                         </div>
                     </div>
 
+                    <hr/>
+                    <h2 className="text-danger text-center">*以下信息如有变更需要重新审核</h2>
 
                     <div className="form-group form-inline">
                         <label className="control-label col-sm-3">
@@ -217,10 +224,10 @@ var Org = React.createClass({
                         </div>
                     </div>
                 </div>
-                <div className="row">
-                    <div className=" text-center">
-                        <button className="col-sm-offset-3 col-sm-3 btn btn-primary mt-20 ">提交</button>
-                    </div>
+
+                <div className=" text-center mb-20">
+                    <button className="btn btn-primary">提&nbsp;交</button> &nbsp;&nbsp;
+                    <button className="btn btn-default">返回</button>
                 </div>
             </div>
         );
