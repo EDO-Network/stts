@@ -18,7 +18,7 @@ var Top = React.createClass({
                         <li>您好：{this.state.user.userName}</li>
                         <li><a href="../account_profile.html">账户设置</a></li>
                         <li><a href="../index.html">企服超市</a></li>
-                        <li><a href="../org/service_list.html">我是服务机构</a></li>
+                        <li><a href="../org/dashboard.html">我是服务机构</a></li>
                         <li><a href="#">帮助中心</a></li>
                         <li><a href="../login.html">退出</a></li>
                     </ul>
