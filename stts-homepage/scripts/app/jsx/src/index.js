@@ -7,11 +7,14 @@ var Index = React.createClass({
                 <Header activeMenuID="mainMenuIndex"/>
 
                 <div className="main container">
-                    <div>
+                    <div style={{position:"relative"}}>
                         <div className="left-wrap">
                             <NavCategory/>
                         </div>
+                        <NavCategoryItems/>
+
                         <div className="right-wrap">
+
                             <Slide/>
                         </div>
                     </div>
@@ -19,6 +22,7 @@ var Index = React.createClass({
                     <Statistics/>
                     <GroupOrg/>
                     <Hot/>
+
                     <div className="row">
                         <div className="col-sm-4">
                             <News/>
@@ -332,6 +336,7 @@ var QuestionItem = React.createClass({
         return (
             <div className="border-bottom-dotted mb-10 h-80">
                 <p>问题标题</p>
+
                 <p>
                     回答内容回答内容回答内容回答内容回答内容回答内容回答内容
                 </p>
