@@ -1,0 +1,541 @@
+/*重写Html默认标签*/
+body {
+    font-family: "Microsoft YaHei", "Arial", "黑体", "宋体", sans-serif;
+    font-size: 14px;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+img {
+    vertical-align: middle;
+    border: 0;
+}
+
+div{
+    position: relative;
+}
+
+/*End*/
+
+/*重写bootstrap默认样式*/
+.form-control {
+    border-radius: 0px;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    background-color: #0c63a9;
+    border-color: #0c63a9;
+}
+
+.navbar {
+    border-radius: 0px;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-tabs li.active a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+    background-color: #0c63a9;
+    color: #FFFFFF;
+    border: 1px solid #0c63a9;
+}
+
+.panel {
+    border-radius: 0px;
+}
+
+.panel-heading {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.panel-primary > .panel-heading {
+    color: #fff;
+    background-color: #0c63a9;
+    border-color: #0c63a9;
+}
+
+.table {
+    margin-bottom: 0px;
+}
+
+.table tr {
+    background-color: #ffffff;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.table > thead > tr > th {
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.table > tbody > tr > td {
+    border-top: 0px solid #ddd;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.list-group-item:last-child {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.tab-content {
+    padding: 10px 0;
+}
+
+.breadcrumb {
+    border-radius: 0px;
+}
+
+.bg-info {
+    background-color: #2b9ac9 !important;
+}
+
+.bg-success {
+    background-color: #58c9c7 !important;
+}
+
+/*End*/
+
+/*定义一些常用背景色*/
+
+.bg-clear {
+    background-color: transparent;
+}
+
+.bg-222 {
+    background-color: #222222;
+}
+
+.bg-f5 {
+    background-color: #f5f5f5;
+}
+
+.bg-dark {
+    background-color: #797979;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+.text-dark {
+    color: #797979 !important;
+}
+
+.text-white {
+    color: #ffffff !important;
+}
+
+.text-gold {
+    color: #fbed50;
+}
+
+.border-clear {
+    border: transparent;
+}
+
+/*End*/
+
+.box-shadow {
+    -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.input-error {
+    border-color: #de615e;
+}
+
+.input-lg {
+    height: 46px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 4px;
+}
+
+.required {
+    color: red;
+}
+
+.img-rect-200x100 {
+    width: 200px;
+    height: 100px;
+}
+
+.width-10 {
+    width: 10px;
+}
+
+.width-100 {
+    width: 100px;
+}
+
+.width-200 {
+    width: 200px;
+}
+
+.width-240 {
+    width: 240px;
+}
+
+.width-400 {
+    width: 400px;
+}
+
+.w-50 {
+    width: 50px;
+}
+
+.w-60 {
+    width: 60px;
+}
+
+.w-90 {
+    width: 90px;
+}
+
+.w-100 {
+    width: 100px;
+}
+
+.w-200 {
+    width: 200px;
+}
+
+.w-222 {
+    width: 222px;
+}
+
+.w-400 {
+    width: 400px;
+}
+
+.w-per-100 {
+    width: 100%;
+}
+
+.width-per-60 {
+    width: 60%;
+}
+
+.width-per-40 {
+    width: 40%;
+}
+
+.h-35 {
+    height: 35px;
+}
+
+.h-40 {
+    height: 40px;
+}
+
+.h-80 {
+    height: 80px;
+}
+
+.lh-66 {
+    line-height: 66px;
+}
+
+.margin-0 {
+    margin: 0;
+}
+
+.ml-5 {
+    margin-left: 5px;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.ml-80 {
+    margin-left: 80px;
+}
+
+.ml-210 {
+    margin-left: 210px;
+}
+
+.ml-240 {
+    margin-left: 240px;
+}
+
+.mh-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mt-5 {
+    margin-top: 5px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+
+.mt-60 {
+    margin-top: 60px;
+}
+
+.mt-70 {
+    margin-top: 70px;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+.mb-70 {
+    margin-bottom: 70px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.pt-7 {
+    padding-top: 7px;
+}
+
+.pt-10 {
+    padding-top: 10px;
+}
+
+.pb-10 {
+    padding-bottom: 10px;
+}
+
+.pv-10{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.p-5 {
+    padding: 5px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+.pl-0 {
+    padding-left: 0px;
+}
+
+.pr-0 {
+    padding-right: 0px;
+}
+
+.padding-right-5 {
+    padding-right: 5px;
+}
+
+.padding-h-10 {
+    padding: 0 10px;
+}
+
+.padding-h-50 {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.spacer10 {
+    height: 10px;
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+/*超出宽度就换行*/
+.break-word {
+    word-wrap: break-word;
+}
+
+/*将对象呈递为内联对象，但是对象的内容作为块对象呈递。旁边的内联对象会被呈递在同一行内*/
+.inline-block {
+    display: inline-block;
+}
+
+.title h4 {
+    display: inline-block;
+    text-indent: 8px;
+    border-left: 2px solid #428bca;
+    margin-right: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+/*定义字体样式*/
+.font-size-12 {
+    font-size: 12px;
+}
+
+.font-size-18 {
+    font-size: 18px;
+}
+
+.font-size-20 {
+    font-size: 20px;
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
+/*超出部分省略号*/
+.text-over-ellipsis {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*线的样式*/
+.border-right-dotted {
+    border-right: dotted 1px #cccccc;
+}
+
+.border-left-dotted {
+    border-left: dotted 1px #cccccc;
+}
+
+.border-bottom-dotted {
+    border-bottom: dotted 1px #cccccc;
+}
+/*线的样式*/
+
+.badge-xs {
+    font-size: 9px;
+}
+.badge-xs,
+.badge-sm {
+    -webkit-transform: translate(0, -2px);
+    -ms-transform: translate(0, -2px);
+    -o-transform: translate(0, -2px);
+    transform: translate(0, -2px);
+}
+.badge-primary {
+    background-color: #317eeb;
+}
+.badge-success {
+    background-color: #33b86c;
+}
+.badge-info {
+    background-color: #29b6f6;
+}
+.badge-warning {
+    background-color: #ffd740;
+}
+.badge-danger {
+    background-color: #ef5350;
+}
+.badge-purple {
+    background-color: #7e57c2;
+}
+.badge-pink {
+    background-color: #ec407a;
+}
+.badge-inverse {
+    background-color: #212121;
+}
+
+
+.text-white {
+    color: #ffffff;
+}
+.text-danger {
+    color: #ef5350;
+}
+.text-muted {
+    color: #98a6ad;
+}
+.text-primary {
+    color: #317eeb;
+}
+.text-warning {
+    color: #ffd740;
+}
+.text-success {
+    color: #33b86c;
+}
+.text-info {
+    color: #29b6f6;
+}
+.text-inverse {
+    color: #212121;
+}
+.text-pink {
+    color: #ec407a;
+}
+.text-purple {
+    color: #7e57c2;
+}
+.text-dark {
+    color: #797979 !important;
+}
+
+.block-title{
+    border-left: solid 4px #0c63a9;
+    padding-left: 5px;
+    color: #0c63a9;
+    font-size: 20px;
+    margin-bottom: 10px;
+}

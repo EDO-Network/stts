@@ -1,0 +1,37 @@
+.top-wrap{
+    margin: 0 auto;
+    height: 30px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+}
+
+.top-wrap a{
+    color: #000000;
+}
+
+.top-wrap ul{
+    padding-left: 0;
+}
+
+.top-right-menu{
+    height: 30px;
+    line-height: 30px;
+    float: right;
+}
+
+.top-right-menu li{
+    float: left;
+    margin-left: 10px;
+}
+
+.top-left-menu{
+    height: 30px;
+    line-height: 30px;
+    float: left;
+}
+
+.top-left-menu li{
+    float: left;
+    margin-left: 10px;
+}

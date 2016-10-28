@@ -1,11 +1,11 @@
-a {
+.nav-category a {
     color: #666666;
     text-decoration: none;
     cursor: pointer;
     font-size: 12px
 }
 
-a:hover {
+.nav-category a:hover {
     color: #1BA358
 }
 

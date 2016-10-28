@@ -1,0 +1,45 @@
+.order-process {
+    /*padding-left: 50px;*/
+    height: 100px;
+}
+
+.order-process .node {
+    float: left;
+}
+
+.order-process .node div{
+    text-align: center;
+    overflow: hidden;
+}
+
+.order-process .node .icon{
+    width: 45px;
+    font-size: 30px;
+}
+
+.order-process .node .todo {
+    color: #CCCCCC;
+}
+
+.order-process .node .done {
+    color: #419641;
+}
+
+.order-process .process {
+    width: 124px;
+    height: 5px;
+}
+
+.order-process .process .arrow {
+    width: 124px;
+    height: 30px;
+    background-image: url(../../img/proce_icons.png);
+}
+
+.order-process .process .done{
+    background-position: 0 -27px;
+}
+
+.order-process .process .todo{
+    background-position: 0 -8px;
+}
