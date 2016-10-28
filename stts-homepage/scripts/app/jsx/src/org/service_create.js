@@ -134,17 +134,43 @@ var ServiceNew = React.createClass({
                             </div>
 
                         </div>
+
                         <div className="form-group form-inline">
                             <label className="control-label col-sm-3">
                                 服务价格<span className="text-danger ml-5">*</span>
                             </label>
 
-                            <div className="col-sm-7">
-                                <input type="text" className="form-control"/>
-                                <span className="w-50 text-center"> ~ </span>
+                            <div className="col-sm-8">
+                                <label>
+                                    <input type="radio" name="optionsRadios" checked/> 免费
+                                </label>
+                            </div>
+                        </div>
+                        <div className="form-group form-inline">
+                            <label className="control-label col-sm-3">
+                            </label>
+
+                            <div className="col-sm-8">
+                                <label>
+                                    <input type="radio" name="optionsRadios"/> 标品
+                                </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
                                 <input type="text" className="form-control"/>
                             </div>
+                        </div>
+                        <div className="form-group form-inline">
+                            <label className="control-label col-sm-3">
+                            </label>
 
+                            <div className="col-sm-8">
+                                <label>
+                                    <input type="radio" name="optionsRadios"/> 非标品
+                                </label>&nbsp;&nbsp;
+
+                                <input type="text" className="form-control"/>
+                                <label className="text-center width-10">~</label>
+                                <input type="text" className="form-control"/>
+                            </div>
                         </div>
 
                         <div className="form-group form-inline">
@@ -243,7 +269,7 @@ var ServiceHistory = React.createClass({
                         className="fa fa-times-circle-o mr-10"></span>删除
                     </button>
                 </div>
-                    <div className="col-sm-6">
+                <div className="col-sm-6">
                     <button className="btn badge-warning btn-sm w-100 mr-10"><span
                         className="fa fa-upload mr-10"></span>批量导入
                     </button>
@@ -431,7 +457,7 @@ var HistoryNewModal = React.createClass({
 
                                     <div className="col-sm-8">
                                         <div className="col-sm-8">
-                                        <input className="form-control" type="text"/>
+                                            <input className="form-control" type="text"/>
                                         </div>
 
                                         <div className="col-sm-4">

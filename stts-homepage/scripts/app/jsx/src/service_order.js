@@ -14,24 +14,24 @@ var ServiceOrder = React.createClass({
                             //</div>
                         }
                         {
-                        //<div className="ml-240">
-                            }
-                            <ol className="breadcrumb">
-                                <li>您所在的位置：</li>
-                                <li><a href="index.html">首页</a></li>
-                                <li><a href="service_list.html">服务产品</a></li>
-                                <li><a href="service_detail.html">服务详细</a></li>
-                                <li className='active'>服务购买</li>
-                            </ol>
-                            <div className="panel panel-default">
-                                <div className="panel-heading">订单详细</div>
-                                <div className="panel-body">
-                                    <Order/>
-                                </div>
+                            //<div className="ml-240">
+                        }
+                        <ol className="breadcrumb">
+                            <li>您所在的位置：</li>
+                            <li><a href="index.html">首页</a></li>
+                            <li><a href="service_list.html">服务产品</a></li>
+                            <li><a href="service_detail.html">服务详细</a></li>
+                            <li className='active'>服务购买</li>
+                        </ol>
+                        <div className="panel panel-default">
+                            <div className="panel-heading">订单详细</div>
+                            <div className="panel-body">
+                                <Order/>
                             </div>
+                        </div>
                         {
-                        //</div>
-                            }
+                            //</div>
+                        }
                     </div>
                 </div>
             </div>
@@ -102,6 +102,13 @@ var Order = React.createClass({
                                 </div>
                             </div>
                             <div className="form-group">
+                                <div className="col-sm-2 pt-7">
+                                </div>
+                                <div className="col-sm-10">
+                                    服务价格：1～5000元&nbsp;&nbsp;目前服务券余额：5千元&nbsp;&nbsp;批次：2016年度
+                                </div>
+                            </div>
+                            <div className="form-group">
                                 <div className="col-sm-2">
                                     <label>企业留言</label>
                                 </div>
@@ -118,6 +125,23 @@ var Order = React.createClass({
                                 </div>
                                 <div className="col-sm-2">
                                     <a href="#">阅览合同</a>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <div className="col-sm-2">
+                                    <label>上传附件</label>
+                                </div>
+                                <div className="col-sm-8">
+                                    <img src="#"/>&nbsp;&nbsp;
+                                    <img src="#"/>&nbsp;&nbsp;
+                                    <img src="#"/>&nbsp;&nbsp;
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <div className="col-sm-2">
+                                </div>
+                                <div className="col-sm-8">
+                                    <a href="#" className="btn">上传附件</a>
                                 </div>
                             </div>
                         </div>

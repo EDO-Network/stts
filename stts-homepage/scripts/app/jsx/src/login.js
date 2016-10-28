@@ -12,62 +12,37 @@ var Login = React.createClass({
 
 
 var LoginForm = React.createClass({
-    handleLogin:function(){
+    handleLogin: function () {
         location.href = "select_company.html";
     },
     render: function () {
         return (
             <div className="login-form hot-tab-wrap">
-                <ul className="nav nav-tabs login-tabs" role="tablist">
-                    <li role="presentation" className="active"><a href="#verify" role="tab" data-toggle="tab">验证码登录</a>
-                    </li>
-                    <li role="presentation"><a href="#password" role="tab" data-toggle="tab">密码登录</a></li>
-                </ul>
 
-                <div className="tab-content login-frame">
-                    <div role="tabpanel" className="tab-pane active" id="verify">
-                        <div className="form-group">
-                            <label>手机号</label>
-                            <input type="text" placeholder="请输入手机号" className="form-control"/>
-                        </div>
-                        <div className="form-group">
-                            <label>验证码</label>
+                <div className="login-frame">
+                    <div className="form-group">
+                        <label>手机号</label>
+                        <input type="text" placeholder="请输入手机号" className="form-control"/>
+                    </div>
+                    <div className="form-group">
+                        <label>密码</label>
 
-                            <div className="input-group">
-                                <input type="text" placeholder="请输入验证码"
-                                       className="form-control"/>
-                                  <span className="input-group-btn">
-                                    <button className="btn btn-default" type="button">获取验证码</button>
-                                  </span>
-                            </div>
+                        <input ref="inputPassword" type="password" placeholder="请输入密码"
+                               className="form-control"/>
+                    </div>
+                    <div className="row form-group">
+                        <div className="col-sm-6 text-center">
+                            <a href="#">忘记密码？</a>
                         </div>
-                        <div className="form-group">
-                            <button type="button" className="btn btn-primary btn-block"
-                                    onClick={this.handleLogin}>
-                                登录
-                            </button>
+                        <div className="col-sm-6 text-center">
+                            <a href="#">免费注册</a>
                         </div>
                     </div>
-                    <div role="tabpanel" className="tab-pane" id="password">
-                        <div className="form-group">
-                            <label>手机号</label>
-                            <input type="text" placeholder="请输入手机号" className="form-control"/>
-                        </div>
-                        <div className="form-group">
-                            <label>密码</label>
-
-                            <div className="pull-right">
-                                <a href="#">忘记密码？</a>
-                            </div>
-                            <input ref="inputPassword" type="password" placeholder="请输入密码"
-                                   className="form-control"/>
-                        </div>
-                        <div className="form-group">
-                            <button type="button" className="btn btn-primary btn-block"
-                                    onClick={this.handleLogin}>
-                                登录
-                            </button>
-                        </div>
+                    <div className="form-group">
+                        <button type="button" className="btn btn-primary btn-block"
+                                onClick={this.handleLogin}>
+                            登录
+                        </button>
                     </div>
                 </div>
             </div>
