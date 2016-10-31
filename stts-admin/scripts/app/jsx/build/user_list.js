@@ -9,7 +9,7 @@ var UserList = React.createClass({displayName: "UserList",
                     React.createElement("div", null, 
                         React.createElement("div", {className: "pull-left w-222"}, 
                             React.createElement("div", {className: "list-group"}, 
-                                React.createElement("a", {href: "index.html", className: "list-group-item"}, "统计分析"), 
+                                React.createElement("a", {href: "index.html", className: "list-group-item"}, "运营平台"), 
                                 React.createElement("a", {href: "user_list.html", className: "list-group-item active"}, "用户一览")
                             )
                         ), 
@@ -23,7 +23,7 @@ var UserList = React.createClass({displayName: "UserList",
                             React.createElement("div", {className: "panel panel-default"}, 
                                 React.createElement("div", {className: "panel-heading"}, 
                                     "用户一览", 
-                                    React.createElement("a", {href: "#", className: "pull-right"}, "添加新用户")
+                                    React.createElement("a", {href: "user_create.html", className: "pull-right"}, "添加新用户")
                                 ), 
                                 React.createElement("div", {className: "panel-body"}, 
                                     React.createElement(SearchArea, null), 

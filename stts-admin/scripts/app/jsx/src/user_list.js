@@ -9,7 +9,7 @@ var UserList = React.createClass({
                     <div>
                         <div className="pull-left w-222">
                             <div className="list-group">
-                                <a href="index.html" className="list-group-item">统计分析</a>
+                                <a href="index.html" className="list-group-item">运营平台</a>
                                 <a href="user_list.html" className="list-group-item active">用户一览</a>
                             </div>
                         </div>
@@ -23,7 +23,7 @@ var UserList = React.createClass({
                             <div className="panel panel-default">
                                 <div className="panel-heading">
                                     用户一览
-                                    <a href="#" className="pull-right">添加新用户</a>
+                                    <a href="user_create.html" className="pull-right">添加新用户</a>
                                 </div>
                                 <div className="panel-body">
                                     <SearchArea/>
