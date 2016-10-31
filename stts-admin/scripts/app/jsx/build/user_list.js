@@ -26,7 +26,8 @@ var UserList = React.createClass({displayName: "UserList",
                                     React.createElement("a", {href: "#", className: "pull-right"}, "添加新用户")
                                 ), 
                                 React.createElement("div", {className: "panel-body"}, 
-                                    React.createElement(SearchArea, null)
+                                    React.createElement(SearchArea, null), 
+                                    React.createElement(UsersTable, null)
                                 )
                             )
                         )
@@ -88,20 +89,39 @@ var UsersTable = React.createClass({displayName: "UsersTable",
             React.createElement("table", {className: "table table-hover"}, 
                 React.createElement("thead", null, 
                 React.createElement("tr", null, 
-                    React.createElement("th", null, "用户ID"), 
                     React.createElement("th", null, "用户名"), 
-                    React.createElement("th", null, "性别"), 
-                    React.createElement("th", null, "手机号"), 
-                    React.createElement("th", null, "邮箱"), 
-                    React.createElement("th", null, "微信号"), 
-                    React.createElement("th", null, "创建时间"), 
-                    React.createElement("th", null, "更新时间")
+                    React.createElement("th", null, "真实姓名"), 
+                    React.createElement("th", null, "绑定手机号"), 
+                    React.createElement("th", null, "用户级别"), 
+                    React.createElement("th", null, "是否激活"), 
+                    React.createElement("th", null, "操作")
                 )
                 ), 
                 React.createElement("tbody", null, 
-                this.props.userList.map(function (item, index) {
-                    return React.createElement(UsersTableRow, {key: item.userID, siteUser: item})
-                })
+                React.createElement(AdminRow, null), 
+                React.createElement(UsersTableRow, null)
+                )
+            )
+        );
+    }
+});
+
+var AdminRow = React.createClass({displayName: "AdminRow",
+    render: function () {
+        return (
+            React.createElement("tr", null, 
+                React.createElement("td", null, "administrator［当前用户］"), 
+                React.createElement("td", null, "张XX"), 
+                React.createElement("td", null, "13512341234"), 
+                React.createElement("td", null, "系统管理员"), 
+                React.createElement("td", null, "是"), 
+                React.createElement("td", {className: "text-mute"}, 
+                    "修改 |" + ' ' +
+                    "升级 |" + ' ' +
+                    "降级 |" + ' ' +
+                    "激活 |" + ' ' +
+                    "禁止 |" + ' ' +
+                    "删除"
                 )
             )
         );
@@ -109,23 +129,22 @@ var UsersTable = React.createClass({displayName: "UsersTable",
 });
 
 var UsersTableRow = React.createClass({displayName: "UsersTableRow",
-    handleLink: function (userID) {
-        sessionStorage.setItem(SessionKey.userID, userID);
-        location.href = SiteProperties.clientURL + Page.user;
-    },
     render: function () {
         return (
             React.createElement("tr", null, 
-                React.createElement("td", null, this.props.siteUser.user.loginID), 
-                React.createElement("td", null, React.createElement("a", {href: "javascript:void(0)", 
-                       onClick: this.handleLink.bind(null, this.props.siteUser.userID)}, this.props.siteUser.user.userName)
-                ), 
-                React.createElement("td", null, SexMap[this.props.siteUser.user.sex]), 
-                React.createElement("td", null, this.props.siteUser.user.mobile), 
-                React.createElement("td", null, this.props.siteUser.user.email), 
-                React.createElement("td", null, this.props.siteUser.user.weixinID), 
-                React.createElement("td", null, new Date(this.props.siteUser.user.createTime).format('yyyy-MM-dd hh:mm:ss')), 
-                React.createElement("td", null, new Date(this.props.siteUser.user.updateTime).format('yyyy-MM-dd hh:mm:ss'))
+                React.createElement("td", null, "xxx"), 
+                React.createElement("td", null, "李XX"), 
+                React.createElement("td", null, "13512341234"), 
+                React.createElement("td", null, "一般管理员"), 
+                React.createElement("td", null, "是"), 
+                React.createElement("td", null, 
+                    React.createElement("a", {href: "user_detail.html"}, "修改"), " |", 
+                    React.createElement("a", {href: "#"}, "升级"), " |", 
+                    React.createElement("a", {href: "#"}, "降级"), " |", 
+                    React.createElement("a", {href: "#"}, "激活"), " |", 
+                    React.createElement("a", {href: "#"}, "禁止"), " |", 
+                    React.createElement("a", {href: "#"}, "删除")
+                )
             )
         );
     }

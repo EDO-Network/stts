@@ -1,5 +1,8 @@
+
+// 用Refulx定义Action
 var UserActions = Reflux.createActions(['getUser','updateUserInfo']);
 
+// 监听并实现Relux定义的Action
 var UserStore = Reflux.createStore({
     listenables: [UserActions],
     onGetUser: function (data) {
@@ -26,118 +29,32 @@ var UserStore = Reflux.createStore({
             }
         };
 
-        ajaxPost(url, data, callback);
-    },
-    onUpdateUserInfo:function(data){
-        var url = SiteProperties.serverURL + API.updateUserInfo;
-
         data.accessKey = SecurityClient.accessKey;
         data.accessSecret = SecurityClient.accessSecret;
-        data.accessToken = sessionStorage.getItem(SessionKey.accessToken);
-        data.operatorID = sessionStorage.getItem(SessionKey.operatorID);
-        data.siteID = sessionStorage.getItem(SessionKey.siteID);
-        data.userID = sessionStorage.getItem(SessionKey.userID);
-        // 检查token是否过期
-        if (data.accessToken == null || data.accessToken == "") {
-            location.href = SiteProperties.clientURL + Page.login;
-            return false;
-        }
-
-        var self = this;
-        var callback = function (result) {
-            if (result.status == 200) {
-                alert(Message.SAVE_SUCCESS);
-            } else if(result.status == 202){
-                var field = result.messages[0].field;
-                if(field == "email"){
-                    $("#messageBox").show().text(Message.EMAIL_REPEAT);
-                } else if(field == "userName"){
-                    $("#messageBox").show().text(Message.USER_NAME_REPEAT);
-                }
+        $.ajax({
+            type: "POST",
+            timeout: 10000, //超时时间设置，单位毫秒
+            url: url,
+            dataType: "json",
+            data: data,
+            success: function (result) {
+                self.trigger(result.data);
             }
-        };
-
-        ajaxPost(url, data, callback);
+        });
+    },
+    onUpdateUserInfo:function(data){
+        // 实现的另一个Action
     },
 });
 
 var User = React.createClass({displayName: "User",
+    // 绑定对象user，self.trigger(result.data);会把数据传到这里
+    // 获取这个数据后，就可以用react的方式绑定
     mixins: [Reflux.connect(UserStore, 'user')],
     getInitialState: function () {
         return {
             user: {}
         };
-    },
-    componentDidMount: function(){
-        $(function () {
-            $('.form_date').datetimepicker({
-                weekStart: 1,
-                todayBtn: 1,
-                autoclose: 1,
-                todayHighlight: 1,
-                startView: 2,
-                minView: 2,
-                forceParse: 0,
-                format: 'yyyy-mm-dd'
-            });
-        });
-
-        UserActions.getUser(this.state);
-    },
-    componentDidUpdate: function () {
-        this.refs.inputLoginID.value = this.state.user.loginID;
-        this.refs.inputUserName.value = this.state.user.userName;
-        this.refs.inputMobile.value = this.state.user.mobile;
-        this.refs.inputEmail.value = this.state.user.email;
-        this.refs.inputWeixinID.value = this.state.user.weixinID;
-        this.refs.inputBirthday.value = new Date(this.state.user.birthday).format('yyyy-MM-dd');
-        this.refs.inputSex.value = this.state.user.sex;
-
-        if(this.state.user.isSilent == 1){
-            $("#checkboxIsSilent").attr("checked",true);
-        } else{
-            $("#checkboxIsSilent").attr("checked",false);
-        }
-
-        if(this.state.user.isDisable == 1){
-            $("#checkboxIsDisable").attr("checked",true);
-        } else{
-            $("#checkboxIsDisable").attr("checked",false);
-        }
-
-        this.refs.inputCreateTime.value = new Date(this.state.user.createTime).format('yyyy-MM-dd hh:mm:ss');
-        this.refs.inputLastLoginTime.value = new Date(this.state.user.lastLoginTime).format('yyyy-MM-dd hh:mm:ss');
-    },
-    handleSave:function(){
-        this.state.user.loginID = this.refs.inputLoginID.value;
-        this.state.user.userName = this.refs.inputUserName.value;
-        this.state.user.mobile = this.refs.inputMobile.value;
-        this.state.user.email = this.refs.inputEmail.value;
-        this.state.user.weixinID = this.refs.inputWeixinID.value;
-        this.state.user.birthday = this.refs.inputBirthday.value;
-        this.state.user.sex = this.refs.inputSex.value;
-        var isSilent = $("#checkboxIsSilent").prop("checked");
-        if(isSilent == true){
-            this.state.user.isSilent = 1;
-        } else {
-            this.state.user.isSilent = 0;
-        }
-        var isDisable = $("#checkboxIsDisable").prop("checked");
-        if(isDisable == true){
-            this.state.user.isDisable = 1;
-        } else {
-            this.state.user.isDisable = 0;
-        }
-
-        if(this.state.user.loginID == "" || this.state.user.userName == "" || this.state.user.email == ""){
-            $("#inputLoginID").addClass("input-error");
-            $("#inputUserName").addClass("input-error");
-            $("#inputEmail").addClass("input-error");
-            $("#messageBox").show().text(Message.INPUT_REQUIRED);
-            return;
-        }
-
-        UserActions.updateUserInfo(this.state.user);
     },
     render: function () {
         return (

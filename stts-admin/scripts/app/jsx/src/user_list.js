@@ -27,6 +27,7 @@ var UserList = React.createClass({
                                 </div>
                                 <div className="panel-body">
                                     <SearchArea/>
+                                    <UsersTable/>
                                 </div>
                             </div>
                         </div>
@@ -88,44 +89,62 @@ var UsersTable = React.createClass({
             <table className="table table-hover">
                 <thead>
                 <tr>
-                    <th>用户ID</th>
                     <th>用户名</th>
-                    <th>性别</th>
-                    <th>手机号</th>
-                    <th>邮箱</th>
-                    <th>微信号</th>
-                    <th>创建时间</th>
-                    <th>更新时间</th>
+                    <th>真实姓名</th>
+                    <th>绑定手机号</th>
+                    <th>用户级别</th>
+                    <th>是否激活</th>
+                    <th>操作</th>
                 </tr>
                 </thead>
                 <tbody>
-                {this.props.userList.map(function (item, index) {
-                    return <UsersTableRow key={item.userID} siteUser={item}/>
-                })}
+                <AdminRow/>
+                <UsersTableRow/>
                 </tbody>
             </table>
         );
     }
 });
 
-var UsersTableRow = React.createClass({
-    handleLink: function (userID) {
-        sessionStorage.setItem(SessionKey.userID, userID);
-        location.href = SiteProperties.clientURL + Page.user;
-    },
+var AdminRow = React.createClass({
     render: function () {
         return (
             <tr>
-                <td>{this.props.siteUser.user.loginID}</td>
-                <td><a href="javascript:void(0)"
-                       onClick={this.handleLink.bind(null, this.props.siteUser.userID)}>{this.props.siteUser.user.userName}</a>
+                <td>administrator［当前用户］</td>
+                <td>张XX</td>
+                <td>13512341234</td>
+                <td>系统管理员</td>
+                <td>是</td>
+                <td className="text-mute">
+                    修改 |
+                    升级 |
+                    降级 |
+                    激活 |
+                    禁止 |
+                    删除
                 </td>
-                <td>{SexMap[this.props.siteUser.user.sex]}</td>
-                <td>{this.props.siteUser.user.mobile}</td>
-                <td>{this.props.siteUser.user.email}</td>
-                <td>{this.props.siteUser.user.weixinID}</td>
-                <td>{new Date(this.props.siteUser.user.createTime).format('yyyy-MM-dd hh:mm:ss')}</td>
-                <td>{new Date(this.props.siteUser.user.updateTime).format('yyyy-MM-dd hh:mm:ss')}</td>
+            </tr>
+        );
+    }
+});
+
+var UsersTableRow = React.createClass({
+    render: function () {
+        return (
+            <tr>
+                <td>xxx</td>
+                <td>李XX</td>
+                <td>13512341234</td>
+                <td>一般管理员</td>
+                <td>是</td>
+                <td>
+                    <a href="user_detail.html">修改</a> |
+                    <a href="#">升级</a> |
+                    <a href="#">降级</a> |
+                    <a href="#">激活</a> |
+                    <a href="#">禁止</a> |
+                    <a href="#">删除</a>
+                </td>
             </tr>
         );
     }
