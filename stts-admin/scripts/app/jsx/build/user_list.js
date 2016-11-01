@@ -27,7 +27,8 @@ var UserList = React.createClass({displayName: "UserList",
                                 ), 
                                 React.createElement("div", {className: "panel-body"}, 
                                     React.createElement(SearchArea, null), 
-                                    React.createElement(UsersTable, null)
+                                    React.createElement(UsersTable, null), 
+                                    React.createElement(Paging, null)
                                 )
                             )
                         )
@@ -99,6 +100,9 @@ var UsersTable = React.createClass({displayName: "UsersTable",
                 ), 
                 React.createElement("tbody", null, 
                 React.createElement(AdminRow, null), 
+                React.createElement(UsersTableRow, null), 
+                React.createElement(UsersTableRow, null), 
+                React.createElement(UsersTableRow, null), 
                 React.createElement(UsersTableRow, null)
                 )
             )

@@ -28,6 +28,7 @@ var UserList = React.createClass({
                                 <div className="panel-body">
                                     <SearchArea/>
                                     <UsersTable/>
+                                    <Paging/>
                                 </div>
                             </div>
                         </div>
@@ -99,6 +100,9 @@ var UsersTable = React.createClass({
                 </thead>
                 <tbody>
                 <AdminRow/>
+                <UsersTableRow/>
+                <UsersTableRow/>
+                <UsersTableRow/>
                 <UsersTableRow/>
                 </tbody>
             </table>
