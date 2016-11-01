@@ -303,7 +303,8 @@ var Company = React.createClass({displayName: "Company",
                             )
                         )
                     )
-                )
+                ), 
+                React.createElement(Footer, null)
             )
         );
     }

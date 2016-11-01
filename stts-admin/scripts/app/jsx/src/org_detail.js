@@ -1,31 +1,49 @@
-var OrgDetail = React.createClass({
+var Company = React.createClass({
     render: function () {
         return (
             <div>
-                <Top isLogin="true"/>
+                <Top/>
                 <Header activeMenuID="mainMenuOrg"/>
 
                 <div className="container">
-
-                    <div className="org-title-wrap">
-                        <div className="org-title">宁波xxx信息服务机构</div>
-                        <ul className="nav nav-tabs" role="tablist">
-                            <li role="presentation" className="active"><a href="#desc" role="tab"
-                                                                          data-toggle="tab">机构首页</a>
-                            </li>
-                            <li role="presentation"><a href="#anylize" role="tab" data-toggle="tab">机构详情</a></li>
-                            <li role="presentation"><a href="#evaluate" role="tab" data-toggle="tab">服务项目</a></li>
-                            <li role="presentation"><a href="#record" role="tab" data-toggle="tab">成功案例</a></li>
-                        </ul>
-                    </div>
-                    <div className="clearfix">
+                    <div>
                         <div className="pull-left w-222">
-                            <OrgCard/>
-                            <EvaluateStatistics/>
-                            <OrderStatistics/>
+                            <a href="org_list.html" className="list-group-item active">服务机构一览</a>
+                            <a href="org_qualification_list.html" className="list-group-item">服务机构资质审核</a>
+                            <a href="service_list.html" className="list-group-item">服务产品一览</a>
+                            <a href="service_qualification_list.html" className="list-group-item">服务产品审核</a>
                         </div>
+
                         <div className="ml-240">
-                            <OrgContent/>
+
+                            <ol className="breadcrumb">
+                                <li>您所在的位置：</li>
+                                <li><a href="org_list.html">服务机构管理</a></li>
+                                <li><a href="org_list.html">服务机构一览</a></li>
+                                <li className='active'>服务机构详细</li>
+                            </ol>
+                            <div className="overflow-hidden">
+                                <ul className="nav nav-tabs" role="tablist">
+                                    <li role="presentation" className="active">
+                                        <a href="#desc" role="tab" data-toggle="tab">服务机构信息</a>
+                                    </li>
+                                    <li role="presentation"><a href="#show" role="tab" data-toggle="tab">机构展示</a></li>
+                                    <li role="presentation"><a href="#service" role="tab" data-toggle="tab">服务产品</a>
+                                    </li>
+                                </ul>
+
+                                <div className="tab-content overflow-hidden">
+                                    <div role="tabpanel" className="tab-pane active" id="desc">
+                                        <OrgInfo/>
+                                    </div>
+                                    <div role="tabpanel" className="tab-pane" id="show">
+                                        <OrgShow/>
+                                    </div>
+                                    <div role="tabpanel" className="tab-pane" id="service">
+                                        <OrgService/>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -35,458 +53,482 @@ var OrgDetail = React.createClass({
     }
 });
 
-var OrgCard = React.createClass({
+var OrgInfo = React.createClass({
     render: function () {
         return (
-
-            <div className="panel panel-info">
-                <div className="panel-heading">服务机构名片</div>
-                <div className="panel-body">
-                    <p><img className="w-per-100" src="../img/sample/org_preview.png"/></p>
-
-                    <p>好评率：
-                        <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                        <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                        <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                        <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                        <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                    </p>
-
-                    <p>认证信息：<span className="label label-success">已认证</span></p>
-
-                    <p>年审记录：2016年度通过</p>
-
-                    <p>警告记录：
-                        <span className="label label-danger">1</span>&nbsp;&nbsp;
-                        <span className="label label-warning">2</span>&nbsp;&nbsp;
-                        <span className="label label-info">3</span>
-                    </p>
-
-                    <p>联系地址：宁波市海曙区中山东路145号</p>
-                </div>
-            </div>
-        );
-    }
-});
-
-var EvaluateStatistics = React.createClass({
-    render: function () {
-        return (
-
-            <div className="panel panel-info">
-                <div className="panel-heading">机构一年内评分动态</div>
+            <div className="panel panel-default">
+                <div className="panel-heading">服务机构信息</div>
                 <div className="panel-body">
                     <div className="row">
-                        <div className="col-sm-6">
-                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                        </div>
-                        <div className="col-sm-6">
-                            5.0分 共4人
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-sm-6">
-                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                        </div>
-                        <div className="col-sm-6">
-                            5分 共1人
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-sm-6">
-                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                            <i className="fa fa-star text-mute" aria-hidden="true"></i>
-                        </div>
-                        <div className="col-sm-6">
-                            4分 共1人
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-sm-6">
-                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                            <i className="fa fa-star text-mute" aria-hidden="true"></i>
-                            <i className="fa fa-star text-mute" aria-hidden="true"></i>
-                        </div>
-                        <div className="col-sm-6">
-                            3分 共1人
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-sm-6">
-                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                            <i className="fa fa-star text-mute" aria-hidden="true"></i>
-                            <i className="fa fa-star text-mute" aria-hidden="true"></i>
-                            <i className="fa fa-star text-mute" aria-hidden="true"></i>
-                        </div>
-                        <div className="col-sm-6">
-                            2分 共1人
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-sm-6">
-                            <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                            <i className="fa fa-star text-mute" aria-hidden="true"></i>
-                            <i className="fa fa-star text-mute" aria-hidden="true"></i>
-                            <i className="fa fa-star text-mute" aria-hidden="true"></i>
-                            <i className="fa fa-star text-mute" aria-hidden="true"></i>
-                        </div>
-                        <div className="col-sm-6">
-                            1分 共0人
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-});
+                        <div className="col-sm-2">
+                            <div className="mb-20">
+                                <div>
+                                    <img className="w-200" src="../img/company/company.jpg"/>
+                                </div>
+                                <br/>
 
-var OrderStatistics = React.createClass({
-    render: function () {
-        return (
-
-            <div className="panel panel-info">
-                <div className="panel-heading">一年内交易统计</div>
-                <div className="panel-body">
-                    <div className="row">
-                        <div className="col-sm-6">
-                            交易成功
-                        </div>
-                        <div className="col-sm-6">
-                            10笔
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-sm-6">
-                            交易中止
-                        </div>
-                        <div className="col-sm-6">
-                            4笔
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-sm-6">
-                            交易中
-                        </div>
-                        <div className="col-sm-6">
-                            4笔
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-});
-
-var OrgContent = React.createClass({
-    render: function () {
-        return (
-            <div className="tab-content overflow-hidden">
-                <div role="tabpanel" className="tab-pane active" id="desc">
-                    <div className="panel panel-default">
-                        <div className="panel-heading">机构简介</div>
-                        <div className="panel-body">
-
-                            <p className="text-center">
-                                <img src="../img/sample/service_desc.png"/>
-                            </p>
-
-                            <p>
-                                xxxxxxxxxxxxxxxxxxxx
-                            </p>
-
-                            <p>
-                                xxxxxxxxxxxxxxxxxxxx
-                            </p>
-
-                            <p>
-                                xxxxxxxxxxxxxxxxxxxx
-                            </p>
-                        </div>
-                    </div>
-                    <div className="panel panel-default">
-                        <div className="panel-heading">
-                            最新服务
-                            <a className="pull-right" href="javascript:void(0)">
-                                <span>更多</span>&nbsp;&gt;&gt;
-                            </a>
-                        </div>
-                        <div className="panel-body">
-                            <ServiceItem/>
-                            <ServiceItem/>
-                        </div>
-                    </div>
-
-                    <div className="panel panel-default">
-                        <div className="panel-heading">来自企业的评价
-                        </div>
-                        <div className="panel-body">
-                            <table className="table table-hover">
-                                <thead>
-                                <tr>
-                                    <th>评分</th>
-                                    <th>价格</th>
-                                    <th>服务项目</th>
-                                    <th>评论内容</th>
-                                    <th>评论企业</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <EvaluateItem/>
-                                <EvaluateItem/>
-                                <EvaluateItem/>
-                                <EvaluateItem/>
-                                <EvaluateItem/>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-
-                </div>
-
-                <div role="tabpanel" className="tab-pane" id="anylize">
-                    <div className="panel panel-default">
-                        <div className="panel-heading">
-                            机构介绍
-                            <a className="btn pull-right" onClick={this.handleCondition}>点击折叠
-                            </a>
-                        </div>
-                        <div className="panel-body">
-                            <p>
-                                xxxxxxxxxxxxxxxxxxxx
-                            </p>
-
-                            <p>
-                                xxxxxxxxxxxxxxxxxxxx
-                            </p>
-
-                            <p>
-                                xxxxxxxxxxxxxxxxxxxx
-                            </p>
-                        </div>
-                    </div>
-                    <div className="panel panel-default">
-                        <div className="panel-heading">
-                            专业资质情况
-                            <a className="btn pull-right" onClick={this.handleCondition}>点击折叠
-                            </a>
-                        </div>
-                        <div className="panel-body">
-                            <p>
-                                xxxxxxxxxxxxxxxxxxxx
-                            </p>
-
-                            <p>
-                                xxxxxxxxxxxxxxxxxxxx
-                            </p>
-
-                            <p>
-                                xxxxxxxxxxxxxxxxxxxx
-                            </p>
-                        </div>
-                    </div>
-                    <div className="panel panel-default">
-                        <div className="panel-heading">
-                            人员素质构成情况
-                            <a className="btn pull-right" onClick={this.handleCondition}>点击折叠
-                            </a>
-                        </div>
-                        <div className="panel-body">
-                            <p>
-                                xxxxxxxxxxxxxxxxxxxx
-                            </p>
-
-                            <p>
-                                xxxxxxxxxxxxxxxxxxxx
-                            </p>
-
-                            <p>
-                                xxxxxxxxxxxxxxxxxxxx
-                            </p>
-                        </div>
-                    </div>
-                    <div className="panel panel-default">
-                        <div className="panel-heading">
-                            主要服务设备及条件
-                            <a className="btn pull-right" onClick={this.handleCondition}>点击折叠
-                            </a>
-                        </div>
-                        <div className="panel-body">
-                            <p>
-                                xxxxxxxxxxxxxxxxxxxx
-                            </p>
-
-                            <p>
-                                xxxxxxxxxxxxxxxxxxxx
-                            </p>
-
-                            <p>
-                                xxxxxxxxxxxxxxxxxxxx
-                            </p>
-                        </div>
-                    </div>
-                    <div className="panel panel-default">
-                        <div className="panel-heading">
-                            服务资质及荣誉
-                            <a className="btn pull-right" onClick={this.handleCondition}>点击折叠
-                            </a>
-                        </div>
-                        <div className="panel-body">
-                            <p>
-                                xxxxxxxxxxxxxxxxxxxx
-                            </p>
-
-                            <p>
-                                xxxxxxxxxxxxxxxxxxxx
-                            </p>
-
-                            <p>
-                                xxxxxxxxxxxxxxxxxxxx
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div role="tabpanel" className="tab-pane" id="evaluate">
-                    <ServiceSearchArea/>
-                    <div className="sort-row overflow-hidden">
-                        <div className="sort-inner">
-                            <ul className="sorts">
-                                <li className="sort active"><a href="#">默认</a></li>
-                                <li className="sort"><a href="#">申请次数</a></li>
-                                <li className="sort"><a href="#">好评率</a></li>
-                                <li className="sort"><a href="#">价格</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <ServiceItemPreview/>
-                    <ServiceItemPreview/>
-                    <ServiceItemPreview/>
-                    <ServiceItemPreview/>
-                    <ServiceItemPreview/>
-                    <Paging/>
-                </div>
-                <div role="tabpanel" className="tab-pane" id="record">
-                    <div className="panel panel-default">
-                        <div className="panel-heading">成功案例</div>
-                        <div className="panel-body">
-                            <table className="table table-hover">
-                                <thead>
-                                <tr>
-                                    <th>服务时间</th>
-                                    <th>企业名称</th>
-                                    <th>服务项目</th>
-                                    <th>标签</th>
-                                    <th>价格</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <RecordItem/>
-                                <RecordItem/>
-                                <RecordItem/>
-                                <RecordItem/>
-                                <RecordItem/>
-                                </tbody>
-                            </table>
-                            <Paging/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-});
-
-
-var ServiceSearchArea = React.createClass({
-    handleCondition: function () {
-        var $moreConditionWrap = $("#moreConditionWrap");
-        if ($moreConditionWrap.is(":visible")) {
-            $("#moreConditionWrap").hide(500);
-            $("#btnCondition").text("更多筛选条件");
-        } else {
-            $("#moreConditionWrap").show(500);
-            $("#btnCondition").text("收起筛选条件");
-        }
-    },
-    render: function () {
-        return (
-            <div className="panel panel-default overflow-hidden">
-                <div className="panel-body">
-                    <div className="form-inline mb-10">
-                        <div className="form-group">
-                            <label>服务名称</label> &nbsp;
-                            <input type="text" className="form-control"/>
-                        </div>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <button type="button" className="btn btn-default">搜&nbsp;索</button>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a id="btnCondition" className="btn" onClick={this.handleCondition}>更多筛选条件
-                        </a>
-                    </div>
-                    <div id="moreConditionWrap" style={{display: "none"}}
-                         className="form-horizontal overflow-hidden font-size-12">
-                        <hr/>
-                        <div className="row">
-                            <div className="form-group col-sm-4">
-                                <label className="control-label col-sm-4">服务大类</label>
-
-                                <div className=" col-sm-8">
-                                    <select className="form-control input-sm">
-                                        <option></option>
-                                        <option>分类1</option>
-                                    </select>
+                                <div className="text-center w-200">营业执照
                                 </div>
                             </div>
-                            <div className="form-group col-sm-4">
-                                <label className="control-label col-sm-4 pl-0">服务小类</label>
+                            <div className="mb-20">
+                                <div>
+                                    <img className="w-200" src="../img/company/tax.jpg"/>
+                                </div>
+                                <br/>
 
-                                <div className=" col-sm-8">
-                                    <select className="form-control input-sm">
-                                        <option></option>
-                                        <option>分类1</option>
-                                    </select>
+                                <div className="text-center w-200">纳税证明
                                 </div>
                             </div>
-                            <div className="form-group col-sm-4">
-                                <label className="control-label col-sm-4">价格范围</label>
+                            <div className="mb-20">
+                                <div>
+                                    <img className="w-200" src="../img/company/shebao.jpg"/>
+                                </div>
+                                <br/>
 
-                                <div className=" col-sm-8 ">
-                                    <div className="input-group input-group-sm">
+                                <div className="text-center w-200">社保证明
+                                </div>
+                            </div>
+                            <div className="mb-20">
+                                <div>
+                                    <img className="w-200" src="../img/company/huibiao.jpg"/>
+                                </div>
+                                <br/>
 
-                                        <input type="text" className="form-control input-sm text-right"
-                                               defaultValue="100"/>
+                                <div className="text-center w-200">徽标
+                                </div>
+                            </div>
+                            <div className="mb-20">
+                                <div>
+                                    <img className="w-200" src="../img/company/other.jpg"/>
+                                </div>
+                                <br/>
 
-                                        <span className="input-group-btn text-center font-size-12 width-10">-</span>
+                                <div className="text-center w-200">其他
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-sm-10 form-horizontal">
 
+                            <div className="form-group">
+                                <div className="col-sm-4 control-label">
+                                    <label>企业名称</label>
+                                </div>
+                                <div className="col-sm-8 pt-7">
+                                    <label>xxxx信息技术有限公司</label>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <div className="col-sm-4 control-label">
+                                    <label>企业简称</label>
+                                </div>
+                                <div className="col-sm-8 pt-7">
+                                    <label>xxxx信息</label>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <div className="col-sm-4 control-label">
+                                    <label>企业类型</label>
+                                </div>
+                                <div className="col-sm-8 pt-7">
+                                    <label>事业单位</label>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <div className="col-sm-4 control-label">
+                                    <label>组织机构代码</label>
+                                </div>
+                                <div className="col-sm-8 pt-7">
+                                    <label>11111112312131213123123</label><br/>
+                                    <label>＊组织机构代码（或统一社会信用代码）</label>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <div className="col-sm-4 control-label">
+                                    <label>注册资本（万元）</label>
+                                </div>
+                                <div className="col-sm-8 pt-7">
+                                    <label>1000 万元</label>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <div className="col-sm-4 control-label">
+                                    <label>成立时间</label>
+                                </div>
+                                <div className="col-sm-8 pt-7">
+                                    <label>2016年1月24日</label>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <div className="col-sm-4 control-label">
+                                    <label>法定代表人</label>
+                                </div>
+                                <div className="col-sm-8 pt-7">
+                                    <label>xxxx</label>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <div className="col-sm-4 control-label">
+                                    <label>上年度年末资产总额</label>
+                                </div>
+                                <div className="col-sm-8 pt-7">
+                                    <label>2000 万元</label>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <div className="col-sm-4 control-label">
+                                    <label>上年度企业人数</label>
+                                </div>
+                                <div className="col-sm-8 pt-7">
+                                    <label>200 人</label>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <div className="col-sm-4 control-label">
+                                    <label>上年度所得税总额</label>
+                                </div>
+                                <div className="col-sm-8 pt-7">
+                                    <label>200 万元</label>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <div className="col-sm-4 control-label">
+                                    <label>经济类型</label>
+                                </div>
+                                <div className="col-sm-8 pt-7">
+                                    <label>股份制</label>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <div className="col-sm-4 control-label">
+                                    <label>主营业务</label>
+                                </div>
+                                <div className="col-sm-8 pt-7">
+                                    <label>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                        xxxxxxxxxxxxxxxx
+                                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                        xxxxxxxxxxxxxxxx</label>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <div className="col-sm-4 control-label">
+                                    <label>企业纳税信用等级</label>
+                                </div>
+                                <div className="col-sm-8 pt-7">
+                                    <label>xxx</label>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <div className="col-sm-4 control-label">
+                                    <label>所在区域</label>
+                                </div>
+                                <div className="col-sm-8 pt-7">
+                                    <label>镇海区</label>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <div className="col-sm-4 control-label">
+                                    <label>地址</label>
+                                </div>
+                                <div className="col-sm-8 pt-7">
+                                    <label>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                        xxxxxxxxxxxxxxxx</label>
+                                </div>
+                            </div>
 
-                                        <input type="text" className="form-control input-sm text-right"
-                                               defaultValue="500"/>
+                            <div className="form-group">
+                                <label className="control-label col-sm-4">
+                                    服务联系人
+                                </label>
+
+                                <div className="col-sm-8 pt-7">
+                                    <label>王五</label>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <label className="control-label col-sm-4">
+                                    服务联系人职务
+                                </label>
+
+                                <div className="col-sm-8 pt-7">
+                                    <label>开发部部长</label>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <label className="control-label col-sm-4">
+                                    服务联系人部门
+                                </label>
+
+                                <div className="col-sm-8 pt-7">
+                                    <label>开发部</label>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <label className="control-label col-sm-4">
+                                    服务联系人手机
+                                </label>
+
+                                <div className="col-sm-8 pt-7">
+                                    <label>138172615364</label>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <label className="control-label col-sm-4">
+                                    服务联系人邮箱
+                                </label>
+
+                                <div className="col-sm-8 pt-7">
+                                    <label>xyz@xx.com</label>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <label className="control-label col-sm-4">
+                                    服务热线
+                                </label>
+
+                                <div className="col-sm-8 pt-7">
+                                    <label>12345431</label>
+                                </div>
+                            </div>
+
+                            <div className="form-group">
+                                <label className="control-label col-sm-4">
+                                    营业时间
+                                </label>
+
+                                <div className="col-sm-8 pt-7">
+                                    <label>9:00 ～ 18:00</label>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <label className="control-label col-sm-4">
+                                    固定电话
+                                </label>
+
+                                <div className="col-sm-8 pt-7">
+                                    <label>xxx(x)-xxxxxxx(x)</label>
+                                </div>
+                            </div>
+                            <div className="form-group form-inline">
+                                <label className="control-label col-sm-4">
+                                    服务类型
+                                </label>
+
+                                <div className="col-sm-8">
+                                    <div className="checkbox mr-10">
+                                        <label>
+                                            <input type="checkbox"/> 人才引培
+                                        </label>
+                                    </div>
+
+                                    <div className="checkbox mr-10">
+                                        <label>
+                                            <input type="checkbox"/> 技术创新
+                                        </label>
+                                    </div>
+
+                                    <div className="checkbox mr-10">
+                                        <label>
+                                            <input type="checkbox"/> 检验检测认证
+                                        </label>
+                                    </div>
+
+                                    <div className="checkbox">
+                                        <label>
+                                            <input type="checkbox"/> 财务指导
+                                        </label>
+                                    </div>
+                                    <div className="checkbox mr-10">
+                                        <label>
+                                            <input type="checkbox"/> 创业辅导
+                                        </label>
+                                    </div>
+
+                                    <div className="checkbox mr-10">
+                                        <label>
+                                            <input type="checkbox"/> 市场拓展
+                                        </label>
+                                    </div>
+
+                                    <div className="checkbox mr-10">
+                                        <label>
+                                            <input type="checkbox"/> 管理咨询
+                                        </label>
+                                    </div>
+
+                                    <div className="checkbox">
+                                        <label>
+                                            <input type="checkbox"/> 知识产权保护
+                                        </label>
+                                    </div>
+                                    <div className="checkbox mr-10">
+                                        <label>
+                                            <input type="checkbox"/> 法律维权
+                                        </label>
+                                    </div>
+
+                                    <div className="checkbox">
+                                        <label>
+                                            <input type="checkbox"/> 公共服务
+                                        </label>
                                     </div>
                                 </div>
+
+                            </div>
+                            <div className="form-group">
+                                <label className="control-label col-sm-4">
+                                    状态
+                                </label>
+
+                                <div className="col-sm-8 pt-7">
+                                    <label>正常</label>
+                                </div>
+                            </div>
+
+                            <div className="text-center">
+                                <button className="btn btn-primary" type="button"
+                                        data-toggle="modal" data-target="#closeDownModal">查&nbsp;封
+                                </button>
+                                &nbsp;
+                                <button className="btn btn-default" type="button"
+                                        data-toggle="modal" data-target="#freezeModal">冻&nbsp;结
+                                </button>
+                            </div>
+                            <CloseDownModal/>
+                            <FreezeModal/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+});
+
+var OrgShow = React.createClass({
+    render: function () {
+        return (
+            <div className="panel panel-default">
+                <div className="panel-heading">服务机构展示</div>
+                <div className="panel-body">
+
+
+                    <div className="panel panel-default">
+                        <div className="panel-heading">机构介绍</div>
+                        <div className="panel-body">
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        </div>
+                    </div>
+
+                    <div className="panel panel-default">
+                        <div className="panel-heading">专业资质情况</div>
+                        <div className="panel-body">
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        </div>
+                    </div>
+
+                    <div className="panel panel-default">
+                        <div className="panel-heading">人员素质构成情况</div>
+                        <div className="panel-body">
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        </div>
+                    </div>
+
+                    <div className="panel panel-default">
+                        <div className="panel-heading">主要服务设备及条件</div>
+                        <div className="panel-body">
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        </div>
+                    </div>
+
+                    <div className="panel panel-default">
+                        <div className="panel-heading">服务资质及荣誉</div>
+                        <div className="panel-body">
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        );
+    }
+});
+
+var OrgService = React.createClass({
+    render: function () {
+        return (
+            <div className="panel panel-default">
+                <div className="panel-heading">服务机构产品一览</div>
+                <div className="panel-body">
+                    <ServiceListContent/>
+                </div>
+            </div>
+        );
+    }
+});
+
+var CloseDownModal = React.createClass({
+    render: function () {
+        return (
+            <div className="modal fade" id="closeDownModal" tabindex="-1" role="dialog"
+                 aria-labelledby="closeDownModalLabel"
+                 aria-hidden="true">
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <button type="button" className="close" data-dismiss="modal"><span
+                                aria-hidden="true">&times;</span><span className="sr-only">Close</span></button>
+                            <h4 className="modal-title" id="addModalLabel">服务机构查封</h4>
+                        </div>
+                        <div className="modal-body">
+                            <div className="form form-horizontal " role="form">
+                                <div className="form-group">
+                                    <label className="control-label col-sm-3">
+                                        查封原因分类
+                                    </label>
+
+                                    <div className="col-sm-8">
+                                        <select className="form-control">
+                                            <option>恶意套取服务券</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div className="form-group">
+                                    <label className="control-label col-sm-3">
+                                        查封理由
+                                    </label>
+
+                                    <div className="col-sm-8">
+                                        <textarea className="form-control" rows="5"></textarea>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-                        <div className="text-center">
-                            <button className="btn btn-sm btn-default">
-                                清空条件
-                            </button>
-                            &nbsp;&nbsp;
-                            <button className=" btn btn-sm btn-primary">
-                                <span className="fa fa-search"></span>&nbsp;搜索
-                            </button>
+                        <div className="modal-footer ">
+                            <div className="text-center">
+                                <button type="button" className="btn btn-primary ">
+                                    立即查封
+                                </button>
+                                <button type="button" className="btn btn-default " data-dismiss="modal">取消</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -495,117 +537,60 @@ var ServiceSearchArea = React.createClass({
     }
 });
 
-var ServiceItem = React.createClass({
+var FreezeModal = React.createClass({
     render: function () {
         return (
-            <div className="overflow-hidden border-bottom-dotted mb-10 pv-10">
-                <div className="col-sm-3 border-right-dotted">
-                    <div><a href="service_detail.html">服务名称</a></div>
-                    <div><a href="org_detail.html">机构名称</a></div>
-                </div>
-                <div className="col-sm-6 border-right-dotted">
-                    <div>服务分类：信用征集和评价</div>
-                    <div>服务费用：小型、微型企业（无论新评还是续评）2000元</div>
-                </div>
-                <div className="col-sm-3">
-                    <div>申请次数：14次</div>
-                    <div>好评率：
-                        <i className="fa fa-star text-danger font-size-12" aria-hidden="true"></i>
-                        <i className="fa fa-star text-danger font-size-12" aria-hidden="true"></i>
-                        <i className="fa fa-star text-danger font-size-12" aria-hidden="true"></i>
-                        <i className="fa fa-star text-danger font-size-12" aria-hidden="true"></i>
-                        <i className="fa fa-star text-danger font-size-12" aria-hidden="true"></i>
+            <div className="modal fade" id="freezeModal" tabindex="-1" role="dialog" aria-labelledby="freezeModalLabel"
+                 aria-hidden="true">
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <button type="button" className="close" data-dismiss="modal"><span
+                                aria-hidden="true">&times;</span><span className="sr-only">Close</span></button>
+                            <h4 className="modal-title" id="addModalLabel">服务机构冻结</h4>
+                        </div>
+                        <div className="modal-body">
+                            <div className="form form-horizontal " role="form">
+                                <div className="form-group">
+                                    <label className="control-label col-sm-3">
+                                        冻结原因分类
+                                    </label>
+
+                                    <div className="col-sm-8">
+                                        <select className="form-control">
+                                            <option>涉嫌违法，被调查中</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div className="form-group">
+                                    <label className="control-label col-sm-3">
+                                        冻结理由
+                                    </label>
+
+                                    <div className="col-sm-8">
+                                        <textarea className="form-control" rows="5"></textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div className="modal-footer ">
+                            <div className="text-center">
+                                <button type="button" className="btn btn-primary ">
+                                    立即冻结
+                                </button>
+                                <button type="button" className="btn btn-default " data-dismiss="modal">取消</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         );
     }
 });
-
-
-var ServiceItemPreview = React.createClass({
-    render: function () {
-        return (
-            <div className="overflow-hidden border-bottom-dotted mb-10 pv-10">
-                <div className="col-sm-4 border-right-dotted">
-                    <div className="col-sm-4">
-                        <a href="service_detail.html">
-                            <img src="../img/sample/service_small.jpg"/>
-                        </a>
-                    </div>
-                    <div className="col-sm-8">
-                        <div><a href="service_detail.html">高管培训</a></div>
-                        <br/>
-
-                        <div><a href="#">中国出口信用保险公司</a></div>
-                    </div>
-                </div>
-                <div className="col-sm-3 border-right-dotted">
-                    <div>服务大类：人才引培</div>
-                    <br/>
-
-                    <div>服务小类：高层培训</div>
-                </div>
-                <div className="col-sm-3 border-right-dotted">
-                    <div>服务价格：2000～5000元</div>
-                    <br/>
-
-                    <div>收费标准：每月3000元</div>
-                </div>
-                <div className="col-sm-2">
-                    <div>好评率：
-                        <i className="fa fa-star text-danger font-size-12" aria-hidden="true"></i>
-                        <i className="fa fa-star text-danger font-size-12" aria-hidden="true"></i>
-                        <i className="fa fa-star text-danger font-size-12" aria-hidden="true"></i>
-                        <i className="fa fa-star text-danger font-size-12" aria-hidden="true"></i>
-                        <i className="fa fa-star text-danger font-size-12" aria-hidden="true"></i>
-                    </div>
-                    <br/>
-
-                    <div>申请次数：14次</div>
-                </div>
-            </div>
-        );
-    }
-});
-
-var EvaluateItem = React.createClass({
-    render: function () {
-        return (
-            <tr>
-                <td>
-                    <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                    <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                    <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                    <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                    <i className="fa fa-star text-danger" aria-hidden="true"></i>
-                </td>
-                <td>2000元</td>
-                <td>服务名称xxxxx</td>
-                <td>服务非常到位，细致周到</td>
-                <td>xxx 股份有限公司</td>
-            </tr>
-        );
-    }
-});
-
-var RecordItem = React.createClass({
-    render: function () {
-        return (
-            <tr>
-                <td>2016-01-01～2016-01-10</td>
-                <td>xxx 科技有限公司</td>
-                <td>质量检测</td>
-                <td>技术创新</td>
-                <td>2000 元</td>
-            </tr>
-        );
-    }
-});
-
-
 
 ReactDOM.render(
-    <OrgDetail />,
+    <Company />,
     document.getElementById('page')
 );

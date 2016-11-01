@@ -34,9 +34,7 @@ var Company = React.createClass({displayName: "Company",
                                                 React.createElement("br", null), 
 
                                                 React.createElement("div", {className: "text-center w-200"}, 
-                                                    React.createElement("button", {className: "btn btn-default", type: "button", 
-                                                            onClick: this.handleSave}, "上传营业执照"
-                                                    )
+                                                    "营业执照"
                                                 )
                                             ), 
                                             React.createElement("div", {className: "mb-20"}, 
@@ -45,10 +43,7 @@ var Company = React.createClass({displayName: "Company",
                                                 ), 
                                                 React.createElement("br", null), 
 
-                                                React.createElement("div", {className: "text-center w-200"}, 
-                                                    React.createElement("button", {className: "btn btn-default", type: "button", 
-                                                            onClick: this.handleSave}, "上传纳税证明"
-                                                    )
+                                                React.createElement("div", {className: "text-center w-200"}, "纳税证明"
                                                 )
                                             ), 
                                             React.createElement("div", {className: "mb-20"}, 
@@ -57,31 +52,12 @@ var Company = React.createClass({displayName: "Company",
                                                 ), 
                                                 React.createElement("br", null), 
 
-                                                React.createElement("div", {className: "text-center w-200"}, 
-                                                    React.createElement("button", {className: "btn btn-default", type: "button", 
-                                                            onClick: this.handleSave}, "上传社保证明"
-                                                    )
+                                                React.createElement("div", {className: "text-center w-200"}, "社保证明"
                                                 )
                                             )
                                         ), 
                                         React.createElement("div", {className: "col-sm-10 form-horizontal"}, 
 
-                                            React.createElement("div", {className: "form-group"}, 
-                                                React.createElement("div", {className: "col-sm-4 control-label"}, 
-                                                    React.createElement("label", null, "审核状态")
-                                                ), 
-                                                React.createElement("div", {className: "col-sm-8 pt-7"}, 
-                                                    React.createElement("label", null, "未审核 / 审核中 / 审核通过 / 审核未通过")
-                                                )
-                                            ), 
-                                            React.createElement("div", {className: "form-group"}, 
-                                                React.createElement("div", {className: "col-sm-4 control-label"}, 
-                                                    React.createElement("label", null, "审核评定")
-                                                ), 
-                                                React.createElement("div", {className: "col-sm-8 pt-7"}, 
-                                                    React.createElement("label", null, "普通 / 小型 / 微型 / 小升规")
-                                                )
-                                            ), 
                                             React.createElement("div", {className: "form-group"}, 
                                                 React.createElement("div", {className: "col-sm-4 control-label"}, 
                                                     React.createElement("label", null, "企业名称")
@@ -228,7 +204,8 @@ var Company = React.createClass({displayName: "Company",
                             )
                         )
                     )
-                )
+                ), 
+                React.createElement(Footer, null)
             )
         );
     }

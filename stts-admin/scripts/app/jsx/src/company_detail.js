@@ -34,9 +34,7 @@ var Company = React.createClass({
                                                 <br/>
 
                                                 <div className="text-center w-200">
-                                                    <button className="btn btn-default" type="button"
-                                                            onClick={this.handleSave}>上传营业执照
-                                                    </button>
+                                                    营业执照
                                                 </div>
                                             </div>
                                             <div className="mb-20">
@@ -45,10 +43,7 @@ var Company = React.createClass({
                                                 </div>
                                                 <br/>
 
-                                                <div className="text-center w-200">
-                                                    <button className="btn btn-default" type="button"
-                                                            onClick={this.handleSave}>上传纳税证明
-                                                    </button>
+                                                <div className="text-center w-200">纳税证明
                                                 </div>
                                             </div>
                                             <div className="mb-20">
@@ -57,31 +52,12 @@ var Company = React.createClass({
                                                 </div>
                                                 <br/>
 
-                                                <div className="text-center w-200">
-                                                    <button className="btn btn-default" type="button"
-                                                            onClick={this.handleSave}>上传社保证明
-                                                    </button>
+                                                <div className="text-center w-200">社保证明
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="col-sm-10 form-horizontal">
 
-                                            <div className="form-group">
-                                                <div className="col-sm-4 control-label">
-                                                    <label>审核状态</label>
-                                                </div>
-                                                <div className="col-sm-8 pt-7">
-                                                    <label>未审核 / 审核中 / 审核通过 / 审核未通过</label>
-                                                </div>
-                                            </div>
-                                            <div className="form-group">
-                                                <div className="col-sm-4 control-label">
-                                                    <label>审核评定</label>
-                                                </div>
-                                                <div className="col-sm-8 pt-7">
-                                                    <label>普通 / 小型 / 微型 / 小升规</label>
-                                                </div>
-                                            </div>
                                             <div className="form-group">
                                                 <div className="col-sm-4 control-label">
                                                     <label>企业名称</label>
@@ -229,6 +205,7 @@ var Company = React.createClass({
                         </div>
                     </div>
                 </div>
+                <Footer/>
             </div>
         );
     }

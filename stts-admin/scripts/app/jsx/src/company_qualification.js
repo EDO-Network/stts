@@ -304,6 +304,7 @@ var Company = React.createClass({
                         </div>
                     </div>
                 </div>
+                <Footer/>
             </div>
         );
     }
