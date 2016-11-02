@@ -11,7 +11,7 @@ var CouponList = React.createClass({displayName: "CouponList",
                         React.createElement("div", {className: "pull-left w-222"}, 
                             React.createElement("div", {className: "list-group"}, 
                                 React.createElement("a", {href: "coupon_list.html", className: "list-group-item active"}, "服务券一览"), 
-                                React.createElement("a", {href: "coupon_list.html", className: "list-group-item"}, "服务券发放"), 
+                                React.createElement("a", {href: "coupon_create.html", className: "list-group-item"}, "服务券发放"), 
                                 React.createElement("a", {href: "coupon_exchange.html", className: "list-group-item"}, "服务券兑付审核")
                             )
                         ), 

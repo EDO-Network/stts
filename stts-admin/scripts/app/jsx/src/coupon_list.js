@@ -11,7 +11,7 @@ var CouponList = React.createClass({
                         <div className="pull-left w-222">
                             <div className="list-group">
                                 <a href="coupon_list.html" className="list-group-item active">服务券一览</a>
-                                <a href="coupon_list.html" className="list-group-item">服务券发放</a>
+                                <a href="coupon_create.html" className="list-group-item">服务券发放</a>
                                 <a href="coupon_exchange.html" className="list-group-item">服务券兑付审核</a>
                             </div>
                         </div>
