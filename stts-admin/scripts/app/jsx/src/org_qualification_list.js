@@ -11,7 +11,7 @@ var CompanyList = React.createClass({
                             <a href="org_list.html" className="list-group-item">服务机构一览</a>
                             <a href="org_qualification_list.html" className="list-group-item active">服务机构资质审核</a>
                             <a href="service_list.html" className="list-group-item">服务产品一览</a>
-                            <a href="service_qualification_list.html" className="list-group-item">服务产品审核</a>
+                            <a href="service_qualification_list.html" className="list-group-item">服务产品上架</a>
                         </div>
                     </div>
                     <div className="ml-240">

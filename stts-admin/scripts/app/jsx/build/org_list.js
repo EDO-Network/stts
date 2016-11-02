@@ -11,7 +11,7 @@ var CompanyList = React.createClass({displayName: "CompanyList",
                             React.createElement("a", {href: "org_list.html", className: "list-group-item active"}, "服务机构一览"), 
                             React.createElement("a", {href: "org_qualification_list.html", className: "list-group-item"}, "服务机构资质审核"), 
                             React.createElement("a", {href: "service_list.html", className: "list-group-item"}, "服务产品一览"), 
-                            React.createElement("a", {href: "service_qualification_list.html", className: "list-group-item"}, "服务产品审核")
+                            React.createElement("a", {href: "service_qualification_list.html", className: "list-group-item"}, "服务产品上架")
                         )
                     ), 
                     React.createElement("div", {className: "ml-240"}, 
