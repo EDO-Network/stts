@@ -16,7 +16,7 @@ var Header = React.createClass({displayName: "Header",
                         React.createElement("li", {id: "mainMenuOrg"}, React.createElement("a", {href: "org_list.html"}, "服务机构管理")), 
                         React.createElement("li", {id: "mainMenuCoupon"}, React.createElement("a", {href: "coupon_list.html"}, "服务券管理")), 
                         React.createElement("li", {id: "mainMenuOrder"}, React.createElement("a", {href: "order_list.html"}, "订单管理")), 
-                        React.createElement("li", {id: "mainMenuSetting"}, React.createElement("a", {href: "setting.html"}, "系统设定"))
+                        React.createElement("li", {id: "mainMenuSetting"}, React.createElement("a", {href: "sys_setting.html"}, "系统设定"))
                     )
                 )
             )

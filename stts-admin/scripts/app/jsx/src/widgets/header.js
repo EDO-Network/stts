@@ -16,7 +16,7 @@ var Header = React.createClass({
                         <li id="mainMenuOrg"><a href="org_list.html">服务机构管理</a></li>
                         <li id="mainMenuCoupon"><a href="coupon_list.html">服务券管理</a></li>
                         <li id="mainMenuOrder"><a href="order_list.html">订单管理</a></li>
-                        <li id="mainMenuSetting"><a href="setting.html">系统设定</a></li>
+                        <li id="mainMenuSetting"><a href="sys_setting.html">系统设定</a></li>
                     </ul>
                 </div>
             </nav>
