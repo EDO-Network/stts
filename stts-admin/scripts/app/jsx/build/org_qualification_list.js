@@ -8,8 +8,8 @@ var CompanyList = React.createClass({displayName: "CompanyList",
                 React.createElement("div", {className: "container"}, 
                     React.createElement("div", {className: "pull-left w-222"}, 
                         React.createElement("div", {className: "list-group"}, 
-                            React.createElement("a", {href: "org_list.html", className: "list-group-item active"}, "服务机构一览"), 
-                            React.createElement("a", {href: "org_qualification_list.html", className: "list-group-item"}, "服务机构资质审核"), 
+                            React.createElement("a", {href: "org_list.html", className: "list-group-item"}, "服务机构一览"), 
+                            React.createElement("a", {href: "org_qualification_list.html", className: "list-group-item active"}, "服务机构资质审核"), 
                             React.createElement("a", {href: "service_list.html", className: "list-group-item"}, "服务产品一览"), 
                             React.createElement("a", {href: "service_qualification_list.html", className: "list-group-item"}, "服务产品审核")
                         )
@@ -18,7 +18,7 @@ var CompanyList = React.createClass({displayName: "CompanyList",
                         React.createElement("ol", {className: "breadcrumb"}, 
                             React.createElement("li", null, "您所在的位置："), 
                             React.createElement("li", null, React.createElement("a", {href: "org_list.html"}, "服务机构管理")), 
-                            React.createElement("li", {className: "active"}, "服务机构一览")
+                            React.createElement("li", {className: "active"}, "服务机构资质审核")
                         ), 
                         React.createElement(SearchArea, null), 
 
@@ -67,10 +67,12 @@ var SearchArea = React.createClass({displayName: "SearchArea",
                         ), 
                         "    ", 
                         React.createElement("div", {className: "form-group"}, 
-                            React.createElement("label", null, "机构标签"), " ", 
+                            React.createElement("label", {className: "control-label"}, "审核状态"), " ", 
+
                             React.createElement("select", {className: "form-control"}, 
-                                React.createElement("option", null, "联营"), 
-                                React.createElement("option", null, "示范")
+                                React.createElement("option", null, "待审核"), 
+                                React.createElement("option", null, "审核通过"), 
+                                React.createElement("option", null, "审核未通过")
                             )
                         ), 
                         "    ", 
@@ -104,6 +106,8 @@ var SearchArea = React.createClass({displayName: "SearchArea",
                                     )
                                 )
                             ), 
+
+
                             React.createElement("div", {className: "form-group col-sm-4"}, 
                                 React.createElement("label", {className: "control-label col-sm-4"}, "账户状态"), 
 
@@ -151,6 +155,29 @@ var SearchArea = React.createClass({displayName: "SearchArea",
                             ), 
                             React.createElement("div", {className: "form-group col-sm-4"}, 
                                 React.createElement("label", {className: "control-label col-sm-6"}, "注册时间"), 
+
+                                React.createElement("div", {className: "col-sm-6"}, 
+                                    React.createElement("select", {className: "form-control"}, 
+                                        React.createElement("option", null, "1个月"), 
+                                        React.createElement("option", null, "3个月"), 
+                                        React.createElement("option", null, "全部")
+                                    )
+                                )
+                            )
+                        ), 
+                        React.createElement("div", {className: "row"}, 
+                            React.createElement("div", {className: "form-group col-sm-4"}, 
+                                React.createElement("label", {className: "control-label col-sm-6"}, "机构标签"), 
+
+                                React.createElement("div", {className: " col-sm-6"}, 
+                                    React.createElement("select", {className: "form-control"}, 
+                                        React.createElement("option", null, "联营"), 
+                                        React.createElement("option", null, "示范")
+                                    )
+                                )
+                            ), 
+                            React.createElement("div", {className: "form-group col-sm-4"}, 
+                                React.createElement("label", {className: "control-label col-sm-6"}, "审核申请时间"), 
 
                                 React.createElement("div", {className: "col-sm-6"}, 
                                     React.createElement("select", {className: "form-control"}, 
@@ -276,7 +303,7 @@ var CompanyTableRow = React.createClass({displayName: "CompanyTableRow",
                 React.createElement("td", null, "1283746371"), 
                 React.createElement("td", null, "2016-02-12"), 
                 React.createElement("td", null, "正常"), 
-                React.createElement("td", null, React.createElement("a", {href: "org_detail.html"}, "详情"))
+                React.createElement("td", null, React.createElement("a", {href: "org_qualification.html"}, "详情"))
             )
         );
     }

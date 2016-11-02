@@ -8,8 +8,8 @@ var CompanyList = React.createClass({
                 <div className="container">
                     <div className="pull-left w-222">
                         <div className="list-group">
-                            <a href="org_list.html" className="list-group-item active">服务机构一览</a>
-                            <a href="org_qualification_list.html" className="list-group-item">服务机构资质审核</a>
+                            <a href="org_list.html" className="list-group-item">服务机构一览</a>
+                            <a href="org_qualification_list.html" className="list-group-item active">服务机构资质审核</a>
                             <a href="service_list.html" className="list-group-item">服务产品一览</a>
                             <a href="service_qualification_list.html" className="list-group-item">服务产品审核</a>
                         </div>
@@ -18,7 +18,7 @@ var CompanyList = React.createClass({
                         <ol className="breadcrumb">
                             <li>您所在的位置：</li>
                             <li><a href="org_list.html">服务机构管理</a></li>
-                            <li className='active'>服务机构一览</li>
+                            <li className='active'>服务机构资质审核</li>
                         </ol>
                         <SearchArea/>
 
@@ -67,10 +67,12 @@ var SearchArea = React.createClass({
                         </div>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <div className="form-group">
-                            <label>机构标签</label>&nbsp;
+                            <label className="control-label">审核状态</label>&nbsp;
+
                             <select className="form-control">
-                                <option>联营</option>
-                                <option>示范</option>
+                                <option>待审核</option>
+                                <option>审核通过</option>
+                                <option>审核未通过</option>
                             </select>
                         </div>
                         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -104,6 +106,8 @@ var SearchArea = React.createClass({
                                     </label>
                                 </div>
                             </div>
+
+
                             <div className="form-group col-sm-4">
                                 <label className="control-label col-sm-4">账户状态</label>
 
@@ -151,6 +155,29 @@ var SearchArea = React.createClass({
                             </div>
                             <div className="form-group col-sm-4">
                                 <label className="control-label col-sm-6">注册时间</label>
+
+                                <div className="col-sm-6">
+                                    <select className="form-control">
+                                        <option>1个月</option>
+                                        <option>3个月</option>
+                                        <option>全部</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="form-group col-sm-4">
+                                <label className="control-label col-sm-6">机构标签</label>
+
+                                <div className=" col-sm-6">
+                                    <select className="form-control">
+                                        <option>联营</option>
+                                        <option>示范</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div className="form-group col-sm-4">
+                                <label className="control-label col-sm-6">审核申请时间</label>
 
                                 <div className="col-sm-6">
                                     <select className="form-control">
@@ -276,7 +303,7 @@ var CompanyTableRow = React.createClass({
                 <td>1283746371</td>
                 <td>2016-02-12</td>
                 <td>正常</td>
-                <td><a href="org_detail.html">详情</a></td>
+                <td><a href="org_qualification.html">详情</a></td>
             </tr>
         );
     }
