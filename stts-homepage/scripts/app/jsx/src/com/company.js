@@ -145,6 +145,30 @@ var Company = React.createClass({
                                             </div>
                                             <div className="form-group">
                                                 <div className="col-sm-4 control-label">
+                                                    <label>上年度年末资产总额</label>
+                                                </div>
+                                                <div className="col-sm-8 pt-7">
+                                                    <input type="text" className="form-control"/>
+                                                </div>
+                                            </div>
+                                            <div className="form-group">
+                                                <div className="col-sm-4 control-label">
+                                                    <label>上年度企业人数</label>
+                                                </div>
+                                                <div className="col-sm-8 pt-7">
+                                                    <input type="text" className="form-control"/>
+                                                </div>
+                                            </div>
+                                            <div className="form-group">
+                                                <div className="col-sm-4 control-label">
+                                                    <label>上年度所得税总额</label>
+                                                </div>
+                                                <div className="col-sm-8 pt-7">
+                                                    <input type="text" className="form-control"/>
+                                                </div>
+                                            </div>
+                                            <div className="form-group">
+                                                <div className="col-sm-4 control-label">
                                                     <label>经济类型</label>
                                                 </div>
                                                 <div className="col-sm-8 pt-7">
