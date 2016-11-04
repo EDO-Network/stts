@@ -41,14 +41,14 @@ var Qualification = React.createClass({
                                             <td>2016-01-01</td>
                                             <td>审核未通过</td>
                                             <td>审核信息不全，请参照详细</td>
-                                            <td><a href="javascript:void(0)">详细</a></td>
+                                            <td><a href="company_qualification.html">详细</a></td>
                                         </tr>
                                         <tr>
                                             <td>2015</td>
                                             <td>2015-01-01</td>
                                             <td>审核通过</td>
                                             <td>审核认定未小微企业</td>
-                                            <td><a href="javascript:void(0)">详细</a></td>
+                                            <td><a href="company_qualification.html">详细</a></td>
                                         </tr>
                                         </tbody>
                                     </table>
