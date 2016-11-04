@@ -54,7 +54,7 @@ var Order = React.createClass({
                 <div className="panel panel-info">
                     <div className="panel-heading">
                         订单信息&nbsp;&nbsp;订单号：201601011800001&nbsp;&nbsp;状态：申请服务&nbsp;&nbsp;
-                        <a href="#" className="pull-right">查看退款/退单信息</a>
+                        <a href="order_arbitration.html" className="pull-right">查看退款/退单信息</a>
                     </div>
                     <div className="panel-body">
                         <div className="col-sm-4">
