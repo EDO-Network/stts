@@ -28,7 +28,7 @@ var OrderDetail = React.createClass({
                             <div className="panel panel-default">
                                 <div className="panel-heading">订单详细</div>
                                 <div className="panel-body">
-                                    <Order/>
+                                    <Order isEvaluateEditor="true"/>
                                 </div>
                             </div>
                         </div>
@@ -41,14 +41,23 @@ var OrderDetail = React.createClass({
 
 var Order = React.createClass({
     render: function () {
+        var evaluateWidget = <OrderEvaluateView/>;
+        if (this.props.isEvaluateEditor == "true") {
+            evaluateWidget = <OrderEvaluateEditor/>;
+        }
         return (
             <div>
                 <OrderProcess step="1"/>
+
                 <h3>等待服务机构受理中，倒计时还剩 5天。</h3>
+
                 <div className="text-center mb-10">
-                    <button className="btn btn-default">交易撤消/退券/退券撤消/退单/退单撤消</button>&nbsp;&nbsp;
-                    <button className="btn btn-default">付券</button>&nbsp;&nbsp;
-                    <button className="btn btn-default">确认完成</button>&nbsp;&nbsp;
+                    <button className="btn btn-default">交易撤消/退券/退券撤消/退单/退单撤消</button>
+                    &nbsp;&nbsp;
+                    <button className="btn btn-default">付券</button>
+                    &nbsp;&nbsp;
+                    <button className="btn btn-default">确认完成</button>
+                    &nbsp;&nbsp;
                     <button className="btn btn-default">评价</button>
                 </div>
                 <div className="panel panel-info">
@@ -84,12 +93,12 @@ var Order = React.createClass({
                 <div className="panel panel-info">
                     <div className="panel-heading">付券记录</div>
                     <div className="panel-body">
-                            2016-01-01 18:00:00 买家付款 券 500元<br/>
-                            2016-02-01 18:00:00 买家付款 券 500元<br/>
-                            2016-02-02 18:00:00 买家申请退款 券 500元<br/>
-                            2016-02-02 18:00:00 卖家退款 券 500元<br/>
-                            2016-03-02 18:00:00 买家申请退单<br/>
-                            2016-03-03 18:00:00 卖家同意退单
+                        2016-01-01 18:00:00 买家付款 券 500元<br/>
+                        2016-02-01 18:00:00 买家付款 券 500元<br/>
+                        2016-02-02 18:00:00 买家申请退款 券 500元<br/>
+                        2016-02-02 18:00:00 卖家退款 券 500元<br/>
+                        2016-03-02 18:00:00 买家申请退单<br/>
+                        2016-03-03 18:00:00 卖家同意退单
                     </div>
                 </div>
                 <div className="panel panel-info">
@@ -138,10 +147,72 @@ var Order = React.createClass({
                         </div>
                     </div>
                 </div>
-                <div className="panel panel-info">
-                    <div className="panel-heading">互评信息</div>
-                    <div className="panel-body">
-                        <div className="text-left">
+                {evaluateWidget}
+            </div>
+        );
+    }
+});
+
+var OrderEvaluateEditor = React.createClass({
+    render: function () {
+        return (
+            <div className="panel panel-info">
+                <div className="panel-heading">互评信息</div>
+                <div className="panel-body">
+                    <div className="text-left">
+                        <div className="row">
+                            <div className="col-sm-6">
+                                <h3>对服务机构的评价</h3>
+
+                                <EvaluateStars title="机构综合评分："/>
+
+                                <EvaluateStars title="服务态度：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"/>
+
+                                <EvaluateStars title="专业水平：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"/>
+
+                                <EvaluateStars title="描述是否相等："/>
+
+                            </div>
+                            <div className="col-sm-6">
+                                <h3>对企业的评价</h3>
+
+                                <EvaluateStars title="企业综合评分："/>
+                                <EvaluateStars title="付款是否及时："/>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-sm-6">
+                                <p>说明：<textarea className="form-control" rows="5"></textarea></p>
+
+                                <div>
+                                    <button className="btn btn-default">提交</button>
+                                </div>
+                            </div>
+                            <div className="col-sm-6">
+
+                                <p>说明：
+                                    <textarea className="form-control" rows="5"></textarea></p>
+
+                                <div>
+                                    <button className="btn btn-default">提交</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+});
+
+var OrderEvaluateView = React.createClass({
+    render: function () {
+        return (
+            <div className="panel panel-info">
+                <div className="panel-heading">互评信息</div>
+                <div className="panel-body">
+                    <div className="text-left">
+                        <div className="row">
                             <div className="col-sm-6">
                                 <h3>对服务机构的评价</h3>
 
@@ -153,7 +224,7 @@ var Order = React.createClass({
                                     <i className="fa fa-star text-danger" aria-hidden="true"></i>
                                 </p>
 
-                                <p>服务态度：
+                                <p>服务态度：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <i className="fa fa-star text-danger" aria-hidden="true"></i>
                                     <i className="fa fa-star text-danger" aria-hidden="true"></i>
                                     <i className="fa fa-star text-danger" aria-hidden="true"></i>
@@ -161,7 +232,7 @@ var Order = React.createClass({
                                     <i className="fa fa-star text-danger" aria-hidden="true"></i>
                                 </p>
 
-                                <p>专业水平：
+                                <p>专业水平：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <i className="fa fa-star text-danger" aria-hidden="true"></i>
                                     <i className="fa fa-star text-danger" aria-hidden="true"></i>
                                     <i className="fa fa-star text-danger" aria-hidden="true"></i>
@@ -177,7 +248,6 @@ var Order = React.createClass({
                                     <i className="fa fa-star text-danger" aria-hidden="true"></i>
                                 </p>
 
-                                <p>说明：本次服务非常满意</p>
                             </div>
                             <div className="col-sm-6">
                                 <h3>对企业的评价</h3>
@@ -197,9 +267,14 @@ var Order = React.createClass({
                                     <i className="fa fa-star text-danger" aria-hidden="true"></i>
                                     <i className="fa fa-star text-danger" aria-hidden="true"></i>
                                 </p>
-
-                                <p>说明：本次服务非常满意</p>
                             </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-sm-6">
+                                <p>说明：本次服务非常满意</p></div>
+                            <div className="col-sm-6">
+                                <p>说明：本次服务非常满意</p></div>
+
                         </div>
                     </div>
                 </div>
