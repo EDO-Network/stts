@@ -47,14 +47,20 @@ var Order = React.createClass({
         }
         return (
             <div>
+                <PayCouponModal/>
+                <OrderFeedbackDialog/>
                 <OrderProcess step="1"/>
 
                 <h3>等待服务机构受理中，倒计时还剩 5天。</h3>
 
                 <div className="text-center mb-10">
-                    <button className="btn btn-default">交易撤消/退券/退券撤消/退单/退单撤消</button>
+                    <button className="btn btn-default">交易撤消</button>&nbsp;&nbsp;
+                    <button className="btn btn-default" data-toggle="modal"
+                            data-target="#orderFeedbackDialog">退单</button>&nbsp;&nbsp;
+                    <button className="btn btn-default">退单撤消</button>
                     &nbsp;&nbsp;
-                    <button className="btn btn-default">付券</button>
+                    <button className="btn btn-default" data-toggle="modal"
+                            data-target="#payCouponModal">付券</button>
                     &nbsp;&nbsp;
                     <button className="btn btn-default">确认完成</button>
                     &nbsp;&nbsp;
@@ -63,7 +69,7 @@ var Order = React.createClass({
                 <div className="panel panel-info">
                     <div className="panel-heading">
                         订单信息&nbsp;&nbsp;订单号：201601011800001&nbsp;&nbsp;状态：申请服务&nbsp;&nbsp;
-                        <a href="order_arbitration.html" className="pull-right">查看退款/退单信息</a>
+                        <a href="order_arbitration.html" className="pull-right">查看退单信息</a>
                     </div>
                     <div className="panel-body">
                         <div className="col-sm-4">
@@ -88,17 +94,6 @@ var Order = React.createClass({
 
                             <p><a href="#">阅览合同</a></p>
                         </div>
-                    </div>
-                </div>
-                <div className="panel panel-info">
-                    <div className="panel-heading">付券记录</div>
-                    <div className="panel-body">
-                        2016-01-01 18:00:00 买家付款 券 500元<br/>
-                        2016-02-01 18:00:00 买家付款 券 500元<br/>
-                        2016-02-02 18:00:00 买家申请退款 券 500元<br/>
-                        2016-02-02 18:00:00 卖家退款 券 500元<br/>
-                        2016-03-02 18:00:00 买家申请退单<br/>
-                        2016-03-03 18:00:00 卖家同意退单
                     </div>
                 </div>
                 <div className="panel panel-info">
@@ -282,6 +277,7 @@ var OrderEvaluateView = React.createClass({
         );
     }
 });
+
 
 ReactDOM.render(
     <OrderDetail />,

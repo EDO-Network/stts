@@ -37,7 +37,7 @@ var OrderProcess = React.createClass({
             <div className="order-process">
                 <div className="node step">
                     <div><i className="icon fa fa-pencil-square todo" aria-hidden="true"></i></div>
-                    <div>提出退券申请</div>
+                    <div>提出退单申请</div>
                     <div style={{display:"none"}}>2016-01-01</div>
                     <div style={{display:"none"}}>18:00:00</div>
                 </div>

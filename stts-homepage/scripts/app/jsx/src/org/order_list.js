@@ -193,7 +193,7 @@ var OrderItem = React.createClass({
                         </div>
                         <div className="col-sm-2 border-left-dotted">
                             <div><a href="#">受理</a> | <a href="#">拒绝</a></div>
-                            <div><a href="order_arbitration.html">同意退款/同意退单</a></div>
+                            <div><a href="order_arbitration.html">同意退单</a></div>
 
                             <div><a href="#">申请仲裁</a> | <a href="#">评价</a> | <a href="order_detail.html">详细</a></div>
                         </div>

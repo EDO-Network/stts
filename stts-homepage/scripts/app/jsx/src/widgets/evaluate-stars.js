@@ -1,30 +1,28 @@
 var EvaluateStars = React.createClass({
-    handleStar: function (index,event) {
+    handleStar: function (index, event) {
         var stars = $(event.target.parentNode).children("i");
         $.each(stars, function (i, item) {
-            if(i < index) {
+            if (i < index) {
                 $(item).addClass("text-gold");
             }
         });
     },
-    handleUnStar: function (index,event) {
+    handleUnStar: function (index, event) {
         var stars = $(event.target.parentNode).children("i");
         $.each(stars, function (i, item) {
-            if(i < index) {
+            if (i < index) {
                 $(item).removeClass("text-gold");
             }
         });
     },
-    handleConfirmStar: function (index,event) {
+    handleConfirmStar: function (index, event) {
         var stars = $(event.target.parentNode).children("i");
         $.each(stars, function (i, item) {
-            if(i < index) {
-                $(item).removeClass("text-gold");
-                $(item).removeClass("text-danger");
-            }
+            $(item).removeClass("text-gold");
+            $(item).removeClass("text-danger");
         });
         $.each(stars, function (i, item) {
-            if(i < index) {
+            if (i < index) {
                 $(item).addClass("text-danger");
             }
         });

@@ -68,7 +68,7 @@ var SummaryTable = React.createClass({displayName: "SummaryTable",
                         React.createElement("th", null, "已兑付"), 
                         React.createElement("th", null, "未兑付"), 
                         React.createElement("th", null, "使用失效"), 
-                        React.createElement("th", null, "交付失效"), 
+                        React.createElement("th", null, "兑付失效"), 
                         React.createElement("th", null, "余额")
                     )
                     ), 

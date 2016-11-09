@@ -24,10 +24,10 @@ var OrderDetail = React.createClass({
                                 <li><a href="dashboard.html">服务机构</a></li>
                                 <li><a href="order_list.html">订单处理</a></li>
                                 <li><a href="order_detail.html">订单详细</a></li>
-                                <li className='active'>退款退单订单号：201601010001</li>
+                                <li className='active'>退单订单号：201601010001</li>
                             </ol>
                             <div className="panel panel-default">
-                                <div className="panel-heading">退款退单</div>
+                                <div className="panel-heading">退单</div>
                                 <div className="panel-body">
                                     <Order/>
                                 </div>

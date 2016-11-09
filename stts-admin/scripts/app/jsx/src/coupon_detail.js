@@ -68,7 +68,7 @@ var SummaryTable = React.createClass({
                         <th>已兑付</th>
                         <th>未兑付</th>
                         <th>使用失效</th>
-                        <th>交付失效</th>
+                        <th>兑付失效</th>
                         <th>余额</th>
                     </tr>
                     </thead>

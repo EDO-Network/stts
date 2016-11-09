@@ -12,6 +12,8 @@ var OrderList = React.createClass({
     render: function () {
         return (
             <div>
+                <PayCouponModal/>
+                <OrderFeedbackDialog/>
                 <Top/>
                 <Header activeMenuID="mainMenuOrder"/>
 
@@ -192,7 +194,10 @@ var OrderItem = React.createClass({
                             <div>服务联系电话：89991234</div>
                         </div>
                         <div className="col-sm-2 border-left-dotted">
-                            <div><a href="order_arbitration.html">交易撤消/退券/退券撤消/退单/退单撤消</a> | <a href="#">付券</a></div>
+                            <div><a href="#">交易撤消</a> |
+                                <a href="#" data-toggle="modal" data-target="#orderFeedbackDialog">退单</a> | <a
+                                    href="#">退单撤消</a> | <a href="#" data-toggle="modal"
+                                                           data-target="#payCouponModal">付券</a></div>
                             <div><a href="#">确认完成</a> | <a href="#">评价</a> | <a href="order_detail.html">详细</a></div>
                         </div>
                     </div>
