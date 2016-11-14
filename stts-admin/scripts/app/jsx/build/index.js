@@ -10,7 +10,8 @@ var Index = React.createClass({displayName: "Index",
                         React.createElement("div", {className: "pull-left w-222"}, 
                             React.createElement("div", {className: "list-group"}, 
                                 React.createElement("a", {href: "index.html", className: "list-group-item active"}, "统计分析"), 
-                                React.createElement("a", {href: "user_list.html", className: "list-group-item"}, "用户一览")
+                                React.createElement("a", {href: "user_list.html", className: "list-group-item"}, "用户一览"), 
+                                React.createElement("a", {href: "notice_list.html", className: "list-group-item"}, "全网通知")
                             )
                         ), 
 

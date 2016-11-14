@@ -31,6 +31,8 @@ var Header = React.createClass({
                             </li>
                             <li id="mainMenuAccountProfile" style={{display:"none"}}><a
                                 href="account_profile.html">账户设置</a></li>
+                            <li id="mainMenuPasswordReset" style={{display:"none"}}><a
+                                href="password_reset.html">重置密码</a></li>
                             <li id="mainMenuIndex"><a href="index.html">首页</a></li>
                             <li id="mainMenuService"><a href="service_list.html">服务产品</a></li>
                             <li id="mainMenuOrg"><a href="org_list.html">服务机构</a></li>

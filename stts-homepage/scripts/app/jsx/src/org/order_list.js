@@ -12,6 +12,7 @@ var OrderList = React.createClass({
     render: function () {
         return (
             <div>
+                <OrderArbitrationDialog/>
                 <Top/>
                 <Header activeMenuID="mainMenuOrder"/>
 
@@ -195,7 +196,7 @@ var OrderItem = React.createClass({
                             <div><a href="#">受理</a> | <a href="#">拒绝</a></div>
                             <div><a href="order_arbitration.html">同意退单</a></div>
 
-                            <div><a href="#">申请仲裁</a> | <a href="#">评价</a> | <a href="order_detail.html">详细</a></div>
+                            <div><a href="#" data-toggle="modal" data-target="#orderArbitrationDialog">申请仲裁</a> | <a href="#">评价</a> | <a href="order_detail.html">详细</a></div>
                         </div>
                     </div>
                 </div>

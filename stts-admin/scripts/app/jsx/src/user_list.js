@@ -11,6 +11,7 @@ var UserList = React.createClass({
                             <div className="list-group">
                                 <a href="index.html" className="list-group-item">运营平台</a>
                                 <a href="user_list.html" className="list-group-item active">用户一览</a>
+                                <a href="notice_list.html" className="list-group-item">全网通知</a>
                             </div>
                         </div>
 

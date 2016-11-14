@@ -564,24 +564,6 @@ var PassModal = React.createClass({
                                     </div>
                                 </div>
 
-                                <div className="form-group">
-                                    <label className="control-label col-sm-3">
-                                        企业类型
-                                    </label>
-
-                                    <div className="col-sm-4">
-                                        <select className="form-control">
-                                            <option>普通</option>
-                                            <option>小型</option>
-                                            <option>微型</option>
-                                            <option>小升规</option>
-                                        </select>
-                                    </div>
-                                    <label className="col-sm-5 pt-7">
-                                        *已自动推荐，请根据实际情况调整
-                                    </label>
-                                </div>
-
                                 <div className="form-group form-inline">
                                     <label className="control-label col-sm-3">
                                         机构特别标签

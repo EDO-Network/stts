@@ -49,14 +49,14 @@ var Order = React.createClass({
                 <div className="text-center mb-10">
                     <button className="btn btn-default">受理&amp;签署合同</button>&nbsp;&nbsp;
                     <button className="btn btn-default">拒绝</button>&nbsp;&nbsp;
-                    <button className="btn btn-default">同意退款/同意退单</button>&nbsp;&nbsp;
+                    <button className="btn btn-default">同意退单</button>&nbsp;&nbsp;
                     <button className="btn btn-default">申请仲裁</button>&nbsp;&nbsp;
                     <button className="btn btn-default">评价</button>
                 </div>
                 <div className="panel panel-info">
                     <div className="panel-heading">
                         订单信息&nbsp;&nbsp;订单号：201601011800001&nbsp;&nbsp;状态：申请服务&nbsp;&nbsp;
-                        <a href="order_arbitration.html" className="pull-right">查看退款/退单信息</a>
+                        <a href="order_arbitration.html" className="pull-right">查看退单信息</a>
                     </div>
                     <div className="panel-body">
                         <div className="col-sm-4">
@@ -81,17 +81,6 @@ var Order = React.createClass({
 
                             <p><a href="#">阅览合同</a></p>
                         </div>
-                    </div>
-                </div>
-                <div className="panel panel-info">
-                    <div className="panel-heading">付券记录</div>
-                    <div className="panel-body">
-                            2016-01-01 18:00:00 买家付款 券 500元<br/>
-                            2016-02-01 18:00:00 买家付款 券 500元<br/>
-                            2016-02-02 18:00:00 买家申请退款 券 500元<br/>
-                            2016-02-02 18:00:00 卖家退款 券 500元<br/>
-                            2016-03-02 18:00:00 买家申请退单<br/>
-                            2016-03-03 18:00:00 卖家同意退单
                     </div>
                 </div>
                 <div className="panel panel-info">

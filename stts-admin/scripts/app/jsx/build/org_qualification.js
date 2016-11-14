@@ -564,24 +564,6 @@ var PassModal = React.createClass({displayName: "PassModal",
                                     )
                                 ), 
 
-                                React.createElement("div", {className: "form-group"}, 
-                                    React.createElement("label", {className: "control-label col-sm-3"}, 
-                                        "企业类型"
-                                    ), 
-
-                                    React.createElement("div", {className: "col-sm-4"}, 
-                                        React.createElement("select", {className: "form-control"}, 
-                                            React.createElement("option", null, "普通"), 
-                                            React.createElement("option", null, "小型"), 
-                                            React.createElement("option", null, "微型"), 
-                                            React.createElement("option", null, "小升规")
-                                        )
-                                    ), 
-                                    React.createElement("label", {className: "col-sm-5 pt-7"}, 
-                                        "*已自动推荐，请根据实际情况调整"
-                                    )
-                                ), 
-
                                 React.createElement("div", {className: "form-group form-inline"}, 
                                     React.createElement("label", {className: "control-label col-sm-3"}, 
                                         "机构特别标签"

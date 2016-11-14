@@ -32,7 +32,7 @@ var LoginForm = React.createClass({
                     </div>
                     <div className="row form-group">
                         <div className="col-sm-6 text-center">
-                            <a href="#">忘记密码？</a>
+                            <a href="password_reset_phone.html">忘记密码？</a>
                         </div>
                         <div className="col-sm-6 text-center">
                             <a href="#">免费注册</a>
