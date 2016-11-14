@@ -17,7 +17,7 @@ var Dashboard = React.createClass({
                     <div>
                         <div className="pull-left w-222">
                             <div className="list-group">
-                                <a href="org_show.html" className="list-group-item active">机构展示</a>
+                                <a href="org_show.html" className="list-group-item active">机构简介</a>
                             </div>
                         </div>
 
@@ -28,18 +28,63 @@ var Dashboard = React.createClass({
                                 <li><a href="active">机构展示</a></li>
                             </ol>
                             <div className="panel panel-info">
-                                <div className="panel-heading">机构展示编辑</div>
+                                <div className="panel-heading">机构简介</div>
                                 <div className="panel-body">
                                     <div className="mb-10">
                                     <textarea name="content" className="w-per-100 "
-                                              style={{height: "800px"}}></textarea>
-                                    </div>
-                                    <div className="text-center">
-                                        <button type="button" className="btn btn-primary">提交</button>
-                                        &nbsp;&nbsp;
-                                        <button type="button" className="btn btn-default">返回</button>
+                                              style={{height: "300px"}}></textarea>
                                     </div>
                                 </div>
+                            </div>
+                            <div className="panel panel-info">
+                                <div className="panel-heading">机构介绍</div>
+                                <div className="panel-body">
+                                    <div className="mb-10">
+                                    <textarea name="content" className="w-per-100 "
+                                              style={{height: "300px"}}></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="panel panel-info">
+                                <div className="panel-heading">专业资质情况</div>
+                                <div className="panel-body">
+                                    <div className="mb-10">
+                                    <textarea name="content" className="w-per-100 "
+                                              style={{height: "300px"}}></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="panel panel-info">
+                                <div className="panel-heading">人员素质构成情况</div>
+                                <div className="panel-body">
+                                    <div className="mb-10">
+                                    <textarea name="content" className="w-per-100 "
+                                              style={{height: "300px"}}></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="panel panel-info">
+                                <div className="panel-heading">主要服务设备及条件</div>
+                                <div className="panel-body">
+                                    <div className="mb-10">
+                                    <textarea name="content" className="w-per-100 "
+                                              style={{height: "300px"}}></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="panel panel-info">
+                                <div className="panel-heading">服务资质及荣誉</div>
+                                <div className="panel-body">
+                                    <div className="mb-10">
+                                    <textarea name="content" className="w-per-100 "
+                                              style={{height: "300px"}}></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="text-center mb-20">
+                                <button type="button" className="btn btn-primary">提交</button>
+                                &nbsp;&nbsp;
+                                <button type="button" className="btn btn-default">返回</button>
                             </div>
                         </div>
                     </div>
