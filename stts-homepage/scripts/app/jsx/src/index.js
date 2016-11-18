@@ -351,7 +351,7 @@ var Notice = React.createClass({
         return (
             <div>
                 <h2>通知公告</h2>
-                <a className="more" href="javascript:void(0)">
+                <a className="more" href="notice_list.html">
                     <span>更多</span>&nbsp;&gt;&gt;
                 </a>
                 <NoticeItem/>

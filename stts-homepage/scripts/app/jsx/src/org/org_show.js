@@ -17,7 +17,7 @@ var Dashboard = React.createClass({
                     <div>
                         <div className="pull-left w-222">
                             <div className="list-group">
-                                <a href="org_show.html" className="list-group-item active">机构简介</a>
+                                <a href="org_show.html" className="list-group-item active">机构展示</a>
                             </div>
                         </div>
 
