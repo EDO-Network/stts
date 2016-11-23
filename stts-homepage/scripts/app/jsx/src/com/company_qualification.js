@@ -3,13 +3,15 @@ var Company = React.createClass({
         return (
             <div>
                 <Top/>
-                <Header activeMenuID="mainMenuCompany"/>
+                <Header activeMenuID="mainMenuQualification"/>
 
                 <div className="container">
                     <div>
                         <div className="pull-left w-222">
                             <div className="list-group">
-                                <a href="company.html" className="list-group-item">企业信息</a>
+                                {
+                                    //<a href="company.html" className="list-group-item">企业信息</a>
+                                }
                                 <a href="qualification.html" className="list-group-item active">资质审核</a>
                             </div>
                         </div>
@@ -19,7 +21,7 @@ var Company = React.createClass({
                             <ol className="breadcrumb">
                                 <li>您所在的位置：</li>
                                 <li><a href="dashboard.html">企业机构</a></li>
-                                <li><a href="company.html">资质审核</a></li>
+                                <li><a href="company.html">资格审核</a></li>
                                 <li className='active'>企业资质审核详细</li>
                             </ol>
                             <div className="panel panel-default">

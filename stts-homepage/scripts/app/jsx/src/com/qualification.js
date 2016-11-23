@@ -3,14 +3,16 @@ var Qualification = React.createClass({
         return (
             <div>
                 <Top/>
-                <Header activeMenuID="mainMenuCompany"/>
+                <Header activeMenuID="mainMenuQualification"/>
 
                 <div className="container">
 
                     <div>
                         <div className="pull-left w-222">
                             <div className="list-group">
-                                <a href="company.html" className="list-group-item">企业信息</a>
+                                {
+                                    // <a href="company.html" className="list-group-item">企业信息</a>
+                                }
                                 <a href="qualification.html" className="list-group-item active">资质审核</a>
                             </div>
                         </div>
@@ -19,7 +21,7 @@ var Qualification = React.createClass({
                             <ol className="breadcrumb">
                                 <li>您所在的位置：</li>
                                 <li><a href="dashboard.html">企业机构</a></li>
-                                <li><a href="company.html">资质审核</a></li>
+                                <li><a href="company.html">资格审核</a></li>
                                 <li className='active'>审核历史一览</li>
                             </ol>
                             <div className="panel panel-default">
@@ -39,8 +41,8 @@ var Qualification = React.createClass({
                                         <tr>
                                             <td>2016</td>
                                             <td>2016-01-01</td>
-                                            <td>审核未通过</td>
-                                            <td>审核信息不全，请参照详细</td>
+                                            <td><a href="company_qualification.html">未审核</a></td>
+                                            <td>未提交审核信息</td>
                                             <td><a href="company_qualification.html">详细</a></td>
                                         </tr>
                                         <tr>
@@ -57,6 +59,7 @@ var Qualification = React.createClass({
                         </div>
                     </div>
                 </div>
+                <Footer/>
             </div>
         );
     }

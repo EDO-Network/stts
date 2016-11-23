@@ -8,18 +8,41 @@ var Index = React.createClass({
 
                 <div className="main container">
                     <div style={{position:"relative"}}>
-                        <div className="left-wrap">
+                        <div className="left-wrap w-222">
                             <NavCategory/>
                         </div>
                         <NavCategoryItems/>
 
                         <div className="right-wrap">
+                            <div className="col-sm-8">
 
-                            <Slide/>
+                                <Slide/>
+                                {
+                                    //<div className="">
+                                    //    <div className="col-sm-6 who-link text-center">
+                                    //            <h2 className="title">我是服务机构</h2>
+                                    //
+                                    //            <a href="com/company.html" className="bg-primary">我要入驻商城</a>
+                                    //    </div>
+                                    //    <div className="col-sm-6 who-link text-center">
+                                    //        <h2 className="title">我是企业</h2>
+                                    //
+                                    //        <div><a href="com/org_info.html" className="bg-info">我要发布需求</a></div>
+                                    //    </div>
+                                    //</div>
+                                }
+                                <Register/>
+                            </div>
+
+                            <div className="col-sm-4">
+                                <Statistics2/>
+                            </div>
                         </div>
                     </div>
                     <div className="clearfix"></div>
-                    <Statistics/>
+                    {
+                        //<Statistics/>
+                    }
                     <GroupOrg/>
                     <Hot/>
 
@@ -37,6 +60,34 @@ var Index = React.createClass({
                 </div>
 
                 <Footer/>
+            </div>
+        );
+    }
+});
+
+
+var Register = React.createClass({
+    render: function () {
+        return (
+            <div className="register-wrap row">
+                <div className="col-sm-6">
+                    <div className="mini-stat clearfix bx-shadow bg-info">
+                        <h2 className="title">我是服务机构</h2>
+
+                        <div className="text-center">
+                            <a href="org/org_info.html">我要入驻商城</a>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-sm-6">
+                    <div className="mini-stat clearfix bx-shadow bg-purple">
+                        <h2 className="title">我是企业</h2>
+
+                        <div className="text-center">
+                            <a href="com/company.html">我要发布需求</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
@@ -110,6 +161,78 @@ var Statistics = React.createClass({
     }
 });
 
+
+var Statistics2 = React.createClass({
+    render: function () {
+        return (
+            <div className="statistics-wrap">
+                <div className="mini-stat clearfix bx-shadow bg-primary">
+                            <span className="mini-stat-icon">
+                                <i className="fa fa-money" aria-hidden="true"></i>
+                            </span>
+
+                    <div className="mini-stat-info text-right">
+                        <span className="counter">245&nbsp;万</span>
+                        累计使用券金额
+                    </div>
+                </div>
+
+                <div className="mini-stat clearfix bx-shadow bg-success">
+                            <span className="mini-stat-icon">
+                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
+                            </span>
+
+                    <div className="mini-stat-info text-right">
+                        <span className="counter">35&nbsp;次</span>
+                        服务交易次数
+                    </div>
+                </div>
+                <div className="mini-stat clearfix bx-shadow bg-primary">
+                            <span className="mini-stat-icon">
+                                <i className="fa fa-money" aria-hidden="true"></i>
+                            </span>
+
+                    <div className="mini-stat-info text-right">
+                        <span className="counter">34&nbsp;万</span>
+                        累计交易金额
+                    </div>
+                </div>
+                <div className="mini-stat clearfix bx-shadow bg-info">
+                            <span className="mini-stat-icon">
+                                <i className="fa fa-shopping-basket" aria-hidden="true"></i>
+                            </span>
+
+                    <div className="mini-stat-info text-right">
+                        <span className="counter">23&nbsp;家</span>
+                        小微企业
+                    </div>
+                </div>
+
+                <div className="mini-stat clearfix bx-shadow bg-info">
+                            <span className="mini-stat-icon">
+                                <i className="fa fa-shopping-basket" aria-hidden="true"></i>
+                            </span>
+
+                    <div className="mini-stat-info text-right">
+                        <span className="counter">23&nbsp;家</span>
+                        服务机构
+                    </div>
+                </div>
+                <div className="mini-stat clearfix bx-shadow bg-purple">
+                            <span className="mini-stat-icon">
+                                <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+                            </span>
+
+                    <div className="mini-stat-info text-right">
+                        <span className="counter">23&nbsp;项</span>
+                        服务产品
+                    </div>
+                </div>
+            </div>
+        );
+    }
+});
+
 var Slide = React.createClass({
     render: function () {
         return (
@@ -167,7 +290,7 @@ var GroupOrg = React.createClass({
     render: function () {
         return (
             <div>
-                <div className="block-title">联营机构</div>
+                <div className="block-title">推荐服务</div>
 
 
                 <a className="more" href="javascript:void(0)">
@@ -175,10 +298,10 @@ var GroupOrg = React.createClass({
                 </a>
 
                 <div className="row">
-                    <div className="col-sm-3"><OrgPreview/></div>
-                    <div className="col-sm-3"><OrgPreview/></div>
-                    <div className="col-sm-3"><OrgPreview/></div>
-                    <div className="col-sm-3"><OrgPreview/></div>
+                    <div className="col-sm-3"><ServicePreview/></div>
+                    <div className="col-sm-3"><ServicePreview/></div>
+                    <div className="col-sm-3"><ServicePreview/></div>
+                    <div className="col-sm-3"><ServicePreview/></div>
                 </div>
             </div>
         );

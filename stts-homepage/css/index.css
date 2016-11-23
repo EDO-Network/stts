@@ -1,5 +1,4 @@
 .main .left-wrap{
-    width: 222px;
     float: left;
 }
 
@@ -8,11 +7,11 @@
 }
 
 .main .statistics-wrap{
-    height: 100px;
+    height: 460px;
 }
 
 .main .slide-wrap img{
-    height: 460px;
+    height: 360px;
     width: 100%;
 }
 
@@ -20,8 +19,8 @@
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    margin-bottom: 20px;
-    padding: 10px;
+    margin-bottom: 15px;
+    padding: 2px 10px;
     color: #ffffff;
 }
 
@@ -88,4 +87,40 @@
     position: absolute;
     right: 10px;
     top: 10px;
+}
+
+.main .register-wrap {
+    margin-top: 5px;
+    height: 100px;
+}
+
+.main .register-wrap .title{
+    line-height: 29px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.main .register-wrap a {
+    /*-moz-border-radius: 100%;*/
+    /*-webkit-border-radius: 100%;*/
+    /*border-radius: 100%;*/
+    background-color: rgba(255, 255, 255, 0.2);
+    display: inline-block;
+    /*float: left;*/
+    /*font-size: 30px;*/
+    /*height: 60px;*/
+    /*line-height: 60px;*/
+    /*margin-right: 10px;*/
+    text-align: center;
+    /*width: 60px;*/
+
+    /*height: 39px;*/
+    /*margin-top: 6px;*/
+    /*line-height: 39px;*/
+    font-size: 20px;
+    color: #fff;
+    width: 100%;
+    /*display: inline;*/
+    margin-bottom: 5px;
 }
