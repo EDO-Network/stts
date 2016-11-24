@@ -45,42 +45,7 @@ var Dashboard = React.createClass({
                                     </div>
                                 </div>
                             </div>
-                            <div className="panel panel-info">
-                                <div className="panel-heading">专业资质情况</div>
-                                <div className="panel-body">
-                                    <div className="mb-10">
-                                    <textarea name="content" className="w-per-100 "
-                                              style={{height: "300px"}}></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="panel panel-info">
-                                <div className="panel-heading">人员素质构成情况</div>
-                                <div className="panel-body">
-                                    <div className="mb-10">
-                                    <textarea name="content" className="w-per-100 "
-                                              style={{height: "300px"}}></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="panel panel-info">
-                                <div className="panel-heading">主要服务设备及条件</div>
-                                <div className="panel-body">
-                                    <div className="mb-10">
-                                    <textarea name="content" className="w-per-100 "
-                                              style={{height: "300px"}}></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="panel panel-info">
-                                <div className="panel-heading">服务资质及荣誉</div>
-                                <div className="panel-body">
-                                    <div className="mb-10">
-                                    <textarea name="content" className="w-per-100 "
-                                              style={{height: "300px"}}></textarea>
-                                    </div>
-                                </div>
-                            </div>
+
                             <div className="text-center mb-20">
                                 <button type="button" className="btn btn-primary">提交</button>
                                 &nbsp;&nbsp;

@@ -13,8 +13,6 @@ var Top = React.createClass({
                 <div className="container">
                     <ul className="top-left-menu">
                         <li>{this.state.user.company}</li>
-                        <li>我的使用额度（元）：<stong className="text-danger">3000</stong> / 5000</li>
-                        <li>服务券总金额（万元）：<stong className="text-danger">3000</stong> / 5000</li>
                     </ul>
                     <ul className="top-right-menu">
                         <li>您好：{this.state.user.userName}</li>

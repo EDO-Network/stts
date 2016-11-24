@@ -3,16 +3,15 @@ var Company = React.createClass({
         return (
             <div>
                 <Top/>
-                <Header activeMenuID="mainMenuQualification"/>
+                <Header activeMenuID="mainMenuCompany"/>
 
                 <div className="container">
                     <div>
                         <div className="pull-left w-222">
                             <div className="list-group">
-                                {
-                                    //<a href="company.html" className="list-group-item">企业信息</a>
-                                }
-                                <a href="qualification.html" className="list-group-item active">资质审核</a>
+                                <a href="dashboard.html" className="list-group-item">我的平台</a>
+                                <a href="company.html" className="list-group-item">企业信息</a>
+                                <a href="qualification.html" className="list-group-item active">资格审核</a>
                             </div>
                         </div>
 
@@ -369,7 +368,8 @@ var Company = React.createClass({
 var CommentModal = React.createClass({
     render: function () {
         return (
-            <div className="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel"
+            <div className="modal fade" id="commentModal" tabindex="-1" role="dialog"
+                 aria-labelledby="commentModalLabel"
                  aria-hidden="true">
                 <div className="modal-dialog">
                     <div className="modal-content">

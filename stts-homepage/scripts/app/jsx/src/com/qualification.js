@@ -3,17 +3,16 @@ var Qualification = React.createClass({
         return (
             <div>
                 <Top/>
-                <Header activeMenuID="mainMenuQualification"/>
+                <Header activeMenuID="mainMenuCompany"/>
 
                 <div className="container">
 
                     <div>
                         <div className="pull-left w-222">
                             <div className="list-group">
-                                {
-                                    // <a href="company.html" className="list-group-item">企业信息</a>
-                                }
-                                <a href="qualification.html" className="list-group-item active">资质审核</a>
+                                <a href="dashboard.html" className="list-group-item">我的平台</a>
+                                <a href="company.html" className="list-group-item">企业信息</a>
+                                <a href="qualification.html" className="list-group-item active">资格审核</a>
                             </div>
                         </div>
 

@@ -9,10 +9,9 @@ var Company = React.createClass({
                     <div>
                         <div className="pull-left w-222">
                             <div className="list-group">
+                                <a href="dashboard.html" className="list-group-item">我的平台</a>
                                 <a href="company.html" className="list-group-item active">企业信息</a>
-                                {
-                                    //<a href="qualification.html" className="list-group-item">资质审核</a>
-                                }
+                                <a href="qualification.html" className="list-group-item">资格审核</a>
                             </div>
                         </div>
 

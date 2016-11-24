@@ -17,9 +17,6 @@ var TopLogout = React.createClass({
         return (
             <div className="top-wrap">
                 <div className="container">
-                    <ul className="top-left-menu">
-                        <li><span className="text-danger">本期服务券余额 2345 万元</span></li>
-                    </ul>
                     <ul className="top-right-menu">
                         <li>欢迎您</li>
                         <li><a href="login.html">请登录</a></li>
@@ -47,13 +44,12 @@ var TopLogin = React.createClass({
                 <div className="container">
                     <ul className="top-left-menu">
                         <li>{this.state.user.company}</li>
-                        <li><span className="text-danger">本期服务券余额 2345 万元</span></li>
                     </ul>
                     <ul className="top-right-menu">
                         <li>您好：{this.state.user.userName}</li>
                         <li></li>
                         <li><a href="account_profile.html">账户设置</a></li>
-                        <li><a href="com/company.html">我的平台</a></li>
+                        <li><a href="com/dashboard.html">我的平台</a></li>
                         <li><a href="org/dashboard.html">我是服务机构</a></li>
                         <li><a href="#">帮助中心</a></li>
                         <li><a href="login.html">退出</a></li>

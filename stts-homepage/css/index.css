@@ -3,7 +3,8 @@
 }
 
 .main .right-wrap{
-    margin-left: 240px;
+    margin-left: 222px;
+    overflow: hidden;
 }
 
 .main .statistics-wrap{
@@ -11,7 +12,7 @@
 }
 
 .main .slide-wrap img{
-    height: 360px;
+    height: 460px;
     width: 100%;
 }
 
@@ -99,6 +100,18 @@
     font-size: 20px;
     font-weight: bold;
     color: #fff;
+}
+
+.main .message-wrap {
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    color: #fbed50;
 }
 
 .main .register-wrap a {

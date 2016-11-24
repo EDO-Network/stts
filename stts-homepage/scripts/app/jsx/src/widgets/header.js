@@ -36,10 +36,8 @@ var Header = React.createClass({
                             <li id="mainMenuIndex"><a href="index.html">首页</a></li>
                             <li id="mainMenuService"><a href="service_list.html">服务产品</a></li>
                             <li id="mainMenuOrg"><a href="org_list.html">服务机构</a></li>
-                            {
-                                //<li id="mainMenuOrgRegister"><a href="org/org_info.html">我要入驻商城</a></li>
-                                //<li id="mainMenuCompanyRegister"><a href="com/company.html">我要发布需求</a></li>
-                            }
+                            <li id="mainMenuOrgRegister"><a href="org/org_info.html">我要入驻商城</a></li>
+                            <li id="mainMenuCompanyRegister"><a href="com/company.html">我要发布需求</a></li>
                         </ul>
                     </div>
                     {

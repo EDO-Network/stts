@@ -13,9 +13,10 @@ var Index = React.createClass({
                         </div>
                         <NavCategoryItems/>
 
-                        <div className="right-wrap">
-                            <div className="col-sm-8">
+                        <div className="right-wrap row">
+                            <div className="col-sm-9">
 
+                                <Message/>
                                 <Slide/>
                                 {
                                     //<div className="">
@@ -30,11 +31,11 @@ var Index = React.createClass({
                                     //        <div><a href="com/org_info.html" className="bg-info">我要发布需求</a></div>
                                     //    </div>
                                     //</div>
+                                    //<Register/>
                                 }
-                                <Register/>
                             </div>
 
-                            <div className="col-sm-4">
+                            <div className="col-sm-3">
                                 <Statistics2/>
                             </div>
                         </div>
@@ -65,6 +66,13 @@ var Index = React.createClass({
     }
 });
 
+var Message = React.createClass({
+    render: function () {
+        return (
+            <div className="message-wrap">本期服务券余额 2345 万元</div>
+        );
+    }
+});
 
 var Register = React.createClass({
     render: function () {
