@@ -44,6 +44,7 @@ var TopLogin = React.createClass({
                 <div className="container">
                     <ul className="top-left-menu">
                         <li>{this.state.user.company}</li>
+                        <li><span className="text-danger">本期服务券余额 2345 万元</span></li>
                     </ul>
                     <ul className="top-right-menu">
                         <li>您好：{this.state.user.userName}</li>
